@@ -1,0 +1,10 @@
+{"states": [
+  {"name": "open-left", "actions": [["click", "#storybook-root .atmr-button__label:text-is(\"left\")"], ["wait", 300]]},
+  {"name": "open-bottom-right", "actions": [["click", "#storybook-root .atmr-button__label:text-is(\"bottomRight\")"], ["wait", 300]]},
+  {"name": "open-right-top", "actions": [["click", "#storybook-root .atmr-button__label:text-is(\"rightTop\")"], ["wait", 300]]},
+  {"name": "open-top", "actions": [["click", "#storybook-root .atmr-button__label:text-is(\"top\")"], ["wait", 300]]},
+  {"name": "switch-menu", "actions": [["click", "#storybook-root .atmr-button__label:text-is(\"topLeft\")"], ["wait", 300], ["click", "#storybook-root .atmr-button__label:text-is(\"bottomRight\")"], ["wait", 300]]},
+  {"name": "open-close", "actions": [["click", "#storybook-root .atmr-button__label:text-is(\"bottom\")"], ["wait", 300], ["click", "#storybook-root .atmr-button__label:text-is(\"bottom\")"], ["wait", 300]]},
+  {"name": "open-outside-click", "actions": [["click", "#storybook-root .atmr-button__label:text-is(\"leftBottom\")"], ["wait", 300], ["click", "body"], ["wait", 300]]},
+  {"name": "kbd-open", "actions": [["focus", "#storybook-root .atmr-button__label:text-is(\"rightBottom\") >> xpath=.."], ["press", "Enter"], ["wait", 300]]}
+]}

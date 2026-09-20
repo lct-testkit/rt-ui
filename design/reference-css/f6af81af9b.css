@@ -1,0 +1,8 @@
+.trigger {
+  color: var(--atmr-fg-default);
+  cursor: pointer;
+}
+
+.atmr-popover__root {
+  width: auto;
+}

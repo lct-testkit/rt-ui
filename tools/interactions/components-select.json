@@ -1,0 +1,14 @@
+{"states": [
+  {"name": "open", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300]]},
+  {"name": "open-hover-item", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["hover", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 100]]},
+  {"name": "toggle-close", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 200], ["click", "#storybook-root .atmr-select"], ["wait", 300]]},
+  {"name": "select", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 300]]},
+  {"name": "select-reopen", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 200], ["click", "#storybook-root .atmr-select"], ["wait", 300]]},
+  {"name": "select-deselect", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 200], ["click", "#storybook-root .atmr-select"], ["wait", 200], ["click", ".atmr-dropdown-menu__item--selected"], ["wait", 300]]},
+  {"name": "kbd-open", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["press", "ArrowDown"], ["press", "Enter"], ["press", "Escape"], ["wait", 200]]},
+  {"name": "tab-out-open", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 200], ["press", "Tab"], ["wait", 200]]},
+  {"name": "type", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 200], ["type", "#storybook-root .atmr-select input", "e"], ["wait", 300]]},
+  {"name": "type-backspace", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 200], ["type", "#storybook-root .atmr-select input", "me"], ["press", "Backspace"], ["press", "Backspace"], ["wait", 300]]},
+  {"name": "type-select", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 200], ["type", "#storybook-root .atmr-select input", "e"], ["wait", 200], ["click", ".atmr-dropdown-menu__item >> nth=1"], ["wait", 300]]},
+  {"name": "type-nomatch", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 200], ["type", "#storybook-root .atmr-select input", "zzz"], ["wait", 300]]}
+]}

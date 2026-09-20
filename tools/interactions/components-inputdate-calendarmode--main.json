@@ -1,0 +1,170 @@
+{
+ "states": [
+  {
+   "name": "open-years-only",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-popover__root >> nth=0 >> input[name=df]"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "open-years-with-month",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-popover__root >> nth=1 >> input[name=df]"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "open-with-times",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-popover__root >> nth=3 >> input[name=df]"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "open-months-only",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-popover__root >> nth=4 >> input[name=df]"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "open-times-only",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-popover__root >> nth=9 >> input[name=df]"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "type-days-months",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-popover__root >> nth=2 >> input[name=df]"
+    ],
+    [
+     "type",
+     "#storybook-root .atmr-popover__root >> nth=2 >> input[name=df]",
+     "15032026"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "type-months-with-days",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-popover__root >> nth=5 >> input[name=df]"
+    ],
+    [
+     "type",
+     "#storybook-root .atmr-popover__root >> nth=5 >> input[name=df]",
+     "15mar"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "type-year",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-popover__root >> nth=0 >> input[name=df]"
+    ],
+    [
+     "type",
+     "#storybook-root .atmr-popover__root >> nth=0 >> input[name=df]",
+     "2027"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "type-month-name",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-popover__root >> nth=4 >> input[name=df]"
+    ],
+    [
+     "type",
+     "#storybook-root .atmr-popover__root >> nth=4 >> input[name=df]",
+     "feb"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "open-then-other",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-popover__root >> nth=0 >> input[name=df]"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-popover__root >> nth=1 >> input[name=df]"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  }
+ ]
+}

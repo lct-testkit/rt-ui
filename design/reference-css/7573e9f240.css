@@ -1,0 +1,18 @@
+.atmr-slider.atmr-slider--primary.gradient-track {
+  --atmr-slider-primary-highlighttrack-bg-color-default: transparent;
+  --atmr-slider-primary-highlighttrack-bg-color-hover: transparent;
+  --atmr-slider-primary-track-bg-color-default: linear-gradient(
+    90deg,
+    #f00 0%,
+    #ff8f0c 31.25%,
+    #ffe03e 65.45%,
+    #17ff12 100%
+  );
+  --atmr-slider-primary-track-bg-color-hover: linear-gradient(
+    90deg,
+    #f00 0%,
+    #ff8f0c 31.25%,
+    #ffe03e 65.45%,
+    #17ff12 100%
+  );
+}

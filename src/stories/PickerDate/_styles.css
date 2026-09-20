@@ -1,0 +1,11 @@
+/* Story-only CSS of stories/PickerDate (design/reference-css/69dcbe375e.css) */
+.stories-pickerdate-container {
+	display: flex;
+	width: max-content;
+	min-height: 30px;
+}
+
+.stories-pickerdate-props-container {
+	display: flex;
+	gap: 40px;
+}

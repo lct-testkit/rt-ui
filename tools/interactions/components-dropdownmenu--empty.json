@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "empty-toggle-close", "actions": [["click", "#storybook-root .atmr-icon-button.dd-root"], ["wait", 300]]},
+  {"name": "empty-toggle-close-open", "actions": [["click", "#storybook-root .atmr-icon-button.dd-root"], ["wait", 300], ["click", "#storybook-root .atmr-icon-button.dd-root"], ["wait", 300]]},
+  {"name": "empty-outside-click", "actions": [["click", "body"], ["wait", 300]]},
+  {"name": "empty-kbd-toggle", "actions": [["focus", "#storybook-root .atmr-icon-button.dd-root"], ["press", "Enter"], ["wait", 300]]}
+]}

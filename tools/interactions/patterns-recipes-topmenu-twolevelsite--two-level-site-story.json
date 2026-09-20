@@ -1,0 +1,146 @@
+{
+ "states": [
+  {
+   "name": "top-tab-click-2",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [role=tab] >> nth=2"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "top-tab-click-more",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [role=tab] >> nth=4"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "bottom-tab-click-1",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [role=tab] >> nth=6"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "bottom-tab-hover-0",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root [role=tab] >> nth=5"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-function-button",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .top-menu-site__function-buttons .atmr-functionbutton >> nth=0"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "click-function-button",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .top-menu-site__function-buttons .atmr-functionbutton >> nth=1"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hover-search",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__utilities-icon"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-login",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .top-menu-site__auth-buttons .atmr-button >> nth=0"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "click-create-account",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .top-menu-site__auth-buttons .atmr-button >> nth=1"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "tab-focus-4",
+   "actions": [
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  }
+ ]
+}

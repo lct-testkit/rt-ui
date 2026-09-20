@@ -1,0 +1,143 @@
+{
+ "states": [
+  {
+   "name": "click-inc-x3",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=0"
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=0"
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=0"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "click-dec",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--decrement >> nth=0"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "hover-inc",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=0"
+    ]
+   ]
+  },
+  {
+   "name": "focus-input",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-number-stepper__input >> nth=0"
+    ]
+   ]
+  },
+  {
+   "name": "type-digits",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__input >> nth=0"
+    ],
+    [
+     "press",
+     "Control+a"
+    ],
+    [
+     "type",
+     "#storybook-root .atmr-number-stepper__input >> nth=0",
+     "1234567"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "type-letters",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__input >> nth=0"
+    ],
+    [
+     "press",
+     "Control+a"
+    ],
+    [
+     "type",
+     "#storybook-root .atmr-number-stepper__input >> nth=0",
+     "ab12cd3"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "kbd-tab-enter",
+   "actions": [
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "inc-then-blur",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__input >> nth=0"
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=0"
+    ],
+    [
+     "mouse",
+     700,
+     500
+    ]
+   ]
+  }
+ ]
+}

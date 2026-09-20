@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "open-m", "actions": [["click", "#storybook-root .atmr-select >> nth=1"], ["wait", 300]]},
+  {"name": "open-l", "actions": [["click", "#storybook-root .atmr-select >> nth=2"], ["wait", 300]]},
+  {"name": "select-l", "actions": [["click", "#storybook-root .atmr-select >> nth=2"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=1"], ["wait", 300]]},
+  {"name": "switch-select", "actions": [["click", "#storybook-root .atmr-select >> nth=0"], ["wait", 300], ["click", "#storybook-root .atmr-select >> nth=2"], ["wait", 300]]}
+]}

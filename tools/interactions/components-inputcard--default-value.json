@@ -1,0 +1,65 @@
+{
+ "states": [
+  {
+   "name": "typed-more",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "1"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-erase",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "press",
+     "End"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "fill-other",
+   "actions": [
+    [
+     "fill",
+     "#storybook-root input >> nth=0",
+     "4111111111111111"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  }
+ ]
+}

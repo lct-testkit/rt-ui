@@ -1,0 +1,166 @@
+{
+ "states": [
+  {
+   "name": "heart-click",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .side-with-top-menu__page-title-heart"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "heart-hover",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .side-with-top-menu__page-title-heart"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "heart-click-twice",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .side-with-top-menu__page-title-heart"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     "#storybook-root .side-with-top-menu__page-title-heart"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hide-menu",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     600
+    ]
+   ]
+  },
+  {
+   "name": "hide-show-menu",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     600
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     600
+    ]
+   ]
+  },
+  {
+   "name": "hover-item",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-side-menu__content > li >> nth=1"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hide-hover-info",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     600
+    ],
+    [
+     "hover",
+     "#storybook-root .atmr-side-menu__info-block"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-kebab",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-functionbutton"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-action-button",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .top-menu-page-title-status__action-button"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "tab-focus-3",
+   "actions": [
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  }
+ ]
+}

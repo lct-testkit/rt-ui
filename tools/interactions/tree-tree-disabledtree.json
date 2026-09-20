@@ -1,0 +1,10 @@
+{"states": [
+  {"name": "click-disabled-expand", "actions": [["click", "#storybook-root .atmr-tree__item--disabled .atmr-tree__button-expand >> nth=0"], ["wait", 150]]},
+  {"name": "click-disabled-title", "actions": [["click", "#storybook-root .atmr-tree__item--disabled .atmr-tree__item-content >> nth=0"], ["wait", 150]]},
+  {"name": "check-0-0-parent", "actions": [["click", "#storybook-root .atmr-tree__button-select .atmr-checkbox >> nth=0"], ["wait", 150]]},
+  {"name": "check-child-0-0-1", "actions": [["click", "#storybook-root .atmr-tree__button-select .atmr-checkbox >> nth=2"], ["wait", 150]]},
+  {"name": "check-parent-0-1", "actions": [["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"parent 0-1\")) .atmr-checkbox >> nth=0"], ["wait", 150]]},
+  {"name": "check-sibling-of-disabled", "actions": [["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"child 0-0-3\")) .atmr-checkbox >> nth=0"], ["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"child 0-0-0\")) .atmr-checkbox >> nth=0"], ["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"child 0-0-1\")) .atmr-checkbox >> nth=0"], ["wait", 150]]},
+  {"name": "collapse-0-0", "actions": [["click", "#storybook-root .atmr-tree__button-expand >> nth=0"], ["wait", 150]]},
+  {"name": "expand-0-1", "actions": [["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"parent 0-1\")) .atmr-tree__button-expand >> nth=0"], ["wait", 150]]}
+]}

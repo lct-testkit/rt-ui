@@ -1,0 +1,5 @@
+{"states": [
+  {"name": "hover-l-next", "actions": [["hover", "#storybook-root .atmr-stepper >> nth=1 >> .atmr-stepper__button--next"]]},
+  {"name": "click-l-prev", "actions": [["click", "#storybook-root .atmr-stepper >> nth=1 >> .atmr-stepper__button--prev"], ["wait", 200]]},
+  {"name": "kbd-l-focus", "actions": [["press", "Tab"], ["press", "Tab"], ["press", "Tab"]]}
+]}

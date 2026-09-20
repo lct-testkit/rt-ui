@@ -1,0 +1,6 @@
+/* decorator of SideWithTopMenu / TopWithSideMenu (<style> element rendered by the story decorator) */
+#storybook-root {
+  margin-top: 0 !important;
+  height: 100vh;
+  overflow: hidden;
+}

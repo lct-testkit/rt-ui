@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  overflow: auto;
+  border: 1px dotted black;
+  background-color: var(--atmr-bg-surface1);
+}
+
+.scroll-container {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  overscroll-behavior: contain;
+  overflow: scroll;
+  margin: auto;
+}
+
+.content {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popper {
+  display: flex;
+  background-color: var(--atmr-accent-default);
+  color: var(--atmr-accent-on-accent);
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,74 @@
+{
+ "states": [
+  {
+   "name": "focus-input-2",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-number-stepper__input >> nth=1"
+    ]
+   ]
+  },
+  {
+   "name": "click-dec-mid",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=1"
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=1"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "click-inc-third",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--decrement >> nth=2"
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--decrement >> nth=2"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "type-second",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__input >> nth=1"
+    ],
+    [
+     "type",
+     "#storybook-root .atmr-number-stepper__input >> nth=1",
+     "42"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "hover-dec-mid",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=1"
+    ]
+   ]
+  }
+ ]
+}

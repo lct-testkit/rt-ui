@@ -1,0 +1,7 @@
+{"states": [
+  {"name": "select-0-2", "actions": [["click", "#storybook-root p:text-is(\"parent 0-2\") >> nth=0"], ["wait", 150]]},
+  {"name": "select-0-2-then-0-4", "actions": [["click", "#storybook-root p:text-is(\"parent 0-2\") >> nth=0"], ["click", "#storybook-root p:text-is(\"parent 0-4\") >> nth=0"], ["wait", 150]]},
+  {"name": "select-after-expand", "actions": [["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"parent 0-0\")) .atmr-tree__button-expand >> nth=0"], ["click", "#storybook-root p:text-is(\"child 0-0-1\") >> nth=0"], ["wait", 150]]},
+  {"name": "check-and-select", "actions": [["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"parent 0-1\")) .atmr-checkbox >> nth=0"], ["click", "#storybook-root p:text-is(\"parent 0-1\") >> nth=0"], ["wait", 150]]},
+  {"name": "hover-row", "actions": [["hover", "#storybook-root p:text-is(\"parent 0-3\") >> nth=0"]]}
+]}

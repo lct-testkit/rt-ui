@@ -1,0 +1,24 @@
+node_modules
+/.svelte-kit
+/build
+/dist
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+vite.config.ts.timestamp-*
+
+# reference material scraped from design.rt.ru (not for redistribution)
+/_mirror
+/design/react-src
+/design/react-vendor
+/design/reference
+/design/diff
+/design/_*
+tools/*.log
+
+# Rostelecom Basis is licensed; keep it out of public repos (provided by the customer)
+/static/fonts
+/src/lib/styles/fonts/*.woff*
+/src/lib/styles/fonts/*.ttf

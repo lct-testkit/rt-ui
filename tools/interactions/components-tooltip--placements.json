@@ -1,0 +1,16 @@
+{"states": [
+  {"name": "hover-topLeft", "actions": [["hover", "#storybook-root button:has(.atmr-button__label:text-is(\"topLeft\"))"], ["wait", 400]]},
+  {"name": "hover-top", "actions": [["hover", "#storybook-root button:has(.atmr-button__label:text-is(\"top\"))"], ["wait", 400]]},
+  {"name": "hover-topRight", "actions": [["hover", "#storybook-root button:has(.atmr-button__label:text-is(\"topRight\"))"], ["wait", 400]]},
+  {"name": "hover-leftTop", "actions": [["hover", "#storybook-root button:has(.atmr-button__label:text-is(\"leftTop\"))"], ["wait", 400]]},
+  {"name": "hover-left", "actions": [["hover", "#storybook-root button:has(.atmr-button__label:text-is(\"left\"))"], ["wait", 400]]},
+  {"name": "hover-leftBottom", "actions": [["hover", "#storybook-root button:has(.atmr-button__label:text-is(\"leftBottom\"))"], ["wait", 400]]},
+  {"name": "hover-rightTop", "actions": [["hover", "#storybook-root button:has(.atmr-button__label:text-is(\"rightTop\"))"], ["wait", 400]]},
+  {"name": "hover-right", "actions": [["hover", "#storybook-root button:has(.atmr-button__label:text-is(\"right\"))"], ["wait", 400]]},
+  {"name": "hover-rightBottom", "actions": [["hover", "#storybook-root button:has(.atmr-button__label:text-is(\"rightBottom\"))"], ["wait", 400]]},
+  {"name": "hover-bottomLeft", "actions": [["hover", "#storybook-root button:has(.atmr-button__label:text-is(\"bottomLeft\"))"], ["wait", 400]]},
+  {"name": "hover-bottom", "actions": [["hover", "#storybook-root button:has(.atmr-button__label:text-is(\"bottom\"))"], ["wait", 400]]},
+  {"name": "hover-bottomRight", "actions": [["hover", "#storybook-root button:has(.atmr-button__label:text-is(\"bottomRight\"))"], ["wait", 400]]},
+  {"name": "focus-button", "actions": [["focus", "#storybook-root button:has(.atmr-button__label:text-is(\"top\"))"], ["wait", 300]]},
+  {"name": "hover-switch", "actions": [["hover", "#storybook-root button:has(.atmr-button__label:text-is(\"left\"))"], ["wait", 400], ["hover", "#storybook-root button:has(.atmr-button__label:text-is(\"right\"))"], ["wait", 400]]}
+]}

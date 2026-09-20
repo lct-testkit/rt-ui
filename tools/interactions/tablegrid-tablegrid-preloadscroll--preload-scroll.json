@@ -1,0 +1,5 @@
+{"states": [
+ {"name": "scroll-bottom", "actions": [["scroll", "#storybook-root .atmr-tablegrid__layout", 0, 100000], ["wait", 300]]},
+ {"name": "click-load-more", "actions": [["scroll", "#storybook-root .atmr-tablegrid__layout", 0, 100000], ["wait", 300], ["click", "text=Загрузить ещё"], ["wait", 500]]},
+ {"name": "loaded", "actions": [["scroll", "#storybook-root .atmr-tablegrid__layout", 0, 100000], ["wait", 300], ["click", "text=Загрузить ещё"], ["wait", 2800]]}
+]}

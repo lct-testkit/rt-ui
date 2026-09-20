@@ -1,0 +1,11 @@
+{"states": [
+  {"name": "inline-hover-button-1", "actions": [["hover", ".atmr-inline-notification__actions button >> nth=0"]]},
+  {"name": "inline-hover-button-2", "actions": [["hover", ".atmr-inline-notification__actions button >> nth=1"]]},
+  {"name": "inline-hover-close", "actions": [["hover", ".atmr-inline-notification__close button"]]},
+  {"name": "inline-tab-2", "actions": [["press", "Tab"], ["press", "Tab"]]},
+  {"name": "inline-tab-close", "actions": [["press", "Tab"], ["press", "Tab"], ["press", "Tab"]]},
+  {"name": "inline-click-button", "actions": [["click", ".atmr-inline-notification__actions button >> nth=0"], ["wait", 300]]},
+  {"name": "inline-close", "actions": [["click", ".atmr-inline-notification__close button"], ["wait", 700]]},
+  {"name": "inline-close-kbd", "actions": [["focus", ".atmr-inline-notification__close button"], ["press", "Enter"], ["wait", 700]]},
+  {"name": "inline-close-space", "actions": [["focus", ".atmr-inline-notification__close button"], ["press", "Space"], ["wait", 700]]}
+]}

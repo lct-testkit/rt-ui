@@ -1,0 +1,37 @@
+/* story-only CSS of patterns-recipes-topmenu-topmenu--top-menu-story (copied 1:1 from the reference) */
+.atmr-top-menu--story-base .atmr-top-menu__product-tabs {
+  width: auto;
+}
+
+.atmr-top-menu--story-base .atmr-top-menu__brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.atmr-top-menu--story-base .atmr-top-menu__brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .atmr-functionbutton {
+    height: 20px;
+  }
+
+  .atmr-top-menu__brand-sub-header {
+    color: var(--atmr-fg-muted);
+  }
+}
+
+.atmr-top-menu--story-base .atmr-top-menu__profile-prefix {
+  display: flex;
+  align-items: center;
+}
+
+.atmr-top-menu--story-base .atmr-tabs-group__tabs::after,
+.atmr-top-menu--story-base .atmr-tabs-group_tabs::after,
+.atmr-top-menu--story-base .atmr-tabs-group--border .atmr-tabs-group__tabs::after,
+.atmr-top-menu--story-base .atmr-tabs-group--border .atmr-tabs-group_tabs::after {
+  content: none !important;
+  display: none !important;
+}

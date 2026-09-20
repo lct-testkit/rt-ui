@@ -1,0 +1,222 @@
+{
+ "states": [
+  {
+   "name": "click-row1",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__row >> nth=1 >> .atmr-tablegrid__cell >> nth=1"
+    ],
+    [
+     "wait",
+     120
+    ],
+    [
+     "hover",
+     "#storybook-root .atmr-tablegrid__row >> nth=5 >> label.atmr-checkbox"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "click-row3",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__row >> nth=3 >> .atmr-tablegrid__cell >> nth=2"
+    ],
+    [
+     "wait",
+     120
+    ],
+    [
+     "hover",
+     "#storybook-root .atmr-tablegrid__row >> nth=5 >> label.atmr-checkbox"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "click-row2-selected",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__row >> nth=2 >> .atmr-tablegrid__cell >> nth=2"
+    ],
+    [
+     "wait",
+     120
+    ],
+    [
+     "hover",
+     "#storybook-root .atmr-tablegrid__row >> nth=5 >> label.atmr-checkbox"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "toggle-row-twice",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__row >> nth=4 >> .atmr-tablegrid__cell >> nth=1"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__row >> nth=4 >> .atmr-tablegrid__cell >> nth=1"
+    ],
+    [
+     "wait",
+     120
+    ],
+    [
+     "hover",
+     "#storybook-root .atmr-tablegrid__row >> nth=5 >> label.atmr-checkbox"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "dblclick-row",
+   "actions": [
+    [
+     "dblclick",
+     "#storybook-root .atmr-tablegrid__row >> nth=5 >> .atmr-tablegrid__cell >> nth=1"
+    ],
+    [
+     "wait",
+     120
+    ],
+    [
+     "hover",
+     "#storybook-root .atmr-tablegrid__row >> nth=5 >> label.atmr-checkbox"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "hover-row",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-tablegrid__row >> nth=2 >> .atmr-tablegrid__cell >> nth=1"
+    ]
+   ]
+  },
+  {
+   "name": "hover-highlighted-row",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__row >> nth=1 >> .atmr-tablegrid__cell >> nth=1"
+    ],
+    [
+     "wait",
+     120
+    ],
+    [
+     "hover",
+     "#storybook-root .atmr-tablegrid__row >> nth=1 >> .atmr-tablegrid__cell >> nth=2"
+    ],
+    [
+     "hover",
+     "#storybook-root .atmr-tablegrid__row >> nth=5 >> label.atmr-checkbox"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "check-row4",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__row >> nth=4 >> label.atmr-checkbox"
+    ],
+    [
+     "wait",
+     120
+    ],
+    [
+     "hover",
+     "#storybook-root .atmr-tablegrid__row >> nth=5 >> label.atmr-checkbox"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "select-all",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__row >> nth=0 >> label.atmr-checkbox"
+    ],
+    [
+     "wait",
+     120
+    ],
+    [
+     "hover",
+     "#storybook-root .atmr-tablegrid__row >> nth=5 >> label.atmr-checkbox"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "check-and-click",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__row >> nth=3 >> label.atmr-checkbox"
+    ],
+    [
+     "wait",
+     120
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__row >> nth=3 >> .atmr-tablegrid__cell >> nth=2"
+    ],
+    [
+     "wait",
+     120
+    ],
+    [
+     "hover",
+     "#storybook-root .atmr-tablegrid__row >> nth=5 >> label.atmr-checkbox"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  }
+ ]
+}

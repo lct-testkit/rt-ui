@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "hover-field", "actions": [["hover", "#storybook-root .atmr-input--multiselect"], ["wait", 100]]},
+  {"name": "hover-tag", "actions": [["hover", "#storybook-root .atmr-tagitem"], ["wait", 100]]},
+  {"name": "hover-chevron", "actions": [["hover", "#storybook-root .atmr-dropdown__trigger-icon"], ["wait", 100]]},
+  {"name": "click-tag", "actions": [["click", "#storybook-root .atmr-tagitem"], ["wait", 300]]}
+]}

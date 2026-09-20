@@ -1,0 +1,77 @@
+/* Story-only CSS of stories/Tooltip (design/reference-css/25020bb920.css), nesting flattened */
+.placements_container {
+	width: 500px;
+}
+.placements_container .siderow {
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+}
+.placements_container .centralrow {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+	align-items: flex-end;
+}
+.placements_container .centralrow .leftcolumn,
+.placements_container .centralrow .rightcolumn {
+	flex-basis: 50%;
+	flex-grow: 0;
+	max-width: 50%;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	width: 100%;
+	flex-wrap: wrap;
+}
+.placements_container .centralrow .rightcolumn {
+	align-items: flex-end;
+}
+
+.tooltip-autowidth-row {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 64px;
+}
+
+.tooltip-autowidth-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--atmr-spacing-4x);
+}
+
+.tooltip-custom-content {
+	display: flex;
+	flex-direction: column;
+	gap: var(--atmr-spacing-0-5x);
+	width: 100%;
+}
+
+.tooltip-custom-content-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.tooltip-custom-content-description {
+	color: var(--atmr-fg-soft);
+}
+
+/* 93c58ff8a0 */
+.description {
+	display: flex;
+	align-items: flex-end;
+}
+.description .description__text {
+	margin: 0;
+}
+.description .description__copy {
+	margin-left: var(--atmr-spacing-2x);
+}

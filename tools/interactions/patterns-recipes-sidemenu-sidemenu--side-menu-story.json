@@ -1,0 +1,402 @@
+{
+ "states": [
+  {
+   "name": "hide-menu",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     500
+    ]
+   ]
+  },
+  {
+   "name": "hide-show-menu",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     500
+    ]
+   ]
+  },
+  {
+   "name": "collapse-open",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__collapse-trigger"
+    ],
+    [
+     "wait",
+     700
+    ]
+   ]
+  },
+  {
+   "name": "collapse-open-select",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__collapse-trigger"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__collapse-content li >> nth=1"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "collapse-open-close",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__collapse-trigger"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__collapse-trigger"
+    ],
+    [
+     "wait",
+     700
+    ]
+   ]
+  },
+  {
+   "name": "search-typed",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "ин"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "search-empty",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "zzz"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hover-item",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-side-menu__content > li >> nth=1"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-selected-trigger",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-side-menu__collapse-trigger"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-footer-notification",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .footer__notification >> nth=0"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-profile",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .item--hover-profile"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-profile-signout",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .item--hover-profile .atmr-list-item__suffix"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-support",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-side-menu__utility-support"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "click-switch",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-switch"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "click-item",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__content > li >> nth=0"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hide-hover-collapse-leave",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "hover",
+     "#storybook-root .atmr-side-menu__collapse-popover-host"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "mouse",
+     900,
+     500
+    ],
+    [
+     "wait",
+     500
+    ]
+   ]
+  },
+  {
+   "name": "hide-click-item",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__content .atmr-popover__root >> nth=3"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "hide-hover-notification",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "hover",
+     "#storybook-root .footer__notification >> nth=0"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hide-hover-profile",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "hover",
+     "#storybook-root .item--hover-profile"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hide-search-icon-hover",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "hover",
+     "#storybook-root .atmr-side-menu__search"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hide-show-search",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "хук"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "tab-focus-3",
+   "actions": [
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  }
+ ]
+}

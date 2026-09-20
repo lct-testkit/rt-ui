@@ -1,0 +1,62 @@
+{
+ "states": [
+  {
+   "name": "typed-s",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "4111"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-l",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=2"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=2",
+     "5555555555554444"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-m-blur",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=1"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=1",
+     "4111"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  }
+ ]
+}

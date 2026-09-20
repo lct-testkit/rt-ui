@@ -1,0 +1,308 @@
+{
+ "states": [
+  {
+   "name": "kbd-2-right",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=0"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-2-second-right",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=1"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-2-second-left-clamped",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=1"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-3-mid-right",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=3"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-3-mid-left-clamped",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=3"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-3-last-end",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=4"
+    ],
+    [
+     "press",
+     "End"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-3-first-home",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=2"
+    ],
+    [
+     "press",
+     "Home"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "click-track-0",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-slider__track >> nth=0"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "click-dot-9-3",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-slider >> nth=1 >> .atmr-slider__track-dot >> nth=8"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "click-dot-2-3",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-slider >> nth=1 >> .atmr-slider__track-dot >> nth=1"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "click-dot-5-3",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-slider >> nth=1 >> .atmr-slider__track-dot >> nth=4"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "click-dot-9-2",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-slider >> nth=0 >> .atmr-slider__track-dot >> nth=8"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "click-dot-2-2",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-slider >> nth=0 >> .atmr-slider__track-dot >> nth=1"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "tab-x3",
+   "actions": [
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "tab-x5",
+   "actions": [
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "shift-tab",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=4"
+    ],
+    [
+     "press",
+     "Shift+Tab"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  }
+ ]
+}

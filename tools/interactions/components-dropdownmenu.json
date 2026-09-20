@@ -1,0 +1,5 @@
+{"states": [
+  {"name": "kbd", "actions": [["press", "Tab"], ["press", "ArrowDown"], ["press", "ArrowDown"], ["press", "Enter"], ["wait", 200], ["press", "Escape"], ["wait", 200]]},
+  {"name": "scroll-list", "actions": [["scroll", "#storybook-root .atmr-dropdown-menu .atmr-scroll-bar", 0, 90], ["wait", 300]]},
+  {"name": "scroll-list-end", "actions": [["scroll", "#storybook-root .atmr-dropdown-menu .atmr-scroll-bar", 0, 100000], ["wait", 300]]}
+]}

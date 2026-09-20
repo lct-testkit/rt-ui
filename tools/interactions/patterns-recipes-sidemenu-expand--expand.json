@@ -1,0 +1,157 @@
+{
+ "states": [
+  {
+   "name": "expand-click",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__expand"
+    ],
+    [
+     "wait",
+     800
+    ]
+   ]
+  },
+  {
+   "name": "expand-collapse",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__expand"
+    ],
+    [
+     "wait",
+     800
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__expand"
+    ],
+    [
+     "wait",
+     800
+    ]
+   ]
+  },
+  {
+   "name": "expand-hover-extra",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__expand"
+    ],
+    [
+     "wait",
+     800
+    ],
+    [
+     "hover",
+     "#storybook-root .atmr-side-menu__expand-content .atmr-side-menu__item >> nth=3"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hide-menu",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     500
+    ]
+   ]
+  },
+  {
+   "name": "hide-menu-expand",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__expand"
+    ],
+    [
+     "wait",
+     800
+    ]
+   ]
+  },
+  {
+   "name": "expand-hide-menu",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__expand"
+    ],
+    [
+     "wait",
+     800
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     600
+    ]
+   ]
+  },
+  {
+   "name": "hover-expand",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-side-menu__expand"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-item",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-side-menu__content > li >> nth=1"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "kbd-expand-tab",
+   "actions": [
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  }
+ ]
+}

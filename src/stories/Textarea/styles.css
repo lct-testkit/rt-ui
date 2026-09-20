@@ -1,0 +1,12 @@
+/* stories-app/src/stories/Textarea/style.css (design/reference-css/5318358e5a.css) */
+.textarea-story {
+	textarea {
+		min-width: 256px;
+	}
+}
+
+.textarea-story__one-row {
+	.atmr-input__container {
+		min-height: unset !important;
+	}
+}

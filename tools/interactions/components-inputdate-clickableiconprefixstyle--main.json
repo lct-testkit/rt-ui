@@ -1,0 +1,99 @@
+{
+ "states": [
+  {
+   "name": "icon-open",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "prefix-hover",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-input__prefix"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "prefix-click",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-input__prefix"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "pick-day",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     ".atmr-popover--inputDate .atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=9"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "mouse",
+     5,
+     5
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "type-valid",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "type",
+     "#storybook-root input[name=df]",
+     "15032026"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  }
+ ]
+}

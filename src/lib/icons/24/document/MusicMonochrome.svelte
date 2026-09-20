@@ -1,0 +1,11 @@
+<script lang="ts">
+	import Base from '../../Icon.svelte';
+	let props: Record<string, any> = $props();
+	const fill = $derived(props.fill === undefined ? ("var(--atmr-status-06-container-default)") : props.fill);
+	const secondaryColor = $derived(props.secondaryColor === undefined ? ("var(--atmr-status-06-on-container)") : props.secondaryColor);
+</script>
+
+<Base {...props}>
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M4 4C4 2.89543 4.89543 2 6 2L13.4737 2C13.9944 2 14.4946 2.20306 14.8679 2.56601L19.3942 6.96654C19.7815 7.3431 20 7.86033 20 8.40053L20 20C20 21.1046 19.1046 22 18 22L6 22C4.89543 22 4 21.1046 4 20L4 4Z" {fill} />
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M11.3072 8.55375L11.9002 8.66595C13.3299 8.93647 14.4726 9.66293 14.9543 10.778C15.4196 11.8549 15.1739 13.0686 14.3546 14.1694C14.2722 14.2801 14.114 14.2957 14.0071 14.2083L13.2328 13.5755C13.1259 13.4882 13.1111 13.3309 13.1919 13.2189C13.7457 12.4503 13.7683 11.815 13.5773 11.3729C13.4252 11.0208 13.0845 10.6651 12.5107 10.4093L12.5107 15.2695L12.5054 15.2695C12.478 15.9542 11.826 16.6278 10.8914 16.8697C9.80281 17.1514 8.74295 16.7405 8.52417 15.952C8.3054 15.1635 9.01056 14.2959 10.0992 14.0142C10.4118 13.9333 10.7221 13.9095 11.0107 13.9354L11.0107 9.40287L11.0107 8.79939C11.0107 8.64269 11.1532 8.52462 11.3072 8.55375Z" fill={secondaryColor} />
+</Base>

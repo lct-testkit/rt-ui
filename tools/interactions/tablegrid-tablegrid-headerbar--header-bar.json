@@ -1,0 +1,57 @@
+{
+ "states": [
+  {
+   "name": "search-type",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "abc"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "hover-row",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-tablegrid__row >> nth=2 >> .atmr-tablegrid__cell >> nth=1"
+    ]
+   ]
+  },
+  {
+   "name": "click-row",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__row >> nth=3 >> .atmr-tablegrid__cell >> nth=1"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-tab-search",
+   "actions": [
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ]
+   ]
+  }
+ ]
+}

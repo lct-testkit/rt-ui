@@ -1,0 +1,11 @@
+{"states": [
+  {"name": "step-next-prev", "actions": [["click", "#storybook-root .atmr-stepper__button--next"], ["wait", 150], ["click", "#storybook-root .atmr-stepper__button--prev"], ["wait", 150]]},
+  {"name": "step-prev", "actions": [["click", "#storybook-root .atmr-stepper__button--prev"], ["wait", 150]]},
+  {"name": "expand-first-tree", "actions": [["click", "#storybook-root .atmr-tree__button-expand >> nth=0"], ["wait", 150]]},
+  {"name": "select-first-tree", "actions": [["click", "#storybook-root p:text-is(\"parent 0-2\") >> nth=0"], ["wait", 150]]},
+  {"name": "virtual-scroll", "actions": [["scroll", ".ReactVirtualized__Grid", 0, 500], ["wait", 300]]},
+  {"name": "virtual-scroll-end", "actions": [["scroll", ".ReactVirtualized__Grid", 0, 100000], ["wait", 300]]},
+  {"name": "virtual-scroll-down-up", "actions": [["scroll", ".ReactVirtualized__Grid", 0, 900], ["wait", 300], ["scroll", ".ReactVirtualized__Grid", 0, -500], ["wait", 300]]},
+  {"name": "virtual-check-0", "actions": [["click", "#storybook-root .ReactVirtualized__Grid .atmr-checkbox >> nth=0"], ["wait", 150]]},
+  {"name": "third-tree-select", "actions": [["click", "#storybook-root p:text-is(\"parent 0-1\") >> nth=2"], ["wait", 150]]}
+]}

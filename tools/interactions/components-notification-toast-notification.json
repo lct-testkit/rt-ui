@@ -1,0 +1,19 @@
+{"states": [
+  {"name": "toast-shown", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 450]]},
+  {"name": "toast-tab-into", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 450], ["press", "Tab"]]},
+  {"name": "toast-tab-2", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 450], ["press", "Tab"], ["press", "Tab"]]},
+  {"name": "toast-tab-close", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 450], ["press", "Tab"], ["press", "Tab"], ["press", "Tab"]]},
+  {"name": "toast-hover-action", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 450], ["hover", ".atmr-toast-notification__actions button >> nth=0"]]},
+  {"name": "toast-hover-close", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 450], ["hover", ".atmr-toast-notification__close button"]]},
+  {"name": "toast-close", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 450], ["click", ".atmr-toast-notification__close button"], ["wait", 700]]},
+  {"name": "toast-close-kbd", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 450], ["focus", ".atmr-toast-notification__close button"], ["press", "Enter"], ["wait", 700]]},
+  {"name": "toast-action-click", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 450], ["click", ".atmr-toast-notification__actions button >> nth=1"], ["wait", 300]]},
+  {"name": "toast-autohide", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 5700]]},
+  {"name": "toast-stack-2", "actions": [["click", "#storybook-root button >> nth=-1"], ["wait", 100], ["click", "#storybook-root button >> nth=-1"], ["wait", 450]]},
+  {"name": "toast-stack-3", "actions": [["click", "#storybook-root button >> nth=-1"], ["wait", 100], ["click", "#storybook-root button >> nth=-1"], ["wait", 100], ["click", "#storybook-root button >> nth=-1"], ["wait", 450]]},
+  {"name": "toast-stack-4-max", "actions": [["click", "#storybook-root button >> nth=-1"], ["wait", 100], ["click", "#storybook-root button >> nth=-1"], ["wait", 100], ["click", "#storybook-root button >> nth=-1"], ["wait", 100], ["click", "#storybook-root button >> nth=-1"], ["wait", 700]]},
+  {"name": "toast-stack-5-wrap", "actions": [["click", "#storybook-root button >> nth=-1"], ["wait", 100], ["click", "#storybook-root button >> nth=-1"], ["wait", 100], ["click", "#storybook-root button >> nth=-1"], ["wait", 100], ["click", "#storybook-root button >> nth=-1"], ["wait", 100], ["click", "#storybook-root button >> nth=-1"], ["wait", 700]]},
+  {"name": "toast-stack-close-second", "actions": [["click", "#storybook-root button >> nth=-1"], ["wait", 100], ["click", "#storybook-root button >> nth=-1"], ["wait", 100], ["click", "#storybook-root button >> nth=-1"], ["wait", 500], ["click", ".atmr-toast-notification >> nth=1 >> .atmr-toast-notification__close button"], ["wait", 700]]},
+  {"name": "toast-stack-autohide-staggered", "actions": [["click", "#storybook-root button >> nth=-1"], ["wait", 2500], ["click", "#storybook-root button >> nth=-1"], ["wait", 3400]]},
+  {"name": "toast-again-after-close", "actions": [["click", "#storybook-root button >> nth=-1"], ["wait", 450], ["click", ".atmr-toast-notification__close button"], ["wait", 700], ["click", "#storybook-root button >> nth=-1"], ["wait", 450]]}
+]}

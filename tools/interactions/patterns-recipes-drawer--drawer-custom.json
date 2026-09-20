@@ -1,0 +1,23 @@
+{"states": [
+  {"name": "drawer-open", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500]]},
+  {"name": "close-icon", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer .atmr-closebutton"], ["wait", 600]]},
+  {"name": "overlay-click", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer__overlay"], ["wait", 600]]},
+  {"name": "escape", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["press", "Escape"], ["wait", 600]]},
+  {"name": "escape-when-closed", "actions": [["press", "Escape"], ["wait", 300]]},
+  {"name": "hover-close-icon", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["hover", ".atmr-drawer .atmr-closebutton"]]},
+  {"name": "hover-action-button", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["hover", ".atmr-drawer__footer button >> nth=0"]]},
+  {"name": "hover-cancel-button", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["hover", ".atmr-drawer__footer button >> nth=1"]]},
+  {"name": "tab-1", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["press", "Tab"]]},
+  {"name": "tab-2", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["press", "Tab"], ["press", "Tab"]]},
+  {"name": "tab-3", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["press", "Tab"], ["press", "Tab"], ["press", "Tab"]]},
+  {"name": "tab-4", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["press", "Tab"], ["press", "Tab"], ["press", "Tab"], ["press", "Tab"]]},
+  {"name": "input-focus", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer .atmr-input input"]]},
+  {"name": "input-type", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer .atmr-input input"], ["type", ".atmr-drawer .atmr-input input", "abc"]]},
+  {"name": "input-then-esc", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer .atmr-input input"], ["type", ".atmr-drawer .atmr-input input", "abc"], ["press", "Escape"], ["wait", 600]]},
+  {"name": "click-inside-content", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer__body p"], ["wait", 400]]},
+  {"name": "footer-click", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer__footer button >> nth=1"], ["wait", 400]]},
+  {"name": "reopen", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer .atmr-closebutton"], ["wait", 600], ["click", "#storybook-root button >> nth=0"], ["wait", 500]]},
+  {"name": "reopen-after-overlay", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer__overlay"], ["wait", 600], ["click", "#storybook-root button >> nth=0"], ["wait", 500]]},
+  {"name": "enter-key-opens", "actions": [["focus", "#storybook-root button >> nth=0"], ["press", "Enter"], ["wait", 500]]},
+  {"name": "space-key-opens", "actions": [["focus", "#storybook-root button >> nth=0"], ["press", "Space"], ["wait", 500]]}
+]}

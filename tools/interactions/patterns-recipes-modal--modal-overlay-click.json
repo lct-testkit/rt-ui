@@ -1,0 +1,10 @@
+{"states": [
+  {"name": "open-second", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400]]},
+  {"name": "overlay-click-first", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["click", "#storybook-root"], ["wait", 500]]},
+  {"name": "overlay-click-second", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400], ["click", "#storybook-root"], ["wait", 500]]},
+  {"name": "close-icon-first", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["click", ".atmr-modal .atmr-closebutton"], ["wait", 500]]},
+  {"name": "close-icon-second", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400], ["click", ".atmr-modal .atmr-closebutton"], ["wait", 500]]},
+  {"name": "esc-second", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400], ["press", "Escape"], ["wait", 500]]},
+  {"name": "hover-close-icon", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["hover", ".atmr-modal .atmr-closebutton"]]},
+  {"name": "focus-close-icon", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400], ["focus", ".atmr-modal .atmr-closebutton"], ["press", "Enter"], ["wait", 500]]}
+]}

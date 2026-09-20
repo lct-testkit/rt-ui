@@ -1,0 +1,34 @@
+/* Story-only CSS of the Modal stories (design/reference-css/1c01b47b15.css), loaded globally by the React Storybook, nesting flattened. */
+.atmr-modal {
+	padding: 32px;
+	border-radius: 8px;
+}
+.atmr-modal__content {
+	display: flex;
+	flex-direction: column;
+	row-gap: 32px;
+	width: 100%;
+	height: 100%;
+}
+.atmr-modal__content .atmr-input {
+	width: 100%;
+}
+.atmr-modal__header {
+	display: flex;
+	align-items: center;
+	column-gap: 16px;
+}
+.atmr-modal__actions {
+	display: flex;
+	flex: 1 1 auto;
+	justify-content: flex-end;
+}
+.atmr-modal__body {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+}
+.atmr-modal__footer {
+	display: flex;
+	column-gap: 12px;
+}

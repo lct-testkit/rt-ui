@@ -1,0 +1,165 @@
+/* TopMenu (root, containers, profile, utilities/navigation icons, brand icon) - component rules.
+ *
+ * ORIGIN: the reference ui-kit ships NO stylesheet for TopMenu. These rules live in the Storybook app's
+ * stories/TopMenu/styles-common.css (design/reference-css/c5ec4ecdff.css) and are loaded there next to the stories, so a consumer of the
+ * original package had to copy them. Here they are part of the package (imported by index.css after side-menu.css = the same cascade
+ * position they had in the reference: after every ui-kit sheet). Story-only layout (.stories-main-top-menu*, the tabs padding tweak,
+ * .sb-show-main...) stays in src/stories/_utils/topMenuCommon.css. Extracted 1:1, do not restyle.
+ */
+.atmr-top-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--atmr-spacing-3x);
+  padding: 0 var(--atmr-spacing-2x);
+  border-radius: 0;
+  background: var(--atmr-bg-surface1);
+  border-bottom: 1px solid var(--atmr-border-muted);
+}
+
+.atmr-top-menu--floating {
+  border-radius: var(--atmr-border-radius-full);
+  box-shadow: var(--atmr-shadow-bottom-l);
+  border-bottom: none;
+}
+
+.atmr-top-menu__navigation-container,
+.atmr-top-menu__brand-container,
+.atmr-top-menu__actions-container,
+.atmr-top-menu__utilities-container {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--atmr-spacing-1x);
+  padding: var(--atmr-spacing-0-5x);
+
+  cursor: pointer;
+}
+
+.atmr-top-menu__profile-container {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--atmr-spacing-2x);
+}
+
+.atmr-top-menu__product-container {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.atmr-top-menu__product-container--align-center {
+  justify-content: center;
+}
+
+.atmr-top-menu__product-container--align-right {
+  justify-content: flex-end;
+}
+
+.atmr-top-menu__product-container--align-stretch {
+  justify-content: center;
+}
+
+.atmr-top-menu__product-container--align-stretch > * {
+  width: 100%;
+}
+
+.atmr-top-menu__profile-avatar {
+  display: block;
+  object-fit: cover;
+}
+
+.atmr-top-menu__profile-avatar--round {
+  border-radius: var(--atmr-border-radius-full);
+}
+
+.atmr-top-menu__profile-avatar--soft {
+  border-radius: var(--atmr-border-radius-s);
+}
+
+.atmr-top-menu__profile-container {
+  cursor: pointer;
+  padding: var(--atmr-spacing-0-5x);
+}
+
+.atmr-top-menu__profile-container:has(.atmr-top-menu__profile-text:hover),
+.atmr-top-menu__profile-container:has(.atmr-top-menu__profile-prefix:hover) {
+  .atmr-top-menu__profile-prefix {
+    background-color: var(--atmr-border-muted);
+    outline: 2px solid var(--atmr-border-muted);
+  }
+}
+
+.atmr-top-menu__profile-prefix:has(.atmr-top-menu__profile-avatar--round) {
+  border-radius: var(--atmr-border-radius-full);
+}
+
+.atmr-top-menu__profile-prefix:has(.atmr-top-menu__profile-avatar--soft) {
+  border-radius: var(--atmr-border-radius-s);
+}
+
+.atmr-top-menu__utilities-icon,
+.atmr-top-menu__navigation-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--atmr-border-radius-m);
+  cursor: pointer;
+}
+
+.atmr-top-menu__utilities-icon svg,
+.atmr-top-menu__navigation-icon svg {
+  fill: var(--atmr-fg-soft);
+}
+
+.atmr-top-menu__utilities-icon:hover,
+.atmr-top-menu__navigation-icon:hover {
+  background: var(--atmr-neutral-container-soft);
+}
+
+.atmr-top-menu__utilities-icon:hover svg,
+.atmr-top-menu__navigation-icon:hover svg {
+  fill: var(--atmr-fg-default);
+}
+
+.atmr-top-menu__utilities-icon:active,
+.atmr-top-menu__navigation-icon:active {
+  background: var(--atmr-neutral-container-default);
+}
+
+.atmr-top-menu__utilities-icon:active svg,
+.atmr-top-menu__navigation-icon:active svg {
+  fill: var(--atmr-fg-default);
+}
+
+.atmr-top-menu__brand-icon-container {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--atmr-border-radius-m);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--atmr-status-01-container-soft);
+}
+
+@media (max-width: 1024px) {
+  .atmr-top-menu {
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+
+  .atmr-top-menu__actions-container {
+    justify-content: center;
+  }
+
+  .atmr-top-menu__utilities-container,
+  .atmr-top-menu__profile-container {
+    margin-left: auto;
+  }
+}

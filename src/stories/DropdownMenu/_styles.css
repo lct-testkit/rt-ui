@@ -1,0 +1,41 @@
+/* Story-only CSS of stories/DropdownMenu/styles.css (design/reference-css/c9af4849e2.css) */
+.atmr-dropdown-menu-root.--stories .atmr-dropdown-menu {
+	width: 300px;
+	overflow: hidden;
+	position: absolute;
+	height: unset;
+}
+.atmr-dropdown-menu-root.--stories-main .atmr-dropdown-menu {
+	width: 300px;
+	overflow: auto;
+}
+.atmr-dropdown-menu-root.--stories-scroll .atmr-dropdown-menu {
+	width: 200px;
+	overflow: auto;
+}
+.atmr-dropdown-menu-root.--stories-custom .atmr-dropdown-menu {
+	width: 280px;
+	height: unset;
+	max-height: unset;
+}
+.atmr-dropdown-menu-root.--stories-custom .atmr-dropdown-menu__item {
+	align-items: center;
+}
+.atmr-dropdown-menu-root.--stories-custom .closeButton-story {
+	width: calc(100% - 24px);
+	margin: var(--atmr-spacing-3x);
+	margin-top: 0;
+}
+.atmr-dropdown-menu-root.--stories-custom [data-key='divider'] {
+	padding: 0 !important;
+}
+.dd-root {
+	width: 200px;
+}
+.placements-container-ddM {
+	margin: 20px 100px;
+	display: grid;
+	align-items: center;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+}

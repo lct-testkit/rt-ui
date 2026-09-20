@@ -1,0 +1,94 @@
+.stories-main-top-menu:has(.top-menu-site__stack) {
+  min-width: 1150px;
+}
+
+.top-menu-site__stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.atmr-top-menu--site-top {
+  padding-right: var(--atmr-spacing-4x);
+}
+
+.top-menu-site__stack > .atmr-top-menu--site-top,
+.top-menu-site__stack > .atmr-top-menu--site-sub {
+  border-bottom: 1px solid var(--atmr-border-muted);
+}
+
+.atmr-top-menu--site-top .atmr-top-menu__product-tabs {
+  width: auto;
+}
+
+/* TEMP */
+.atmr-top-menu--site-top .atmr-tabs-item {
+  padding: 6px 12px !important;
+
+  .atmr-tabs-item__text {
+    height: unset !important;
+  }
+}
+
+.atmr-top-menu--site-top .atmr-tabs-group__tabs::after,
+.atmr-top-menu--site-top .atmr-tabs-group_tabs::after,
+.atmr-top-menu--site-top .atmr-tabs-group--border .atmr-tabs-group__tabs::after,
+.atmr-top-menu--site-top .atmr-tabs-group--border .atmr-tabs-group_tabs::after {
+  content: none !important;
+  display: none !important;
+}
+
+.top-menu-site__function-buttons {
+  flex-wrap: nowrap;
+  gap: var(--atmr-spacing-4x);
+  min-width: 0;
+}
+
+.top-menu-site__function-buttons .atmr-functionbutton {
+  max-width: 280px;
+}
+
+.top-menu-site__function-buttons .atmr-functionbutton__label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.atmr-top-menu--site-sub .atmr-top-menu__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--atmr-spacing-1x);
+}
+
+.atmr-top-menu--site-sub .atmr-top-menu__product-tabs {
+  width: auto;
+}
+
+/* TEMP */
+.atmr-top-menu--site-sub .atmr-tabs-item {
+  padding: 16px 12px !important;
+}
+
+/* TEMP */
+.atmr-top-menu--site-sub .atmr-tabs-item.atmr-tabs-item--icon {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+
+.atmr-top-menu--site-sub .atmr-tabs-group__tabs::after,
+.atmr-top-menu--site-sub .atmr-tabs-group_tabs::after,
+.atmr-top-menu--site-sub .atmr-tabs-group--border .atmr-tabs-group__tabs::after,
+.atmr-top-menu--site-sub .atmr-tabs-group--border .atmr-tabs-group_tabs::after {
+  content: none !important;
+  display: none !important;
+}
+
+.atmr-top-menu--site-sub .atmr-top-menu__actions-container {
+  padding: var(--atmr-spacing-0-5x);
+}
+
+.top-menu-site__auth-buttons {
+  flex-wrap: nowrap;
+  gap: var(--atmr-spacing-1x);
+}

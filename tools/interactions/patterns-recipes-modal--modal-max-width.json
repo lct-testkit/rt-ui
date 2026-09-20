@@ -1,0 +1,9 @@
+{"states": [
+  {"name": "open-300", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400]]},
+  {"name": "open-80", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 400]]},
+  {"name": "overlay-click-300", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400], ["click", "#storybook-root"], ["wait", 500]]},
+  {"name": "overlay-click-80", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 400], ["click", "#storybook-root"], ["wait", 500]]},
+  {"name": "300-then-none", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400], ["press", "Escape"], ["wait", 500], ["click", "#storybook-root button >> nth=0"], ["wait", 400]]},
+  {"name": "80-then-300", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 400], ["press", "Escape"], ["wait", 500], ["click", "#storybook-root button >> nth=1"], ["wait", 400]]},
+  {"name": "esc-80", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 400], ["press", "Escape"], ["wait", 500]]}
+]}

@@ -1,0 +1,3 @@
+{"states": [
+  {"name": "hover-disabled", "actions": [["hover", "#storybook-root button"]]}
+]}

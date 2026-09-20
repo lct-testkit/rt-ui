@@ -1,0 +1,9 @@
+{"states": [
+  {"name": "next", "actions": [["click", "#storybook-root button[type='next']"], ["wait", 100]]},
+  {"name": "next-next-prev", "actions": [["click", "#storybook-root button[type='next']"], ["click", "#storybook-root button[type='next']"], ["click", "#storybook-root button[type='previous']"], ["wait", 100]]},
+  {"name": "page3", "actions": [["click", "#storybook-root button[page='3']"], ["wait", 100]]},
+  {"name": "page6-8", "actions": [["click", "#storybook-root button[page='6']"], ["click", "#storybook-root button[page='8']"], ["wait", 100]]},
+  {"name": "page13", "actions": [["click", "#storybook-root button[page='6']"], ["click", "#storybook-root button[page='8']"], ["click", "#storybook-root button[page='10']"], ["click", "#storybook-root button[page='12']"], ["click", "#storybook-root button[page='13']"], ["wait", 100]]},
+  {"name": "last", "actions": [["click", "#storybook-root button[page='15']"], ["wait", 100]]},
+  {"name": "last-hover-prev", "actions": [["click", "#storybook-root button[page='15']"], ["hover", "#storybook-root button[type='previous']"], ["wait", 100]]}
+]}

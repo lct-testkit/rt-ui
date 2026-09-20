@@ -1,0 +1,98 @@
+{
+ "states": [
+  {
+   "name": "hide-menu",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     500
+    ]
+   ]
+  },
+  {
+   "name": "hover-item",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-side-menu__content .atmr-side-menu__item >> nth=1"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-title",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-side-menu__title >> nth=0"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hide-hover-item",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "hover",
+     "#storybook-root .atmr-side-menu__content .atmr-side-menu__item >> nth=2"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hide-show-menu",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     500
+    ]
+   ]
+  },
+  {
+   "name": "click-item",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__content .atmr-side-menu__item >> nth=3"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  }
+ ]
+}

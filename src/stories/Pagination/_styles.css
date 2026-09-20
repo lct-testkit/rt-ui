@@ -1,0 +1,21 @@
+/* stories/Pagination/styles.css (imported by Pagination.stories.tsx, so it applies to every Pagination story) */
+.stories-items-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	margin-bottom: var(--atmr-spacing-3x);
+}
+
+#storybook-root {
+	width: 100%;
+	padding-bottom: 50px;
+	margin-left: 0px;
+	margin-right: 50px;
+}
+
+@media (max-width: 500px) {
+	#storybook-root {
+		margin-left: 0;
+		padding: 0;
+	}
+}

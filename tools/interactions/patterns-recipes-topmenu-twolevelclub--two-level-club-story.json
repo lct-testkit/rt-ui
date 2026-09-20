@@ -1,0 +1,137 @@
+{
+ "states": [
+  {
+   "name": "top-tab-click-1",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [role=tab] >> nth=1"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "top-tab-click-more",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [role=tab] >> nth=3"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "segment-click-2",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-segment >> nth=2"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "segment-hover-1",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-segment >> nth=1"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "segment-kbd",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-segment >> nth=0"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hover-nav-icon",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__navigation-icon"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-participate",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .top-menu-club__actions .atmr-button"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-profile",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__profile-container"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "tab-focus-4",
+   "actions": [
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  }
+ ]
+}

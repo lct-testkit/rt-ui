@@ -1,0 +1,11 @@
+{"states": [
+  {"name": "click-disabled", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=2"], ["wait", 150], ["mouse", 5, 5], ["wait", 150]]},
+  {"name": "hover-disabled", "actions": [["hover", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=2"], ["wait", 150]]},
+  {"name": "click-enabled-again", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar__item--focusedFirst .atmr-calendar__inner"], ["wait", 150], ["mouse", 5, 5], ["wait", 150]]},
+  {"name": "next-month", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar-header__button >> nth=1"], ["wait", 150]]},
+  {"name": "next-pick-second", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar-header__button >> nth=1"], ["wait", 150], ["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar__item:not(.atmr-calendar__item--empty):not(.atmr-calendar__item--disabled) .atmr-calendar__inner >> nth=9"], ["wait", 150], ["mouse", 5, 5], ["wait", 150]]},
+  {"name": "next-pick-hover", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar-header__button >> nth=1"], ["wait", 150], ["hover", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar__item:not(.atmr-calendar__item--empty):not(.atmr-calendar__item--disabled) .atmr-calendar__inner >> nth=9"], ["wait", 150]]},
+  {"name": "pick-second-then-back", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar-header__button >> nth=1"], ["wait", 150], ["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar__item:not(.atmr-calendar__item--empty):not(.atmr-calendar__item--disabled) .atmr-calendar__inner >> nth=9"], ["wait", 150], ["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar-header__button >> nth=0"], ["wait", 150]]},
+  {"name": "prev-month", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar-header__button >> nth=0"], ["wait", 150]]},
+  {"name": "month-list", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar-header__item--month"], ["wait", 150]]}
+]}

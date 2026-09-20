@@ -1,0 +1,10 @@
+{"states": [
+  {"name": "open-secondary", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400]]},
+  {"name": "open-none", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 400]]},
+  {"name": "overlay-click-primary", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["click", "#storybook-root"], ["wait", 500]]},
+  {"name": "overlay-click-secondary", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400], ["click", "#storybook-root"], ["wait", 500]]},
+  {"name": "overlay-click-none", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 400], ["click", "#storybook-root"], ["wait", 500]]},
+  {"name": "secondary-then-primary", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400], ["press", "Escape"], ["wait", 500], ["click", "#storybook-root button >> nth=0"], ["wait", 400]]},
+  {"name": "primary-then-none", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["press", "Escape"], ["wait", 500], ["click", "#storybook-root button >> nth=2"], ["wait", 400]]},
+  {"name": "none-then-secondary", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 400], ["press", "Escape"], ["wait", 500], ["click", "#storybook-root button >> nth=1"], ["wait", 400]]}
+]}

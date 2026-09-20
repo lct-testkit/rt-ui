@@ -1,0 +1,194 @@
+{
+ "states": [
+  {
+   "name": "kbd-invest-right-x3",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=0"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-video-right-x3",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=1"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-video-end",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=1"
+    ],
+    [
+     "press",
+     "End"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-video-pageup",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=1"
+    ],
+    [
+     "press",
+     "PageUp"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-video-shift-right",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=1"
+    ],
+    [
+     "press",
+     "Shift+ArrowRight"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-video-ctrl-right",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=1"
+    ],
+    [
+     "press",
+     "Control+ArrowRight"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "click-track-video",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-slider__track >> nth=1"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "click-dot-video-4mbps",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-slider >> nth=1 >> .atmr-slider__track-dot >> nth=15"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "hover-track-video",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-slider__track >> nth=1"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-invest-right-x5",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=0"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+#storybook-root {
+  width: auto;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+
+  color: var(--atmr-fg-default);
+}
+
+.sb-story-unstyled > div,
+.sb-story > div {
+  width: auto;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 5%;
+}
+
+.docblock-source.sb-unstyled {
+  background: #f9fafb;
+}

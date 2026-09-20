@@ -1,0 +1,19 @@
+{"states": [
+  {"name": "hover-field", "actions": [["hover", "#storybook-root .atmr-input--multiselect"], ["wait", 100]]},
+  {"name": "hover-chevron", "actions": [["hover", "#storybook-root .atmr-dropdown__trigger-icon"], ["wait", 100]]},
+  {"name": "tab-x2", "actions": [["press", "Tab"], ["press", "Tab"], ["wait", 100]]},
+  {"name": "tab-x3", "actions": [["press", "Tab"], ["press", "Tab"], ["press", "Tab"], ["wait", 100]]},
+  {"name": "kbd-chevron-enter", "actions": [["focus", "#storybook-root .atmr-dropdown__trigger-icon"], ["press", "Enter"], ["wait", 300]]},
+  {"name": "kbd-chevron-enter-twice", "actions": [["focus", "#storybook-root .atmr-dropdown__trigger-icon"], ["press", "Enter"], ["wait", 300], ["press", "Enter"], ["wait", 300]]},
+  {"name": "kbd-chevron-space", "actions": [["focus", "#storybook-root .atmr-dropdown__trigger-icon"], ["press", "Space"], ["wait", 300]]},
+  {"name": "kbd-tag-close-enter", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 200], ["click", ".atmr-dropdown-menu__item >> nth=5"], ["wait", 200], ["focus", "#storybook-root .atmr-tagitem__closebutton >> nth=0"], ["press", "Enter"], ["wait", 300]]},
+  {"name": "esc-open", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 300], ["press", "Escape"], ["wait", 300]]},
+  {"name": "select-hover-selected", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 200], ["hover", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 100]]},
+  {"name": "click-disabled-item", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=4"], ["wait", 300]]},
+  {"name": "click-title-item", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=0"], ["wait", 300]]},
+  {"name": "click-divider-item", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=2"], ["wait", 300]]},
+  {"name": "click-item-with-suffix", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=1"], ["wait", 300]]},
+  {"name": "click-item-suffix-button", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 300], ["click", ".atmr-dropdown-menu__suffix button"], ["wait", 300]]},
+  {"name": "type-e-hover-item", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 200], ["type", "#storybook-root .atmr-taginput", "e"], ["wait", 200], ["hover", ".atmr-dropdown-menu__item >> nth=1"], ["wait", 100]]},
+  {"name": "type-enter-selected-again", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 200], ["type", "#storybook-root .atmr-taginput", "Polymer"], ["press", "Enter"], ["wait", 200], ["press", "Enter"], ["wait", 300]]}
+]}

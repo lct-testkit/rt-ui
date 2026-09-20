@@ -1,0 +1,12 @@
+{"states": [
+ {"name": "check-row0", "actions": [["click", "#storybook-root .atmr-checkbox >> nth=1"], ["wait", 200]]},
+ {"name": "uncheck-nested", "actions": [["click", "#storybook-root .atmr-checkbox >> nth=3"], ["wait", 200]]},
+ {"name": "header-select-all", "actions": [["click", "#storybook-root .atmr-checkbox >> nth=0"], ["wait", 200]]},
+ {"name": "header-select-all-clear", "actions": [["click", "#storybook-root .atmr-checkbox >> nth=0"], ["wait", 200], ["click", "#storybook-root .atmr-checkbox >> nth=0"], ["wait", 200]]},
+ {"name": "expand-row4", "actions": [["click", "#storybook-root .atmr-tablegrid__expand__icon[role=button] >> nth=2"], ["wait", 250]]},
+ {"name": "expand-row4-check", "actions": [["click", "#storybook-root .atmr-tablegrid__expand__icon[role=button] >> nth=2"], ["wait", 250], ["click", "#storybook-root .atmr-checkbox >> nth=10"], ["wait", 200]]},
+ {"name": "expand-nested-a1", "actions": [["click", "#storybook-root .atmr-tablegrid__expand__icon[role=button] >> nth=1"], ["wait", 250]]},
+ {"name": "expand-nested-a1-check", "actions": [["click", "#storybook-root .atmr-tablegrid__expand__icon[role=button] >> nth=1"], ["wait", 250], ["click", "#storybook-root .atmr-checkbox >> nth=5"], ["wait", 200]]},
+ {"name": "collapse-row1", "actions": [["click", "#storybook-root .atmr-tablegrid__expand__icon[role=button] >> nth=0"], ["wait", 250]]},
+ {"name": "hover-expander", "actions": [["hover", "#storybook-root .atmr-tablegrid__expand__icon[role=button] >> nth=2"]]}
+]}

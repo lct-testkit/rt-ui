@@ -1,0 +1,12 @@
+{"states": [
+  {"name": "more-open", "actions": [["click", "#storybook-root .atmr-breadcrumbs__dividermenu"], ["wait", 350]]},
+  {"name": "more-toggle-closed", "actions": [["click", "#storybook-root .atmr-breadcrumbs__dividermenu"], ["wait", 200], ["click", "#storybook-root .atmr-breadcrumbs__dividermenu"], ["wait", 350]]},
+  {"name": "more-choose", "actions": [["click", "#storybook-root .atmr-breadcrumbs__dividermenu"], ["wait", 350], ["click", ".atmr-dropdown-menu__item >> nth=1"], ["wait", 400]]},
+  {"name": "more-outside", "actions": [["click", "#storybook-root .atmr-breadcrumbs__dividermenu"], ["wait", 350], ["click", "html"], ["wait", 300]]},
+  {"name": "more-hover-item", "actions": [["click", "#storybook-root .atmr-breadcrumbs__dividermenu"], ["wait", 350], ["hover", ".atmr-dropdown-menu__item >> nth=2"], ["wait", 200]]},
+  {"name": "more-kbd-enter", "actions": [["focus", "#storybook-root .atmr-breadcrumbs__dividermenu"], ["press", "Enter"], ["wait", 350]]},
+  {"name": "hover-more", "actions": [["hover", "#storybook-root .atmr-breadcrumbs__dividermenu"], ["wait", 200]]},
+  {"name": "hover-crumb", "actions": [["hover", "#storybook-root .atmr-breadcrumbs__item >> nth=1"], ["wait", 200]]},
+  {"name": "hover-current", "actions": [["hover", "#storybook-root .atmr-breadcrumbs__item >> nth=2"], ["wait", 200]]},
+  {"name": "tab-chain", "actions": [["press", "Tab"], ["press", "Tab"], ["press", "Tab"], ["wait", 150]]}
+]}

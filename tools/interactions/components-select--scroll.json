@@ -1,0 +1,7 @@
+{"states": [
+  {"name": "open-scroll", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["scroll", ".atmr-dropdown-menu ul", 0, 90], ["wait", 300]]},
+  {"name": "open-scroll-end", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["scroll", ".atmr-dropdown-menu ul", 0, 100000], ["wait", 300]]},
+  {"name": "scroll-select-last", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["scroll", ".atmr-dropdown-menu ul", 0, 100000], ["wait", 200], ["click", ".atmr-dropdown-menu__item >> nth=10"], ["wait", 300]]},
+  {"name": "type-cyrillic", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 200], ["type", "#storybook-root .atmr-select input", "ан"], ["wait", 300]]},
+  {"name": "type-cyrillic-select", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 200], ["type", "#storybook-root .atmr-select input", "ан"], ["wait", 200], ["click", ".atmr-dropdown-menu__item >> nth=1"], ["wait", 300]]}
+]}

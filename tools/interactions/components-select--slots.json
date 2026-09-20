@@ -1,0 +1,7 @@
+{"states": [
+  {"name": "chip-union", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu button >> nth=2"], ["wait", 300]]},
+  {"name": "footer-button-click", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu button >> nth=4"], ["wait", 300]]},
+  {"name": "select-employee", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=1"], ["wait", 300]]},
+  {"name": "chip-atomaro", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu button >> nth=1"], ["wait", 300]]},
+  {"name": "chip-kod", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu button >> nth=3"], ["wait", 300]]}
+]}

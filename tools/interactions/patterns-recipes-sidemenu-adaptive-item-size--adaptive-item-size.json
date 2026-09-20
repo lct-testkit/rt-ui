@@ -1,0 +1,156 @@
+{
+ "states": [
+  {
+   "name": "hide-menu",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     500
+    ]
+   ]
+  },
+  {
+   "name": "collapse-open",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__collapse-trigger"
+    ],
+    [
+     "wait",
+     700
+    ]
+   ]
+  },
+  {
+   "name": "collapse-open-select-truncate",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__collapse-trigger"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__item--truncate"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "collapse-open-close",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__collapse-trigger"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__collapse-trigger"
+    ],
+    [
+     "wait",
+     700
+    ]
+   ]
+  },
+  {
+   "name": "hide-hover-collapse",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "hover",
+     "#storybook-root .atmr-side-menu__collapse-popover-host"
+    ],
+    [
+     "wait",
+     500
+    ]
+   ]
+  },
+  {
+   "name": "hide-popover-select-truncate",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "hover",
+     "#storybook-root .atmr-side-menu__collapse-popover-host"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     ".atmr-side-menu__collapse-popover .atmr-side-menu__item--truncate"
+    ],
+    [
+     "wait",
+     500
+    ]
+   ]
+  },
+  {
+   "name": "hover-item",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-side-menu__content > li >> nth=1"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "open-collapse-hide-menu",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__collapse-trigger"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     600
+    ]
+   ]
+  }
+ ]
+}

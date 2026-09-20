@@ -1,0 +1,15 @@
+{"states": [
+  {"name": "right", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500]]},
+  {"name": "left", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 500]]},
+  {"name": "top", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 500]]},
+  {"name": "bottom", "actions": [["click", "#storybook-root button >> nth=3"], ["wait", 500]]},
+  {"name": "right-overlay-close", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer__overlay"], ["wait", 600]]},
+  {"name": "left-escape", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 500], ["press", "Escape"], ["wait", 600]]},
+  {"name": "top-overlay-close", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 500], ["click", ".atmr-drawer__overlay"], ["wait", 600]]},
+  {"name": "bottom-escape", "actions": [["click", "#storybook-root button >> nth=3"], ["wait", 500], ["press", "Escape"], ["wait", 600]]},
+  {"name": "right-then-left", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["press", "Escape"], ["wait", 600], ["click", "#storybook-root button >> nth=1"], ["wait", 500]]},
+  {"name": "top-then-bottom", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 500], ["click", ".atmr-drawer__overlay"], ["wait", 600], ["click", "#storybook-root button >> nth=3"], ["wait", 500]]},
+  {"name": "bottom-then-right", "actions": [["click", "#storybook-root button >> nth=3"], ["wait", 500], ["press", "Escape"], ["wait", 600], ["click", "#storybook-root button >> nth=0"], ["wait", 500]]},
+  {"name": "hover-button", "actions": [["hover", "#storybook-root button >> nth=1"]]},
+  {"name": "keyboard-open-right", "actions": [["focus", "#storybook-root button >> nth=0"], ["press", "Enter"], ["wait", 500]]}
+]}

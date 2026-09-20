@@ -1,0 +1,18 @@
+.stories-inputDate-calendarMode {
+  margin: 20px 100px;
+  display: grid;
+  align-items: center;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.stories-input-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--atmr-spacing-4x);
+}
+
+.atmr-input.atmr-input--primary.clickable-icon-prefix .atmr-input__prefix:hover svg {
+  fill: var(--atmr-input-primary-icon-color-hover);
+  cursor: pointer;
+}

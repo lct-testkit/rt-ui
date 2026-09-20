@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "type-clear", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 200], ["type", "#storybook-root .atmr-taginput", "e"], ["wait", 200], ["click", ".atmr-input__suffix.clear"], ["wait", 300]]},
+  {"name": "type-hover-clear", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 200], ["type", "#storybook-root .atmr-taginput", "e"], ["wait", 200], ["hover", ".atmr-input__suffix.clear"], ["wait", 100]]},
+  {"name": "select-type-clear", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 200], ["type", "#storybook-root .atmr-taginput", "me"], ["wait", 200], ["click", ".atmr-input__suffix.clear"], ["wait", 300]]},
+  {"name": "type-enter-clear", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 200], ["type", "#storybook-root .atmr-taginput", "Polymer"], ["press", "Enter"], ["wait", 200], ["click", ".atmr-input__suffix.clear"], ["wait", 300]]}
+]}

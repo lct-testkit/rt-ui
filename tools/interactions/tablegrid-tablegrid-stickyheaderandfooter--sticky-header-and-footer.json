@@ -1,0 +1,164 @@
+{
+ "states": [
+  {
+   "name": "scroll-y",
+   "actions": [
+    [
+     "scroll",
+     "#storybook-root .atmr-tablegrid__layout",
+     0,
+     150
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "scroll-x",
+   "actions": [
+    [
+     "scroll",
+     "#storybook-root .atmr-tablegrid__layout",
+     300,
+     0
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "scroll-xy",
+   "actions": [
+    [
+     "scroll",
+     "#storybook-root .atmr-tablegrid__layout",
+     300,
+     150
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "expand-first",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__expand__icon[role=button] >> nth=0"
+    ],
+    [
+     "wait",
+     250
+    ]
+   ]
+  },
+  {
+   "name": "expand-first-scroll",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__expand__icon[role=button] >> nth=0"
+    ],
+    [
+     "wait",
+     250
+    ],
+    [
+     "scroll",
+     "#storybook-root .atmr-tablegrid__layout",
+     200,
+     200
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "expand-nested-scroll",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__expand__icon[role=button] >> nth=0"
+    ],
+    [
+     "wait",
+     250
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__expand__icon[role=button] >> nth=1"
+    ],
+    [
+     "wait",
+     250
+    ],
+    [
+     "scroll",
+     "#storybook-root .atmr-tablegrid__layout",
+     0,
+     260
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "click-row-highlight",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__row >> nth=2 >> .atmr-tablegrid__cell >> nth=2"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "page-next",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-pagination button[type=next]"
+    ],
+    [
+     "wait",
+     250
+    ]
+   ]
+  },
+  {
+   "name": "page-size-open",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-pagination__container input"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hover-row",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-tablegrid__row >> nth=3 >> .atmr-tablegrid__cell >> nth=3"
+    ]
+   ]
+  }
+ ]
+}

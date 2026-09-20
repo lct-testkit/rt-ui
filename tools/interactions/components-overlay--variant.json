@@ -1,0 +1,11 @@
+{"states": [
+  {"name": "open-primary", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400]]},
+  {"name": "open-secondary", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400]]},
+  {"name": "open-primary-close", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["click", "body > .atmr-overlay"], ["wait", 400]]},
+  {"name": "open-secondary-close", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400], ["click", "body > .atmr-overlay"], ["wait", 400]]},
+  {"name": "reopen", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["click", "body > .atmr-overlay"], ["wait", 400], ["click", "#storybook-root button >> nth=1"], ["wait", 400]]},
+  {"name": "cancel-during-enter", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 100], ["click", "body > .atmr-overlay"], ["wait", 500]]},
+  {"name": "cancel-during-exit", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["click", "body > .atmr-overlay"], ["wait", 100], ["click", "#storybook-root button >> nth=0"], ["wait", 500]]},
+  {"name": "kbd-open", "actions": [["focus", "#storybook-root button >> nth=0"], ["press", "Enter"], ["wait", 400]]},
+  {"name": "hover-secondary", "actions": [["hover", "#storybook-root button >> nth=1"]]}
+]}

@@ -1,0 +1,22 @@
+/* EXTENSION — author's addition, NOT part of the original Rostelecom design system. Off by default. */
+/*
+ * LAYOUT-ONLY rules of the extension (independent of any motion): the opt-in `fullHeight` of DRAWER. Every rule needs the modifier class `rt-ext-drawer--full`
+ * that Drawer adds only when `fullHeight` is set, so without it nothing here matches and the original markup and pixels are untouched. Drawer.svelte imports
+ * this tiny file (and nothing else of the extension's CSS); the Modal part is `layout-modal.css`, the motion-only rules are in `ext.css`. No `atmr-*` rule is changed.
+ */
+
+/*
+ * Drawer `fullHeight` (author's opt-in, off by default): the original content panel is only as tall as its content (it hangs from the top of the
+ * `position: fixed; top: 0; bottom: 0` root). With `.rt-ext-drawer--full` on the root a left / right panel spans the whole viewport height and its
+ * content scrolls inside; a top / bottom panel spans the whole width. No `atmr-*` rule is changed: these only match when the class is present.
+ */
+.atmr-drawer.rt-ext-drawer--full.atmr-drawer--left .atmr-drawer__content,
+.atmr-drawer.rt-ext-drawer--full.atmr-drawer--right .atmr-drawer__content {
+	height: 100%;
+	overflow-y: auto;
+}
+.atmr-drawer.rt-ext-drawer--full.atmr-drawer--top .atmr-drawer__content,
+.atmr-drawer.rt-ext-drawer--full.atmr-drawer--bottom .atmr-drawer__content {
+	width: 100%;
+	overflow-y: auto;
+}

@@ -1,0 +1,8 @@
+.stories-main-side-menu {
+  height: 100%;
+  display: flex;
+  background-color: #f8f9fa;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

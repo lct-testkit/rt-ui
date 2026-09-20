@@ -1,0 +1,20 @@
+{"states": [
+  {"name": "drawer-open", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500]]},
+  {"name": "close-icon", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer .atmr-closebutton"], ["wait", 600]]},
+  {"name": "cancel-button", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer__footer button >> nth=1"], ["wait", 600]]},
+  {"name": "overlay-click", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer__overlay"], ["wait", 600]]},
+  {"name": "escape", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["press", "Escape"], ["wait", 600]]},
+  {"name": "select-open", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer .atmr-select"], ["wait", 400]]},
+  {"name": "select-open-hover-item", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer .atmr-select"], ["wait", 400], ["hover", ".atmr-dropdown-menu__item >> nth=2"], ["wait", 100]]},
+  {"name": "select-choose", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer .atmr-select"], ["wait", 400], ["click", ".atmr-dropdown-menu__item >> nth=2"], ["wait", 400]]},
+  {"name": "select-type", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer .atmr-select input"], ["type", ".atmr-drawer .atmr-select input", "са"], ["wait", 400]]},
+  {"name": "select-then-esc", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer .atmr-select"], ["wait", 400], ["press", "Escape"], ["wait", 600]]},
+  {"name": "city-click", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".cities-list__item >> nth=3"], ["wait", 300]]},
+  {"name": "city-hover", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["hover", ".cities-list__item >> nth=1"]]},
+  {"name": "city-click-then-select-open", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".cities-list__item >> nth=5"], ["wait", 300], ["click", ".atmr-drawer .atmr-select"], ["wait", 400]]},
+  {"name": "hover-locate-button", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["hover", ".atmr-drawer__footer button >> nth=0"]]},
+  {"name": "tab-1", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["press", "Tab"]]},
+  {"name": "tab-2", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["press", "Tab"], ["press", "Tab"]]},
+  {"name": "scroll-content", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["scroll", ".atmr-drawer__content", 0, 300], ["wait", 200]]},
+  {"name": "reopen", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".cities-list__item >> nth=2"], ["click", ".atmr-drawer .atmr-closebutton"], ["wait", 600], ["click", "#storybook-root button >> nth=0"], ["wait", 500]]}
+]}

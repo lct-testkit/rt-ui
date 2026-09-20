@@ -1,0 +1,10 @@
+{"states": [
+  {"name": "pos-topRight", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 450]]},
+  {"name": "pos-topCenter", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 450]]},
+  {"name": "pos-bottomLeft", "actions": [["click", "#storybook-root button >> nth=3"], ["wait", 450]]},
+  {"name": "pos-bottomRight", "actions": [["click", "#storybook-root button >> nth=4"], ["wait", 450]]},
+  {"name": "pos-bottomCenter", "actions": [["click", "#storybook-root button >> nth=5"], ["wait", 450]]},
+  {"name": "pos-bottomLeft-close", "actions": [["click", "#storybook-root button >> nth=3"], ["wait", 450], ["click", ".atmr-toast-notification__close button"], ["wait", 700]]},
+  {"name": "pos-two-containers", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 100], ["click", "#storybook-root button >> nth=4"], ["wait", 450]]},
+  {"name": "pos-bottom-three", "actions": [["click", "#storybook-root button >> nth=3"], ["click", "#storybook-root button >> nth=4"], ["click", "#storybook-root button >> nth=5"], ["wait", 500]]}
+]}

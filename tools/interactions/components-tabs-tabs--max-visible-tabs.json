@@ -1,0 +1,12 @@
+{"states": [
+  {"name": "overflow-open", "actions": [["click", "#storybook-root [aria-label=Ещё]"], ["wait", 350]]},
+  {"name": "overflow-toggle-closed", "actions": [["click", "#storybook-root [aria-label=Ещё]"], ["wait", 200], ["click", "#storybook-root [aria-label=Ещё]"], ["wait", 350]]},
+  {"name": "overflow-choose-first", "actions": [["click", "#storybook-root [aria-label=Ещё]"], ["wait", 350], ["click", ".atmr-dropdown-menu__item >> nth=0"], ["wait", 500]]},
+  {"name": "overflow-choose-last", "actions": [["click", "#storybook-root [aria-label=Ещё]"], ["wait", 350], ["click", ".atmr-dropdown-menu__item >> nth=2"], ["wait", 500]]},
+  {"name": "overflow-choose-then-reopen", "actions": [["click", "#storybook-root [aria-label=Ещё]"], ["wait", 350], ["click", ".atmr-dropdown-menu__item >> nth=1"], ["wait", 500], ["click", "#storybook-root [aria-label=Ещё]"], ["wait", 350]]},
+  {"name": "overflow-outside", "actions": [["click", "#storybook-root [aria-label=Ещё]"], ["wait", 350], ["click", "html"], ["wait", 300]]},
+  {"name": "overflow-hover-item", "actions": [["click", "#storybook-root [aria-label=Ещё]"], ["wait", 350], ["hover", ".atmr-dropdown-menu__item >> nth=1"], ["wait", 200]]},
+  {"name": "hover-more", "actions": [["hover", "#storybook-root [aria-label=Ещё]"], ["wait", 200]]},
+  {"name": "kbd-into-hidden", "actions": [["focus", "#storybook-root [role=tab] >> nth=4"], ["press", "ArrowRight"], ["wait", 150]]},
+  {"name": "kbd-more-space", "actions": [["focus", "#storybook-root [aria-label=Ещё]"], ["press", "Space"], ["wait", 350]]}
+]}

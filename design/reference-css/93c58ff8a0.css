@@ -1,0 +1,12 @@
+.description {
+  display: flex;
+  align-items: flex-end;
+
+  .description__text {
+    margin: 0;
+  }
+
+  .description__copy {
+    margin-left: var(--atmr-spacing-2x);
+  }
+}

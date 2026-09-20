@@ -1,0 +1,23 @@
+{"states": [
+  {"name": "expand-0-0", "actions": [["click", "#storybook-root .atmr-tree__button-expand >> nth=0"], ["wait", 150]]},
+  {"name": "expand-0-0-then-0-0-0", "actions": [["click", "#storybook-root .atmr-tree__button-expand >> nth=0"], ["wait", 150], ["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"child 0-0-0\")) .atmr-tree__button-expand >> nth=0"], ["wait", 150]]},
+  {"name": "expand-collapse-0-0", "actions": [["click", "#storybook-root .atmr-tree__button-expand >> nth=0"], ["wait", 150], ["click", "#storybook-root .atmr-tree__button-expand >> nth=0"], ["wait", 150]]},
+  {"name": "collapse-0-4", "actions": [["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"parent 0-4\")) .atmr-tree__button-expand >> nth=0"], ["wait", 150]]},
+  {"name": "expand-disabled-0-2", "actions": [["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"parent 0-2\")) .atmr-tree__button-expand >> nth=0"], ["wait", 150]]},
+  {"name": "check-0-0", "actions": [["click", "#storybook-root .atmr-tree__button-select .atmr-checkbox >> nth=0"], ["wait", 150]]},
+  {"name": "check-0-3-expand-0-3", "actions": [["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"parent 0-3\")) .atmr-checkbox >> nth=0"], ["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"parent 0-3\")) .atmr-tree__button-expand >> nth=0"], ["wait", 150]]},
+  {"name": "uncheck-0-4", "actions": [["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"parent 0-4\")) .atmr-checkbox >> nth=0"], ["wait", 150]]},
+  {"name": "uncheck-child-0-4-1", "actions": [["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"child 0-4-1\")) .atmr-checkbox >> nth=0"], ["wait", 150]]},
+  {"name": "uncheck-grandchild-0-4-3-0", "actions": [["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"child 0-4-3-0\")) .atmr-checkbox >> nth=0"], ["wait", 150]]},
+  {"name": "check-0-1-0-0-expand", "actions": [["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"parent 0-1\")) .atmr-tree__button-expand >> nth=0"], ["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"child 0-1-0\")) .atmr-tree__button-expand >> nth=0"], ["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"child 0-1-0-0\")) .atmr-checkbox >> nth=0"], ["wait", 150]]},
+  {"name": "check-disabled-child", "actions": [["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"child 0-4-2\")) .atmr-checkbox >> nth=0"], ["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"child 0-4-0-0\")) .atmr-checkbox >> nth=0"], ["wait", 150]]},
+  {"name": "select-0-3", "actions": [["click", "#storybook-root p:text-is(\"parent 0-3\") >> nth=0"], ["wait", 150]]},
+  {"name": "select-0-3-then-0-5", "actions": [["click", "#storybook-root p:text-is(\"parent 0-3\") >> nth=0"], ["click", "#storybook-root p:text-is(\"parent 0-5\") >> nth=0"], ["wait", 150]]},
+  {"name": "select-highlighted-0-1", "actions": [["click", "#storybook-root p:text-is(\"parent 0-1\") >> nth=0"], ["wait", 150]]},
+  {"name": "select-disabled-0-2", "actions": [["click", "#storybook-root p:text-is(\"parent 0-2\") >> nth=0"], ["wait", 150]]},
+  {"name": "hover-row-0-6", "actions": [["hover", "#storybook-root p:text-is(\"parent 0-6\") >> nth=0"]]},
+  {"name": "hover-expand-0-5", "actions": [["hover", "#storybook-root .atmr-tree__item:has(p:text-is(\"parent 0-5\")) .atmr-tree__button-expand >> nth=0"]]},
+  {"name": "kbd-space-check-0-0", "actions": [["focus", "#storybook-root .atmr-tree__button-select .atmr-checkbox__input >> nth=0"], ["press", "Space"], ["wait", 150]]},
+  {"name": "kbd-enter-expand-0-0", "actions": [["focus", "#storybook-root .atmr-tree__button-expand >> nth=0"], ["press", "Enter"], ["wait", 150]]},
+  {"name": "tab-x3", "actions": [["press", "Tab"], ["press", "Tab"], ["press", "Tab"]]}
+]}

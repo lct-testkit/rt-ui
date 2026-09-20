@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "next", "actions": [["click", "#storybook-root button:has(.atmr-button__label:text-is(\"Next\"))"], ["wait", 200]]},
+  {"name": "next-next", "actions": [["click", "#storybook-root button:has(.atmr-button__label:text-is(\"Next\"))"], ["click", "#storybook-root button:has(.atmr-button__label:text-is(\"Next\"))"], ["wait", 200]]},
+  {"name": "next-prev", "actions": [["click", "#storybook-root button:has(.atmr-button__label:text-is(\"Next\"))"], ["click", "#storybook-root button:has(.atmr-button__label:text-is(\"Previous\"))"], ["wait", 200]]},
+  {"name": "next-x3", "actions": [["click", "#storybook-root button:has(.atmr-button__label:text-is(\"Next\"))"], ["click", "#storybook-root button:has(.atmr-button__label:text-is(\"Next\"))"], ["click", "#storybook-root button:has(.atmr-button__label:text-is(\"Next\"))"], ["wait", 200]]}
+]}

@@ -1,0 +1,156 @@
+{
+ "states": [
+  {
+   "name": "open-modal",
+   "actions": [
+    [
+     "click",
+     "#storybook-root button >> text=Открыть модалку"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "open-modal-scrolled",
+   "actions": [
+    [
+     "scroll",
+     "#storybook-root .atmr-tablegrid__layout",
+     0,
+     200
+    ],
+    [
+     "wait",
+     150
+    ],
+    [
+     "click",
+     "#storybook-root button >> text=Открыть модалку"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "modal-close-button",
+   "actions": [
+    [
+     "click",
+     "#storybook-root button >> text=Открыть модалку"
+    ],
+    [
+     "wait",
+     400
+    ],
+    [
+     "click",
+     ".atmr-modal .atmr-modal__actions button"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "modal-escape",
+   "actions": [
+    [
+     "click",
+     "#storybook-root button >> text=Открыть модалку"
+    ],
+    [
+     "wait",
+     400
+    ],
+    [
+     "press",
+     "Escape"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "scroll-y",
+   "actions": [
+    [
+     "scroll",
+     "#storybook-root .atmr-tablegrid__layout",
+     0,
+     200
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "scroll-y-end",
+   "actions": [
+    [
+     "scroll",
+     "#storybook-root .atmr-tablegrid__layout",
+     0,
+     5000
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "select-row",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__layout .atmr-checkbox >> nth=2"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "select-all-visible",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__layout .atmr-checkbox >> nth=0"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "search-typed",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__header__bar input"
+    ],
+    [
+     "type",
+     "#storybook-root .atmr-tablegrid__header__bar input",
+     "abc"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  }
+ ]
+}

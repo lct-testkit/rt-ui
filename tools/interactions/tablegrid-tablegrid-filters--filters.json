@@ -1,0 +1,146 @@
+{
+ "states": [
+  {
+   "name": "inline-select-open",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [data-header-cell-name=ur] input"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "inline-select-pick",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [data-header-cell-name=ur] input"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     ".atmr-dropdown-menu[data-show=true] >> text=Физическое лицо"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "operators-open",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [data-header-cell-name=vls] input"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "operators-typed-enter",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [data-header-cell-name=vls] input"
+    ],
+    [
+     "type",
+     "#storybook-root [data-header-cell-name=vls] input",
+     "Акт"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "operators-nomatch",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [data-header-cell-name=vls] input"
+    ],
+    [
+     "type",
+     "#storybook-root [data-header-cell-name=vls] input",
+     "zzz"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "custom-popover-open",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [data-header-cell-name=\"ur 2\"] .atmr-tablegrid__filter__button"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "filter-then-clear",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [data-header-cell-name=ur] input"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     ".atmr-dropdown-menu[data-show=true] >> text=Физическое лицо"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     "#storybook-root button >> text=Очистить фильтр"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hover-filter-button",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root [data-header-cell-name=rasp] .atmr-tablegrid__filter__button"
+    ]
+   ]
+  }
+ ]
+}

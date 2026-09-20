@@ -1,0 +1,10 @@
+{"states": [
+  {"name": "hover-all-prev", "actions": [["hover", "#storybook-root .atmr-stepper >> nth=0 >> .atmr-stepper__button--prev"]]},
+  {"name": "hover-left-prev-disabled", "actions": [["hover", "#storybook-root .atmr-stepper >> nth=1 >> .atmr-stepper__button--prev"]]},
+  {"name": "hover-left-next", "actions": [["hover", "#storybook-root .atmr-stepper >> nth=1 >> .atmr-stepper__button--next"]]},
+  {"name": "hover-right-next-disabled", "actions": [["hover", "#storybook-root .atmr-stepper >> nth=2 >> .atmr-stepper__button--next"]]},
+  {"name": "hover-right-prev", "actions": [["hover", "#storybook-root .atmr-stepper >> nth=2 >> .atmr-stepper__button--prev"]]},
+  {"name": "click-left-next", "actions": [["click", "#storybook-root .atmr-stepper >> nth=1 >> .atmr-stepper__button--next"], ["wait", 200]]},
+  {"name": "kbd-tab-skips-disabled", "actions": [["press", "Tab"], ["press", "Tab"]]},
+  {"name": "kbd-tab3", "actions": [["press", "Tab"], ["press", "Tab"], ["press", "Tab"]]}
+]}

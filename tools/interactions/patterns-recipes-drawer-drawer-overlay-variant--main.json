@@ -1,0 +1,15 @@
+{"states": [
+  {"name": "primary", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500]]},
+  {"name": "secondary", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 500]]},
+  {"name": "none", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 500]]},
+  {"name": "primary-overlay-close", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer__overlay"], ["wait", 600]]},
+  {"name": "secondary-overlay-close", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 500], ["click", ".atmr-drawer__overlay"], ["wait", 600]]},
+  {"name": "none-close-button", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 500], ["click", ".atmr-drawer .atmr-closebutton"], ["wait", 600]]},
+  {"name": "none-escape", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 500], ["press", "Escape"], ["wait", 600]]},
+  {"name": "primary-escape", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["press", "Escape"], ["wait", 600]]},
+  {"name": "none-then-primary", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 500], ["click", "#storybook-root button >> nth=0"], ["wait", 600]]},
+  {"name": "primary-close-then-none", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer__overlay"], ["wait", 600], ["click", "#storybook-root button >> nth=2"], ["wait", 500]]},
+  {"name": "none-close-then-secondary", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 500], ["press", "Escape"], ["wait", 600], ["click", "#storybook-root button >> nth=1"], ["wait", 500]]},
+  {"name": "none-hover-close", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 500], ["hover", ".atmr-drawer .atmr-closebutton"]]},
+  {"name": "none-tab", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 500], ["press", "Tab"]]}
+]}

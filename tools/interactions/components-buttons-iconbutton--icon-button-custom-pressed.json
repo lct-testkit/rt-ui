@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "pressed-twice", "actions": [["click", "#storybook-root button"], ["click", "#storybook-root button"], ["wait", 200]]},
+  {"name": "pressed-hover", "actions": [["click", "#storybook-root button"], ["wait", 200], ["hover", "#storybook-root button"]]},
+  {"name": "kbd-enter", "actions": [["focus", "#storybook-root button"], ["press", "Enter"], ["wait", 200]]},
+  {"name": "kbd-space", "actions": [["focus", "#storybook-root button"], ["press", "Space"], ["wait", 200]]}
+]}

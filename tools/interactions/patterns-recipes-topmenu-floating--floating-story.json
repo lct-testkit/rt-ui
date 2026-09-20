@@ -1,0 +1,103 @@
+{
+ "states": [
+  {
+   "name": "hover-product-item",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__product-item >> nth=1"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "click-product-item",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-top-menu__product-item >> nth=2"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hover-nav-icon",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__navigation-icon"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-create-button",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__actions-container .atmr-button"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-utility-item",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__utilities-container .atmr-top-menu__product-item >> nth=1"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-profile",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__profile-container"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "tab-focus-3",
+   "actions": [
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  }
+ ]
+}

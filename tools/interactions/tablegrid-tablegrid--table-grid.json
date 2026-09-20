@@ -1,0 +1,221 @@
+{
+ "states": [
+  {
+   "name": "expand-row1",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__expand__icon >> nth=0"
+    ],
+    [
+     "wait",
+     250
+    ]
+   ]
+  },
+  {
+   "name": "expand-nested",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__expand__icon >> nth=0"
+    ],
+    [
+     "wait",
+     250
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__expand__icon >> nth=1"
+    ],
+    [
+     "wait",
+     250
+    ]
+   ]
+  },
+  {
+   "name": "expand-then-collapse",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__expand__icon >> nth=0"
+    ],
+    [
+     "wait",
+     250
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__expand__icon >> nth=0"
+    ],
+    [
+     "wait",
+     250
+    ]
+   ]
+  },
+  {
+   "name": "click-row",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__row >> nth=2 >> .atmr-tablegrid__cell >> nth=2"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "dblclick-row",
+   "actions": [
+    [
+     "dblclick",
+     "#storybook-root .atmr-tablegrid__row >> nth=3 >> .atmr-tablegrid__cell >> nth=2"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "hover-row",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-tablegrid__row >> nth=2 >> .atmr-tablegrid__cell >> nth=3"
+    ]
+   ]
+  },
+  {
+   "name": "hover-header",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root [data-header-cell-name=vsnA] >> nth=0"
+    ]
+   ]
+  },
+  {
+   "name": "hover-header-sortable",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root [data-header-cell-name=threadCount] >> nth=0"
+    ]
+   ]
+  },
+  {
+   "name": "focus-sort",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-tablegrid__sorting__button >> nth=0"
+    ]
+   ]
+  },
+  {
+   "name": "scroll-x",
+   "actions": [
+    [
+     "scroll",
+     "#storybook-root .atmr-tablegrid__layout",
+     400,
+     0
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "scroll-y",
+   "actions": [
+    [
+     "scroll",
+     "#storybook-root .atmr-tablegrid__layout",
+     0,
+     120
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "expand-and-scroll",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__expand__icon >> nth=0"
+    ],
+    [
+     "wait",
+     250
+    ],
+    [
+     "scroll",
+     "#storybook-root .atmr-tablegrid__layout",
+     200,
+     100
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "open-filter-popover",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [data-header-cell-name=partNumber] .atmr-tablegrid__filter__button >> nth=0"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "filter-select-open",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [data-header-cell-name=partNumber] .atmr-tablegrid__filter__button >> nth=0"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     ".atmr-popover[data-show=true] input"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "sort-click",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [data-header-cell-name=threadCount] .atmr-tablegrid__sorting__button"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  }
+ ]
+}

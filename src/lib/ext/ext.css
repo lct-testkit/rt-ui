@@ -1,0 +1,85 @@
+/* EXTENSION — author's addition, NOT part of the original Rostelecom design system. Off by default. */
+/*
+ * MOTION-ONLY styles of the extension: they belong to the states that exist only while a `motion` is ON (the `rt-ext-*` class / element is added ONLY
+ * then, so with the extension off none of these rules matches anything). This file is imported ONLY from the extension entry (`src/lib/ext/index.ts`, i.e.
+ * `@lct-testkit/rt-ui/ext`) and from `ExtMotionProvider.svelte`: a consumer that does not use the extension does not get a byte of it (the ORIGINAL components
+ * never import it). A component that is given `motion` WITHOUT a provider needs `import '@lct-testkit/rt-ui/ext'` (or `.../ext/ext.css`) once in the app.
+ * The always-safe layout rules (`fullHeight` of Drawer / Modal) live in `layout-drawer.css` / `layout-modal.css`, which those two components import themselves.
+ * Colours come from the theme tokens (var(--atmr-...)), so the rules follow all four themes. Extension-only components (Progress, ...) keep their CSS in
+ * their own <style> blocks instead.
+ */
+
+/* EXTENSION — author's addition, NOT part of the original Rostelecom design system. Off by default. */
+/*
+ * Styles for ORIGINAL elements that get an extension state (the `rt-ext-*` class is added ONLY while the extension
+ * is enabled, so with the extension off none of these rules matches anything). Colours come from the theme tokens
+ * (var(--atmr-...)), so the rules follow all four themes. Extension-only components (Progress, ...) keep their CSS in
+ * their own <style> blocks instead.
+ */
+
+/*
+ * Wizard (WizardStepsHorizontal `motion`): the connector after a step is "filled" with a sweep instead of switching its
+ * colour at once. `--rt-ext-fill` (0%..100%) is set inline by StepItemHorizontal, animated by a Svelte Tween/Spring.
+ * `!important` on the base colour is needed because the original `--confirm` rule (4 classes) would otherwise paint the
+ * whole line with the "done" colour immediately.
+ */
+.atmr-wizard-horizontal-item.rt-ext-wizard-step .atmr-wizard-horizontal-item__row::after,
+.atmr-wizard-horizontal-item.rt-ext-wizard-step .atmr-wizard-horizontal-item__indicator::after {
+	background-color: var(--atmr-wizardstepshorizontal-primary-connector-color-default) !important;
+	background-image: linear-gradient(
+		var(--atmr-wizardstepshorizontal-primary-connector-color-done),
+		var(--atmr-wizardstepshorizontal-primary-connector-color-done)
+	);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: var(--rt-ext-fill, 0%) 100%;
+}
+
+/*
+ * Toast (ToastNotificationsProvider `motion`): with the extension on, the stack renders every toast inside `.rt-ext-toast-item` (the element
+ * that carries the Svelte `in:` / `out:` / `animate:`) and marks the toast `.rt-ext-toast`. The original toast collapses to `height: 0` until
+ * its JS sets an inline pixel height; the extended one keeps its natural height so the transitions and the flip can measure it right away.
+ */
+.rt-ext-toast-item {
+	width: 100%;
+}
+.atmr-toast-notification.rt-ext-toast,
+.atmr-custom-toast-notification.rt-ext-toast {
+	height: auto;
+}
+
+/*
+ * Tabs (TabsGroup `motion`): with the extension on TabsGroup carries `.rt-ext-tabs` and renders ONE `.rt-ext-tabs-indicator` inside the tablist that glides
+ * between the tabs (its `left` / `top` / `width` / `height` are written inline by a Svelte Tween / Spring). The selected tab's own underline (its `::after`)
+ * is hidden by opacity (its colour and height stay readable, and the hover underline of the other tabs is untouched). Colour and height come from the
+ * same tokens as the original underline (`--atmr-tabitem-*-highlight-*`).
+ */
+.atmr-tabs-group.rt-ext-tabs .atmr-tabs-item.atmr-tabs-item--selected:after {
+	opacity: 0;
+}
+.rt-ext-tabs-indicator {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: var(--atmr-tabitem-m-highlight-border-width);
+	opacity: 0;
+	pointer-events: none;
+	background-color: var(--atmr-tabitem-primary-highlight-color-selected-default);
+}
+.rt-ext-tabs-indicator--disabled {
+	background-color: var(--atmr-tabitem-primary-highlight-color-selected-disabled);
+}
+
+/*
+ * SideMenu (`motion`): while the panel moves between its two widths it carries `.rt-ext-side-menu--motion` and a Svelte Tween / Spring writes `--rt-ext-sm-label`
+ * (0..1) on it: every label fades and slides in / out with it. `!important` on `transition` because the base layer (`.rt-base` in base.css, the author's
+ * label fix that stays as it is) gives the labels a 160 ms CSS opacity transition that would smooth the per-frame values.
+ */
+.atmr-side-menu.rt-ext-side-menu--motion .atmr-list-item__content,
+.atmr-side-menu.rt-ext-side-menu--motion .atmr-list-item__suffix,
+.atmr-side-menu.rt-ext-side-menu--motion .atmr-typography {
+	opacity: var(--rt-ext-sm-label, 1);
+	transform: translateX(calc((1 - var(--rt-ext-sm-label, 1)) * -6px));
+	transition: none !important;
+}

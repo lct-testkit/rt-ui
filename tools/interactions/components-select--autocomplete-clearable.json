@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "select-clear", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 300], ["hover", "#storybook-root .atmr-select"], ["wait", 100], ["click", ".atmr-input__suffix.clear"], ["wait", 300]]},
+  {"name": "select-hover-clear", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 300], ["hover", "#storybook-root .atmr-select"], ["wait", 100], ["hover", ".atmr-input__suffix.clear"], ["wait", 100]]},
+  {"name": "type-clear", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 200], ["type", "#storybook-root .atmr-select input", "e"], ["wait", 200], ["click", ".atmr-input__suffix.clear"], ["wait", 300]]},
+  {"name": "type-hover-clear", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 200], ["type", "#storybook-root .atmr-select input", "e"], ["wait", 200], ["hover", ".atmr-input__suffix.clear"], ["wait", 100]]}
+]}

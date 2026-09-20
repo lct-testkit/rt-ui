@@ -1,0 +1,10 @@
+{"states": [
+  {"name": "open-1", "actions": [["click", "#storybook-root [style*='cursor: pointer'] >> nth=0"], ["wait", 500]]},
+  {"name": "open-2", "actions": [["click", "#storybook-root [style*='cursor: pointer'] >> nth=1"], ["wait", 500]]},
+  {"name": "open-3", "actions": [["click", "#storybook-root [style*='cursor: pointer'] >> nth=2"], ["wait", 500]]},
+  {"name": "open-1-close-1", "actions": [["click", "#storybook-root [style*='cursor: pointer'] >> nth=0"], ["wait", 450], ["click", "#storybook-root [style*='cursor: pointer'] >> nth=0"], ["wait", 500]]},
+  {"name": "open-1-then-2", "actions": [["click", "#storybook-root [style*='cursor: pointer'] >> nth=0"], ["wait", 450], ["click", "#storybook-root [style*='cursor: pointer'] >> nth=1"], ["wait", 500]]},
+  {"name": "open-1-2-3", "actions": [["click", "#storybook-root [style*='cursor: pointer'] >> nth=0"], ["wait", 450], ["click", "#storybook-root [style*='cursor: pointer'] >> nth=1"], ["wait", 450], ["click", "#storybook-root [style*='cursor: pointer'] >> nth=2"], ["wait", 500]]},
+  {"name": "open-2-close-2-open-1", "actions": [["click", "#storybook-root [style*='cursor: pointer'] >> nth=1"], ["wait", 450], ["click", "#storybook-root [style*='cursor: pointer'] >> nth=1"], ["wait", 450], ["click", "#storybook-root [style*='cursor: pointer'] >> nth=0"], ["wait", 500]]},
+  {"name": "open-1-tab", "actions": [["click", "#storybook-root [style*='cursor: pointer'] >> nth=0"], ["wait", 450], ["press", "Tab"]]}
+]}

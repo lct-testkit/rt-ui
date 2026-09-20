@@ -1,0 +1,6 @@
+/* stories-app/src/stories/Input/styles.css (design/reference-css/207dc78ead.css) */
+.stories-input-form {
+	display: flex;
+	flex-direction: column;
+	gap: var(--atmr-spacing-4x);
+}

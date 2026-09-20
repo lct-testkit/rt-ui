@@ -1,0 +1,215 @@
+{
+ "states": [
+  {
+   "name": "filter-typed-enter",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [data-header-cell-name=rasp] input"
+    ],
+    [
+     "type",
+     "#storybook-root [data-header-cell-name=rasp] input",
+     "5-2"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "hover",
+     "#storybook-root [data-header-cell-name=obm]"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "filter-nomatch",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [data-header-cell-name=rasp] input"
+    ],
+    [
+     "type",
+     "#storybook-root [data-header-cell-name=rasp] input",
+     "zzz"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "filter-nomatch-reset",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [data-header-cell-name=rasp] input"
+    ],
+    [
+     "type",
+     "#storybook-root [data-header-cell-name=rasp] input",
+     "zzz"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     "#storybook-root button >> text=Сбросить фильтры"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "operators-open",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [data-header-cell-name=rasp] input"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "hover",
+     "#storybook-root [data-header-cell-name=obm]"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "page-next",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-pagination button[type=next]"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "page-last",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-pagination button[type=page] >> text=\"20\""
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "page-size-open",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-pagination .atmr-pagination__container input"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "page-size-50",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-pagination .atmr-pagination__container input"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     ".atmr-dropdown-menu[data-show=true] >> text=\"50\""
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "jumper-7",
+   "actions": [
+    [
+     "fill",
+     "#storybook-root .atmr-pagination .atmr-pagination__jumper input",
+     "7"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "filter-then-page",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [data-header-cell-name=rasp] input"
+    ],
+    [
+     "type",
+     "#storybook-root [data-header-cell-name=rasp] input",
+     "1"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-pagination button[type=next]"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  }
+ ]
+}

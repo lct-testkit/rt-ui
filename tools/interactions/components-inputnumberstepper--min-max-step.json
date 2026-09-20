@@ -1,0 +1,158 @@
+{
+ "states": [
+  {
+   "name": "hover-inc",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=0"
+    ]
+   ]
+  },
+  {
+   "name": "click-inc-x3",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=0"
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=0"
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=0"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "click-inc-to-max",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=0"
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=0"
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=0"
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=0"
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=0"
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=0"
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=0"
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=0"
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=0"
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__button--increment >> nth=0"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "type-over-max",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__input >> nth=0"
+    ],
+    [
+     "press",
+     "Control+a"
+    ],
+    [
+     "type",
+     "#storybook-root .atmr-number-stepper__input >> nth=0",
+     "500"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "type-under-min",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__input >> nth=0"
+    ],
+    [
+     "press",
+     "Control+a"
+    ],
+    [
+     "type",
+     "#storybook-root .atmr-number-stepper__input >> nth=0",
+     "5"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "type-in-range",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-number-stepper__input >> nth=0"
+    ],
+    [
+     "press",
+     "Control+a"
+    ],
+    [
+     "type",
+     "#storybook-root .atmr-number-stepper__input >> nth=0",
+     "150"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "focus-input",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-number-stepper__input >> nth=0"
+    ]
+   ]
+  }
+ ]
+}

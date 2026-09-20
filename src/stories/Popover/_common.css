@@ -1,0 +1,9 @@
+/* styles-common.css (Popover, ContactCard, Feedback, Metrics) */
+.trigger {
+	color: var(--atmr-fg-default);
+	cursor: pointer;
+}
+
+.atmr-popover__root {
+	width: auto;
+}

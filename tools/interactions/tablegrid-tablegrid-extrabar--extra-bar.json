@@ -1,0 +1,48 @@
+{
+ "states": [
+  {
+   "name": "hover-row",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-tablegrid__row >> nth=2 >> .atmr-tablegrid__cell >> nth=1"
+    ]
+   ]
+  },
+  {
+   "name": "click-row",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__row >> nth=3 >> .atmr-tablegrid__cell >> nth=1"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "hover-header",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root [data-header-cell-name=ur] >> nth=0"
+    ]
+   ]
+  },
+  {
+   "name": "kbd-rows",
+   "actions": [
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ]
+   ]
+  }
+ ]
+}

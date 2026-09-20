@@ -1,0 +1,20 @@
+/* Story-only CSS of stories/Icons (design/reference-css/eb102598b3.css = src/stories/Icons/styles.css), nesting flattened */
+.icons__container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.icons__container .icon {
+	width: 120px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	word-break: break-word;
+	margin: var(--atmr-spacing-1x) var(--atmr-spacing-1x);
+	gap: var(--atmr-spacing-2x);
+}
+
+.icons__container .icon svg {
+	cursor: pointer;
+}

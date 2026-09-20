@@ -1,0 +1,102 @@
+{
+ "states": [
+  {
+   "name": "typed",
+   "actions": [
+    [
+     "click",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "Hello, world"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-multiline",
+   "actions": [
+    [
+     "click",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "first line"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "second line"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "third line"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "fourth line"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-blur",
+   "actions": [
+    [
+     "click",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "Hello"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "focus",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  }
+ ]
+}

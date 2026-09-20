@@ -1,0 +1,45 @@
+/* rt-ui base layer — NOT part of the original Rostelecom design system CSS. Opt-in: nothing here applies unless an element has `.rt-base`
+   (ThemeProvider adds it by default; add the class to <body> or your app root yourself otherwise).
+
+   Why it exists: the original components do not set a font or a text colour — they inherit them from the application root
+   (the whole original stylesheet contains just two `font-family: inherit` rules, and the original Storybook even forces Times New Roman
+   to make missing fonts visible). Without a base the text of e.g. Stepper renders in the browser's default serif and black.
+   The playground that is compared with the original NEVER uses this class, so pixel parity is not affected. */
+.rt-base {
+	font-family: var(--atmr-font-family-body);
+	color: var(--atmr-fg-default);
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Text elements the original leaves completely unstyled (found while dogfooding): give them the colour of their sibling icons. */
+.rt-base .atmr-stepper--primary .atmr-stepper__label { color: var(--atmr-stepper-primary-button-icon-color-default); }
+.rt-base .atmr-stepper--secondary .atmr-stepper__label { color: var(--atmr-stepper-secondary-button-icon-color-default); }
+.rt-base .atmr-stepper__label { font-family: inherit; white-space: nowrap; }
+
+/* Showcase mode of the playground (`/story/<id>?base=1`): beat the original storybook preview's forced Times New Roman. */
+body.rt-showcase { font-family: var(--atmr-font-family-body); }
+
+/* SideMenu (author's fix, not in the original): while the panel animates between 56 px (icons only) and 256 px the original lets the header
+   and item texts wrap letter by letter and shows clipped first glyphs next to the icons ("text runs away"). Keep every label on one line,
+   clip it, hide it completely in the closed state and let it fade in when the panel opens. */
+.rt-base .atmr-side-menu .atmr-typography,
+.rt-base .atmr-side-menu .atmr-list-item__content {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: clip;
+	transition: opacity 160ms ease;
+}
+.rt-base .atmr-side-menu--closed .atmr-typography,
+.rt-base .atmr-side-menu--closed .atmr-list-item__content {
+	opacity: 0;
+}
+
+/* [ext, not in original] TableGrid `alignCells`: the original styles `--align-*` only on header cells, so body cells stay left-aligned.
+   With the prop the body cells get the same class (see modules/layout/layout.svelte.ts); the rule below makes it take effect. Without the prop no body cell
+   carries the class, so the original rendering is unchanged. */
+.atmr-tablegrid__cell:not(.atmr-tablegrid__cell--header).atmr-tablegrid__cell--align-right {
+	text-align: right;
+}
+.atmr-tablegrid__cell:not(.atmr-tablegrid__cell--header).atmr-tablegrid__cell--align-left {
+	text-align: left;
+}

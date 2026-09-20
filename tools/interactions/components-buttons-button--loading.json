@@ -1,0 +1,4 @@
+{"states": [
+  {"name": "loading-done", "actions": [["click", "#storybook-root button"], ["wait", 5500]]},
+  {"name": "kbd-enter", "actions": [["focus", "#storybook-root button"], ["press", "Enter"], ["wait", 300]]}
+]}

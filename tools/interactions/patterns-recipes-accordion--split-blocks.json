@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "open-1-check", "actions": [["click", "#storybook-root [style*='cursor: pointer'] >> nth=0"], ["wait", 450], ["click", "#storybook-root .atmr-checkbox >> visible=true >> nth=0"], ["wait", 100]]},
+  {"name": "open-1-check-2", "actions": [["click", "#storybook-root [style*='cursor: pointer'] >> nth=0"], ["wait", 450], ["click", "#storybook-root .atmr-checkbox >> visible=true >> nth=0"], ["click", "#storybook-root .atmr-checkbox >> visible=true >> nth=1"], ["wait", 100]]},
+  {"name": "open-1-tab-2", "actions": [["click", "#storybook-root [style*='cursor: pointer'] >> nth=0"], ["wait", 450], ["press", "Tab"], ["press", "Tab"]]},
+  {"name": "open-1-kbd-space", "actions": [["click", "#storybook-root [style*='cursor: pointer'] >> nth=0"], ["wait", 450], ["press", "Tab"], ["press", "Space"], ["wait", 100]]}
+]}

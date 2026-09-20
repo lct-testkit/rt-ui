@@ -1,0 +1,10 @@
+{"states": [
+  {"name": "open-outside", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400]]},
+  {"name": "scroll-inside", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["scroll", ".atmr-modal", 0, 300], ["wait", 100]]},
+  {"name": "scroll-inside-end", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["scroll", ".atmr-modal", 0, 5000], ["wait", 100]]},
+  {"name": "scroll-outside", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400], ["scroll", ".atmr-modal-wrapper", 0, 300], ["wait", 100]]},
+  {"name": "scroll-outside-end", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400], ["scroll", ".atmr-modal-wrapper", 0, 5000], ["wait", 100]]},
+  {"name": "inside-then-outside", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["press", "Escape"], ["wait", 500], ["click", "#storybook-root button >> nth=1"], ["wait", 400]]},
+  {"name": "outside-then-inside", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400], ["press", "Escape"], ["wait", 500], ["click", "#storybook-root button >> nth=0"], ["wait", 400]]},
+  {"name": "esc-outside", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400], ["press", "Escape"], ["wait", 500]]}
+]}

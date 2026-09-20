@@ -1,0 +1,109 @@
+{
+ "states": [
+  {
+   "name": "width-rasp-300",
+   "actions": [
+    [
+     "fill",
+     "#storybook-root input >> nth=0",
+     "300"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "width-vls-filtered",
+   "actions": [
+    [
+     "fill",
+     "#storybook-root input >> nth=1",
+     "ab12"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "width-ur-empty",
+   "actions": [
+    [
+     "fill",
+     "#storybook-root input >> nth=2",
+     ""
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "width-typed",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "250"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "width-all-narrow",
+   "actions": [
+    [
+     "fill",
+     "#storybook-root input >> nth=0",
+     "60"
+    ],
+    [
+     "fill",
+     "#storybook-root input >> nth=1",
+     "60"
+    ],
+    [
+     "fill",
+     "#storybook-root input >> nth=2",
+     "60"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "hover-header",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root [data-header-cell-name=vls] >> nth=0"
+    ]
+   ]
+  }
+ ]
+}

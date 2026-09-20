@@ -1,0 +1,16 @@
+{
+  "name": "rt-ui-bench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Benchmark harness of rt-ui (size + runtime). Only react/react-dom live here (S0r hello-world); vite / svelte / lightningcss are taken from the root node_modules on purpose (one Svelte runtime for the app and the library).",
+  "scripts": {
+    "size": "node size.mjs",
+    "runtime": "python runtime.py",
+    "report": "python report.py"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

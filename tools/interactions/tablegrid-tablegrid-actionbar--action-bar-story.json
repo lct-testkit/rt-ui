@@ -1,0 +1,190 @@
+{
+ "states": [
+  {
+   "name": "uncheck-row",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__layout .atmr-checkbox >> nth=2"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "check-row",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__layout .atmr-checkbox >> nth=5"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "header-toggle",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__layout .atmr-checkbox >> nth=0"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "header-toggle-twice",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__layout .atmr-checkbox >> nth=0"
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__layout .atmr-checkbox >> nth=0"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "cancel-selection",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__actionbar >> text=Отмена"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "delete-selected",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__actionbar >> text=Удалить"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "actionbar-checkbox-clear",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-tablegrid__actionbar .atmr-checkbox"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "page-next",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-pagination button[type=next]"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "page-3",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-pagination button[type=page] >> text=\"3\""
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "page-size-open",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-pagination .atmr-pagination__container input"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "page-size-20",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-pagination .atmr-pagination__container input"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     ".atmr-dropdown-menu[data-show=true] >> text=\"20\""
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "jumper-5",
+   "actions": [
+    [
+     "fill",
+     "#storybook-root .atmr-pagination .atmr-pagination__jumper input",
+     "5"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hover-delete",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-tablegrid__actionbar >> text=Удалить"
+    ]
+   ]
+  }
+ ]
+}

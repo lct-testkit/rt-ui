@@ -1,0 +1,8 @@
+{"states": [
+  {"name": "esc-close", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["press", "Escape"], ["wait", 500]]},
+  {"name": "close-icon", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["click", ".atmr-modal .atmr-closebutton"], ["wait", 500]]},
+  {"name": "send-request", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["click", ".atmr-modal .atmr-button >> nth=0"], ["wait", 500]]},
+  {"name": "cancel-outline", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["click", ".atmr-modal .atmr-button >> nth=1"], ["wait", 500]]},
+  {"name": "checkbox-then-close", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["click", ".atmr-modal label.atmr-checkbox"], ["wait", 100], ["click", ".atmr-modal .atmr-button >> nth=1"], ["wait", 500]]},
+  {"name": "reopen-closed", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["press", "Escape"], ["wait", 500], ["click", "#storybook-root button >> nth=0"], ["wait", 400], ["press", "Escape"], ["wait", 500]]}
+]}

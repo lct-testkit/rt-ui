@@ -1,0 +1,9 @@
+{"states": [
+  {"name": "select-closes", "actions": [["click", "#storybook-root .atmr-dropdown-menu__text >> text=\"Mithril\""], ["wait", 300]]},
+  {"name": "select-then-reopen", "actions": [["click", "#storybook-root .atmr-dropdown-menu__text >> text=\"Mithril\""], ["wait", 300], ["click", "#storybook-root .atmr-icon-button.dd-root"], ["wait", 300]]},
+  {"name": "toggle-close", "actions": [["click", "#storybook-root .atmr-icon-button.dd-root"], ["wait", 300]]},
+  {"name": "toggle-close-open", "actions": [["click", "#storybook-root .atmr-icon-button.dd-root"], ["wait", 300], ["click", "#storybook-root .atmr-icon-button.dd-root"], ["wait", 300]]},
+  {"name": "kbd-toggle", "actions": [["focus", "#storybook-root .atmr-icon-button.dd-root"], ["press", "Enter"], ["wait", 300]]},
+  {"name": "kbd-toggle-open", "actions": [["focus", "#storybook-root .atmr-icon-button.dd-root"], ["press", "Enter"], ["wait", 300], ["press", "Space"], ["wait", 300], ["press", "Escape"], ["wait", 200]]},
+  {"name": "outside-then-reopen", "actions": [["click", "body"], ["wait", 300], ["click", "#storybook-root .atmr-icon-button.dd-root"], ["wait", 300]]}
+]}

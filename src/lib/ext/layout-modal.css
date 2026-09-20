@@ -1,0 +1,22 @@
+/* EXTENSION — author's addition, NOT part of the original Rostelecom design system. Off by default. */
+/*
+ * LAYOUT-ONLY rules of the extension (independent of any motion): the opt-in `fullHeight` of MODAL. Every rule needs the modifier class `rt-ext-modal--full`
+ * that Modal adds only when `fullHeight` is set, so without it nothing here matches and the original markup and pixels are untouched. Modal.svelte imports
+ * this tiny file (and nothing else of the extension's CSS); the Drawer part is `layout-drawer.css`, the motion-only rules are in `ext.css`. No `atmr-*` rule is changed.
+ */
+
+/*
+ * Modal `fullHeight` (author's opt-in, off by default): with `.rt-ext-modal--full` on the `.atmr-modal` panel it stretches to the viewport height,
+ * keeping the `marginTop` gap above and below (`--atmr-modal-margin-top`) and honouring an explicit `maxHeight` (`--atmr-modal-max-height`; `auto`
+ * is invalid for max-height and falls back to `none`); the body scrolls inside the panel. The `.atmr-modal-wrapper` parent raises the specificity
+ * above the original `.atmr-modal.atmr-modal--scroll-behaviour` rules.
+ */
+.atmr-modal-wrapper .atmr-modal.rt-ext-modal--full {
+	height: calc(100% - var(--atmr-modal-margin-top) * 2);
+	max-height: var(--atmr-modal-max-height, none);
+	overflow-y: auto;
+}
+/* an `isCentered` modal without the inside-scroll behaviour is pinned to `top: 0` by the original: give it the same gap as the others */
+.atmr-modal-wrapper .atmr-modal.atmr-modal--centered.rt-ext-modal--full:not(.atmr-modal--scroll-behaviour) {
+	top: var(--atmr-modal-margin-top);
+}

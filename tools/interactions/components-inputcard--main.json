@@ -1,0 +1,392 @@
+{
+ "states": [
+  {
+   "name": "typed-visa",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "4111111111111111"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-mastercard",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "5555555555554444"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-amex",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "378282246310005"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-mir",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "2200000000000053"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-unionpay",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "6200000000000005"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-jcb",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "3530111333300000"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-discover",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "6011111111111117"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-maestro",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "6759649826438453"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-partial",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "4111"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-partial-blur",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "4111"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-invalid-full",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "4111111111111112"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-invalid-prefix",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "9999"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-letters",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "abc4111xyz"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-overlong",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "41111111111111111111111111"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "fill-visa",
+   "actions": [
+    [
+     "fill",
+     "#storybook-root input >> nth=0",
+     "4111 1111 1111 1111"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "fill-amex-blur",
+   "actions": [
+    [
+     "fill",
+     "#storybook-root input >> nth=0",
+     "378282246310005"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-then-clear",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "4111"
+    ],
+    [
+     "press",
+     "Control+A"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-backspace",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "41111111"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "focus-blur-empty",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "invalid-then-fix",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "9999"
+    ],
+    [
+     "press",
+     "Control+A"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "4111111111111111"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  }
+ ]
+}

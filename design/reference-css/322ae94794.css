@@ -1,0 +1,37 @@
+.placements_container {
+  width: 500px;
+
+  .siderow {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .centralrow {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+
+    .leftcolumn,
+    .rightcolumn {
+      flex-basis: 50%;
+      flex-grow: 0;
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .rightcolumn {
+      align-items: flex-end;
+    }
+  }
+}

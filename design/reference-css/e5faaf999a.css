@@ -1,0 +1,13 @@
+.stories-ms-scroll {
+  .atmr-dropdown-menu__menu {
+    max-height: 300px;
+    overflow: auto;
+  }
+}
+
+.stories-ms-value {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--atmr-spacing-3x);
+}

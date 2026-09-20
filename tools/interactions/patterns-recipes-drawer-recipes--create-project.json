@@ -1,0 +1,267 @@
+{
+ "states": [
+  {
+   "name": "start-open",
+   "actions": [
+    [
+     "click",
+     "#storybook-root button >> nth=0"
+    ],
+    [
+     "wait",
+     600
+    ],
+    [
+     "click",
+     ".atmr-drawer .atmr-popover__root--inputDate >> nth=0 >> input[name=df]"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "start-type",
+   "actions": [
+    [
+     "click",
+     "#storybook-root button >> nth=0"
+    ],
+    [
+     "wait",
+     600
+    ],
+    [
+     "click",
+     ".atmr-drawer .atmr-popover__root--inputDate >> nth=0 >> input[name=df]"
+    ],
+    [
+     "type",
+     ".atmr-drawer .atmr-popover__root--inputDate >> nth=0 >> input[name=df]",
+     "15032026"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "end-open",
+   "actions": [
+    [
+     "click",
+     "#storybook-root button >> nth=0"
+    ],
+    [
+     "wait",
+     600
+    ],
+    [
+     "click",
+     ".atmr-drawer .atmr-popover__root--inputDate >> nth=1 >> input[name=df]"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "type-name",
+   "actions": [
+    [
+     "click",
+     "#storybook-root button >> nth=0"
+    ],
+    [
+     "wait",
+     600
+    ],
+    [
+     "type",
+     ".atmr-drawer input >> nth=0",
+     "Проект"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "add-direction",
+   "actions": [
+    [
+     "click",
+     "#storybook-root button >> nth=0"
+    ],
+    [
+     "wait",
+     600
+    ],
+    [
+     "click",
+     ".atmr-drawer .project-info__add-direction"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "add-direction-select-open",
+   "actions": [
+    [
+     "click",
+     "#storybook-root button >> nth=0"
+    ],
+    [
+     "wait",
+     600
+    ],
+    [
+     "click",
+     ".atmr-drawer .project-info__add-direction"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     ".atmr-drawer .project-info__technologies .atmr-select >> nth=0"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "add-two-remove",
+   "actions": [
+    [
+     "click",
+     "#storybook-root button >> nth=0"
+    ],
+    [
+     "wait",
+     600
+    ],
+    [
+     "click",
+     ".atmr-drawer .project-info__add-direction"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     ".atmr-drawer .project-info__add-direction"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     ".atmr-drawer .project-info__technologies .atmr-icon-button >> nth=0"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "close-icon",
+   "actions": [
+    [
+     "click",
+     "#storybook-root button >> nth=0"
+    ],
+    [
+     "wait",
+     600
+    ],
+    [
+     "click",
+     ".atmr-drawer .atmr-closebutton"
+    ],
+    [
+     "wait",
+     600
+    ]
+   ]
+  },
+  {
+   "name": "both-dates-typed",
+   "actions": [
+    [
+     "click",
+     "#storybook-root button >> nth=0"
+    ],
+    [
+     "wait",
+     600
+    ],
+    [
+     "click",
+     ".atmr-drawer .atmr-popover__root--inputDate >> nth=0 >> input[name=df]"
+    ],
+    [
+     "type",
+     ".atmr-drawer .atmr-popover__root--inputDate >> nth=0 >> input[name=df]",
+     "10032026"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     ".atmr-drawer .atmr-popover__root--inputDate >> nth=1 >> input[name=df]"
+    ],
+    [
+     "type",
+     ".atmr-drawer .atmr-popover__root--inputDate >> nth=1 >> input[name=df]",
+     "20032026"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "end-type-partial",
+   "actions": [
+    [
+     "click",
+     "#storybook-root button >> nth=0"
+    ],
+    [
+     "wait",
+     600
+    ],
+    [
+     "click",
+     ".atmr-drawer .atmr-popover__root--inputDate >> nth=1 >> input[name=df]"
+    ],
+    [
+     "type",
+     ".atmr-drawer .atmr-popover__root--inputDate >> nth=1 >> input[name=df]",
+     "2003"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  }
+ ]
+}

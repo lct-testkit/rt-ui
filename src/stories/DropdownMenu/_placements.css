@@ -1,0 +1,35 @@
+/* Story-only CSS of stories/Tooltip/styles.css (design/reference-css/25020bb920.css) that the DropdownMenu stories import too:
+   the `.placements_container` block with the nesting flattened (the Tooltip-only rules are not used here). */
+.placements_container {
+	width: 500px;
+}
+.placements_container .siderow {
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+}
+.placements_container .centralrow {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+	align-items: flex-end;
+}
+.placements_container .centralrow .leftcolumn,
+.placements_container .centralrow .rightcolumn {
+	flex-basis: 50%;
+	flex-grow: 0;
+	max-width: 50%;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	width: 100%;
+	flex-wrap: wrap;
+}
+.placements_container .centralrow .rightcolumn {
+	align-items: flex-end;
+}

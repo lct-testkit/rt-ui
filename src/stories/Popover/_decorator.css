@@ -1,0 +1,5 @@
+/* decorators.tsx: withPopoverRootOffset (a <style> rendered next to every Popover story except Placements) */
+#storybook-root {
+	margin-right: 0 !important;
+	margin-top: 25% !important;
+}

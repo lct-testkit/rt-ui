@@ -1,0 +1,19 @@
+{"states": [
+  {"name": "open", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 300]]},
+  {"name": "open-hover-item", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 300], ["hover", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 100]]},
+  {"name": "chevron-open-close", "actions": [["click", "#storybook-root .atmr-dropdown__trigger-icon >> nth=0"], ["wait", 300], ["click", "#storybook-root .atmr-dropdown__trigger-icon >> nth=0"], ["wait", 300]]},
+  {"name": "chevron-open", "actions": [["click", "#storybook-root .atmr-dropdown__trigger-icon >> nth=0"], ["wait", 300]]},
+  {"name": "reclick-field-open", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 200], ["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 300]]},
+  {"name": "select", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 300]]},
+  {"name": "select-deselect", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 200], ["click", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 300]]},
+  {"name": "select-many", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=1"], ["wait", 100], ["click", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 100], ["click", ".atmr-dropdown-menu__item >> nth=5"], ["wait", 100], ["click", ".atmr-dropdown-menu__item >> nth=6"], ["wait", 100], ["click", ".atmr-dropdown-menu__item >> nth=7"], ["wait", 300]]},
+  {"name": "select-many-remove-tag", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=1"], ["wait", 100], ["click", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 100], ["click", ".atmr-dropdown-menu__item >> nth=5"], ["wait", 100], ["click", ".atmr-dropdown-menu__item >> nth=6"], ["wait", 100], ["click", "#storybook-root .atmr-tagitem__closebutton >> nth=1"], ["wait", 300]]},
+  {"name": "select-hover-tag-close", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 200], ["hover", "#storybook-root .atmr-tagitem__closebutton >> nth=0"], ["wait", 100]]},
+  {"name": "type", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 200], ["type", "#storybook-root .atmr-taginput >> nth=0", "e"], ["wait", 300]]},
+  {"name": "type-select-item", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 200], ["type", "#storybook-root .atmr-taginput >> nth=0", "e"], ["wait", 200], ["click", ".atmr-dropdown-menu__item >> nth=1"], ["wait", 300]]},
+  {"name": "type-nomatch", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 200], ["type", "#storybook-root .atmr-taginput >> nth=0", "zzz"], ["wait", 300]]},
+  {"name": "type-enter", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 200], ["type", "#storybook-root .atmr-taginput >> nth=0", "Polymer"], ["press", "Enter"], ["wait", 300]]},
+  {"name": "type-enter-invalid", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 200], ["type", "#storybook-root .atmr-taginput >> nth=0", "zzz"], ["press", "Enter"], ["wait", 300]]},
+  {"name": "type-separator", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 200], ["type", "#storybook-root .atmr-taginput >> nth=0", "Polymer,Mithril,zzz,"], ["wait", 300]]},
+  {"name": "tab-out-open", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 200], ["press", "Tab"], ["wait", 200]]}
+]}

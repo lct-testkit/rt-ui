@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "hover-secondary-prev", "actions": [["hover", "#storybook-root .atmr-stepper >> nth=1 >> .atmr-stepper__button--prev"]]},
+  {"name": "hover-secondary-next", "actions": [["hover", "#storybook-root .atmr-stepper >> nth=1 >> .atmr-stepper__button--next"]]},
+  {"name": "click-secondary-next", "actions": [["click", "#storybook-root .atmr-stepper >> nth=1 >> .atmr-stepper__button--next"], ["wait", 200]]},
+  {"name": "kbd-secondary-focus", "actions": [["press", "Tab"], ["press", "Tab"], ["press", "Tab"]]}
+]}

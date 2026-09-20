@@ -1,0 +1,11 @@
+.stories-feedback-popover {
+  width: 252px;
+}
+
+.stories-feedback-popover {
+  .atmr-popover__button_group {
+    button {
+      width: 100%;
+    }
+  }
+}

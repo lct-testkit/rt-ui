@@ -1,0 +1,11 @@
+{"states": [
+  {"name": "p0-click-disabled", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=2"], ["wait", 150], ["mouse", 5, 5], ["wait", 150]]},
+  {"name": "p0-click-14", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=13"], ["wait", 150], ["mouse", 5, 5], ["wait", 150]]},
+  {"name": "p0-click-15", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=14"], ["wait", 150], ["mouse", 5, 5], ["wait", 150]]},
+  {"name": "p0-next-month", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar-header__button >> nth=1"], ["wait", 150]]},
+  {"name": "p1-next-disabled", "actions": [["click", "#storybook-root .atmr-calendar >> nth=1 >> css=.atmr-calendar-header__button >> nth=1"], ["wait", 150]]},
+  {"name": "p1-click-14-beyond-max", "actions": [["click", "#storybook-root .atmr-calendar >> nth=1 >> css=.atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=13"], ["wait", 150], ["mouse", 5, 5], ["wait", 150]]},
+  {"name": "p1-click-before-max", "actions": [["click", "#storybook-root .atmr-calendar >> nth=1 >> css=.atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=5"], ["wait", 150], ["mouse", 5, 5], ["wait", 150]]},
+  {"name": "p1-prev-month", "actions": [["click", "#storybook-root .atmr-calendar >> nth=1 >> css=.atmr-calendar-header__button >> nth=0"], ["wait", 150]]},
+  {"name": "p1-hover-enabled", "actions": [["hover", "#storybook-root .atmr-calendar >> nth=1 >> css=.atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=14"], ["wait", 150]]}
+]}

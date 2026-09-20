@@ -1,0 +1,44 @@
+{
+ "states": [
+  {
+   "name": "hover-add",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root button >> nth=0"
+    ]
+   ]
+  },
+  {
+   "name": "hover-load",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root button >> nth=1"
+    ]
+   ]
+  },
+  {
+   "name": "kbd-buttons",
+   "actions": [
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ]
+   ]
+  },
+  {
+   "name": "hover-header",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root [data-header-cell-name=vls] >> nth=0"
+    ]
+   ]
+  }
+ ]
+}

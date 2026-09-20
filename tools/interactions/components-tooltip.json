@@ -1,0 +1,7 @@
+{"states": [
+  {"name": "hover-open", "actions": [["hover", "#storybook-root .atmr-tooltip__trigger >> nth=0"], ["wait", 400]]},
+  {"name": "hover-leave", "actions": [["hover", "#storybook-root .atmr-tooltip__trigger >> nth=0"], ["wait", 400], ["mouse", 700, 700], ["wait", 300]]},
+  {"name": "hover-onto-tooltip", "actions": [["hover", "#storybook-root .atmr-tooltip__trigger >> nth=0"], ["wait", 400], ["hover", ".atmr-tooltip >> nth=0"], ["wait", 400]]},
+  {"name": "click-open", "actions": [["click", "#storybook-root .atmr-tooltip__trigger >> nth=0"], ["wait", 400]]},
+  {"name": "click-open-leave", "actions": [["click", "#storybook-root .atmr-tooltip__trigger >> nth=0"], ["wait", 400], ["mouse", 700, 700], ["wait", 300]]}
+]}

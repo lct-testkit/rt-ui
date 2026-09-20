@@ -1,0 +1,5 @@
+{"states": [
+  {"name": "select-second-menu", "actions": [["click", "#storybook-root .atmr-dropdown-menu__text >> text=\"Mithril\" >> nth=1"], ["wait", 300]]},
+  {"name": "hover-first-menu", "actions": [["hover", "#storybook-root .atmr-dropdown-menu__text >> text=\"Mithril\" >> nth=0"]]},
+  {"name": "hover-second-menu", "actions": [["hover", "#storybook-root .atmr-dropdown-menu__text >> text=\"Mithril\" >> nth=1"]]}
+]}

@@ -1,0 +1,33 @@
+/* Popover/CustomPopover/styles.css, nesting flattened */
+.stories-popover-form {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: var(--atmr-spacing-4x);
+}
+.stories-popover-form .image {
+	padding: 12px;
+	background-color: rgba(0, 211, 89, 0.07);
+	border-radius: 12px;
+	margin-right: 12px;
+}
+.stories-popover-form .stories-popover-form-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.stories-popover-container {
+	display: grid;
+}
+.stories-popover-container .stories-popover-container-closebuttons {
+	display: flex;
+	flex-direction: row;
+}
+
+.stories-popover-divider {
+	width: auto;
+	height: 1px;
+	margin-top: var(--atmr-spacing-4x);
+	margin-bottom: var(--atmr-spacing-4x);
+	background-color: var(--atmr-border-default);
+}

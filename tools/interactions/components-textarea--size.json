@@ -1,0 +1,67 @@
+{
+ "states": [
+  {
+   "name": "typed-s",
+   "actions": [
+    [
+     "click",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "Hello"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-m",
+   "actions": [
+    [
+     "click",
+     "#storybook-root textarea >> nth=1"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=1",
+     "Hello"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-l",
+   "actions": [
+    [
+     "click",
+     "#storybook-root textarea >> nth=2"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=2",
+     "Hello"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "hover-l",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root textarea >> nth=2"
+    ]
+   ]
+  }
+ ]
+}

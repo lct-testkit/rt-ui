@@ -1,0 +1,4 @@
+{"states": [
+  {"name": "hover-4", "actions": [["hover", "#storybook-root button >> nth=3"]]},
+  {"name": "tab-tab", "actions": [["press", "Tab"], ["press", "Tab"]]}
+]}

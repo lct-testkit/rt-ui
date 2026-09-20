@@ -1,0 +1,10 @@
+{"states": [
+  {"name": "hover-prev", "actions": [["hover", "#storybook-root .atmr-stepper__button--prev >> nth=0"]]},
+  {"name": "hover-next", "actions": [["hover", "#storybook-root .atmr-stepper__button--next >> nth=0"]]},
+  {"name": "click-prev", "actions": [["click", "#storybook-root .atmr-stepper__button--prev >> nth=0"], ["wait", 200]]},
+  {"name": "click-next", "actions": [["click", "#storybook-root .atmr-stepper__button--next >> nth=0"], ["wait", 200]]},
+  {"name": "kbd-tab2", "actions": [["press", "Tab"], ["press", "Tab"]]},
+  {"name": "kbd-enter-prev", "actions": [["focus", "#storybook-root .atmr-stepper__button--prev >> nth=0"], ["press", "Enter"], ["wait", 200]]},
+  {"name": "kbd-space-next", "actions": [["press", "Tab"], ["press", "Tab"], ["press", "Space"], ["wait", 200]]},
+  {"name": "mouse-away", "actions": [["hover", "#storybook-root .atmr-stepper__button--next >> nth=0"], ["mouse", 700, 500]]}
+]}

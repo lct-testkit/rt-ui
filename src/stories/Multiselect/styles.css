@@ -1,0 +1,15 @@
+/* Port of stories-app/src/stories/Multiselect/styles.css (imported by the stories instead of a scoped <style> block: the dev server would add its
+   svelte-<hash> scope class to every plain element of a story that has a <style> block, e.g. the `.stories-ms-value` div) */
+.stories-ms-scroll {
+	.atmr-dropdown-menu__menu {
+		max-height: 300px;
+		overflow: auto;
+	}
+}
+
+.stories-ms-value {
+	width: 280px;
+	display: flex;
+	flex-direction: column;
+	gap: var(--atmr-spacing-3x);
+}

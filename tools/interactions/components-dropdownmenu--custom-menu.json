@@ -1,0 +1,7 @@
+{"states": [
+  {"name": "footer-close", "actions": [["click", "#storybook-root .closeButton-story"], ["wait", 300]]},
+  {"name": "footer-hover", "actions": [["hover", "#storybook-root .closeButton-story"]]},
+  {"name": "select-user3", "actions": [["click", "#storybook-root .atmr-dropdown-menu__text >> text=\"Вадим Кузнецов\""], ["wait", 300]]},
+  {"name": "select-user4-hover-user1", "actions": [["click", "#storybook-root .atmr-dropdown-menu__text >> text=\"Анна Семенова\""], ["wait", 300], ["hover", "#storybook-root .atmr-dropdown-menu__text >> text=\"Елена Иванова\""]]},
+  {"name": "kbd-footer", "actions": [["focus", "#storybook-root .closeButton-story"], ["press", "Enter"], ["wait", 300]]}
+]}

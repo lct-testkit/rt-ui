@@ -1,0 +1,4 @@
+{"states": [
+  {"name": "page8", "actions": [["click", "#storybook-root button[page='6']"], ["click", "#storybook-root button[page='8']"], ["wait", 100]]},
+  {"name": "jumper-enter", "actions": [["focus", "#storybook-root .atmr-pagination__jumper input"], ["type", "#storybook-root .atmr-pagination__jumper input", "9"], ["press", "Enter"], ["wait", 100]]}
+]}

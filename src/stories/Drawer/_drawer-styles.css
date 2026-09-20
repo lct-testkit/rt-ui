@@ -1,0 +1,50 @@
+/* Story-only CSS of stories/Drawer (design/reference-css/cb05296461.css) */
+.drawer-example .atmr-drawer__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  padding: 32px;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.drawer-example .atmr-drawer__header {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.drawer-example .atmr-drawer__actions {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+}
+
+.drawer-example .atmr-drawer__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.drawer-example .atmr-drawer__footer {
+  display: flex;
+  column-gap: 12px;
+}
+
+.buttons {
+  display: flex;
+  column-gap: 22px;
+}
+.buttons button {
+  flex: 0 1 45%;
+}
+.buttons--col {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 17px;
+  max-width: 280px;
+}
+.buttons--gap {
+  column-gap: 65px;
+}

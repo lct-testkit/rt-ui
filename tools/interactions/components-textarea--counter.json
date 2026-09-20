@@ -1,0 +1,110 @@
+{
+ "states": [
+  {
+   "name": "typed",
+   "actions": [
+    [
+     "click",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "Hello"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-max",
+   "actions": [
+    [
+     "click",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "abcdefghijklmnopqrstuvwxy"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-over-max",
+   "actions": [
+    [
+     "click",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "abcdefghijklmnopqrstuvwxyABCDE"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-then-delete",
+   "actions": [
+    [
+     "click",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "Hello"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "typed-select-all-delete",
+   "actions": [
+    [
+     "click",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "Hello"
+    ],
+    [
+     "press",
+     "Control+A"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  }
+ ]
+}

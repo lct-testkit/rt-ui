@@ -1,0 +1,7 @@
+{"states": [
+  {"name": "hover-2", "actions": [["hover", "#storybook-root button >> nth=1"]]},
+  {"name": "hover-3", "actions": [["hover", "#storybook-root button >> nth=2"]]},
+  {"name": "tab-tab", "actions": [["press", "Tab"], ["press", "Tab"]]},
+  {"name": "tab-x3", "actions": [["press", "Tab"], ["press", "Tab"], ["press", "Tab"]]},
+  {"name": "click-3", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 200]]}
+]}

@@ -1,0 +1,25 @@
+.design-tokens {
+  width: 845px;
+}
+
+.design-tokens .design-tokens__divider {
+  width: 100%;
+  border: var(--atmr-border-width-s) solid rgba(68, 83, 113, 0.15);
+}
+
+.design-tokens .design-tokens__row {
+  min-height: 44px;
+}
+
+.design-tokens .design-tokens__inner {
+  min-height: 32px;
+  padding: 12px 0;
+}
+
+.design-tokens .design-tokens__name:not(:first-child) {
+  margin-top: 48px;
+}
+
+.design-tokens .design-tokens__name h4 {
+  color: var(--atmr-fg-soft) !important;
+}

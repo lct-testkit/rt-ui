@@ -1,0 +1,42 @@
+/* story-only CSS shared by the TopMenu / SideWithTopMenu stories (reference: styles-common.css). The TopMenu COMPONENT rules moved to src/lib/styles/top-menu.css */
+.sb-show-main.sb-main-padded:has(#storybook-root .stories-main-top-menu) {
+  padding: 0 !important;
+}
+
+.stories-main-top-menu {
+  width: 100%;
+  min-height: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0;
+}
+
+.stories-main-top-menu:has(.atmr-top-menu--story-base) {
+  min-width: 960px;
+}
+
+.stories-main-top-menu__row {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.stories-main-top-menu__primary {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* TEMP*/
+.stories-main-top-menu .atmr-tabs-item {
+  padding: 16px 12px;
+  align-items: center;
+
+  &:after {
+    transform: translateY(1px);
+  }
+}

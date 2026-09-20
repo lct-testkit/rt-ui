@@ -1,0 +1,7 @@
+{"states": [
+  {"name": "click-suffix-button", "actions": [["click", "#storybook-root .atmr-icon-button >> nth=0"], ["wait", 150]]},
+  {"name": "hover-suffix-button", "actions": [["hover", "#storybook-root .atmr-icon-button >> nth=2"]]},
+  {"name": "expand-left-0-0", "actions": [["click", "#storybook-root .atmr-tree__button-expand >> nth=0"], ["wait", 150]]},
+  {"name": "expand-right-0-0", "actions": [["click", "#storybook-root .atmr-tree__button-expand >> nth=10"], ["wait", 150]]},
+  {"name": "select-left", "actions": [["click", "#storybook-root p:text-is(\"parent 0-2\") >> nth=0"], ["wait", 150]]}
+]}

@@ -1,0 +1,406 @@
+/* EXTENSION — author's addition, NOT part of the original Rostelecom design system. Off by default.
+ *
+ * Styles of the chart module (`@lct-testkit/rt-ui/charts`). Imported by the chart components only: a consumer that never imports
+ * `/charts` never gets a byte of this. Colours, type, spacing, radius and shadows come from the design-system variables (`--atmr-*`),
+ * so all four themes work without changes.
+ *
+ * PALETTE  --rt-chart-1 … --rt-chart-10 (+ --rt-chart-other) are defined on every `.rt-chart` and on `.rt-chart-palette` (put that class on
+ *          any element to use the palette outside a chart, e.g. a colour dot in a table cell). Override them the way you override any
+ *          custom property of a component: on the chart itself (`style="--rt-chart-1: #0a0"`, the `colors` prop does that), or in a rule that
+ *          targets the chart (`.dashboard .rt-chart { --rt-chart-1: … }`). The defaults have zero specificity (`:where`).
+ *          Steps: accent 500 · status-01 400 · status-04 500 · info 500 · success 500 · status-05 500 · warning 600 · status-03 500 ·
+ *          status-06 500 · status-02 400 — each nudged `--rt-chart-tint` (12 %) toward the theme's text colour, which makes it a little darker
+ *          on a light surface and a little lighter on a dark one; that keeps every mark above 3:1 on both (tools/check-charts.py validates it).
+ *          In the Purple themes `accent` and `status-01` swap, so slot 1 is always the theme's brand colour.
+ * TUNING   --rt-chart-surface (gaps between marks, rings of markers; default --atmr-bg-surface1: set it to the card background if that
+ *          differs), --rt-chart-grid, --rt-chart-axis, --rt-chart-text, --rt-chart-tint.
+ */
+
+:where(.rt-chart, .rt-chart-palette) {
+	--rt-chart-1: color-mix(in oklab, var(--atmr-fg-default) var(--rt-chart-tint, 12%), var(--atmr-accent-500));
+	--rt-chart-2: color-mix(in oklab, var(--atmr-fg-default) var(--rt-chart-tint, 12%), var(--atmr-status-01-400));
+	--rt-chart-3: var(--atmr-status-04-500);
+	--rt-chart-4: color-mix(in oklab, var(--atmr-fg-default) var(--rt-chart-tint, 12%), var(--atmr-info-500));
+	--rt-chart-5: color-mix(in oklab, var(--atmr-fg-default) var(--rt-chart-tint, 12%), var(--atmr-success-500));
+	--rt-chart-6: color-mix(in oklab, var(--atmr-fg-default) var(--rt-chart-tint, 12%), var(--atmr-status-05-500));
+	--rt-chart-7: color-mix(in oklab, var(--atmr-fg-default) var(--rt-chart-tint, 12%), var(--atmr-warning-600));
+	--rt-chart-8: color-mix(in oklab, var(--atmr-fg-default) var(--rt-chart-tint, 12%), var(--atmr-status-03-500));
+	--rt-chart-9: color-mix(in oklab, var(--atmr-fg-default) var(--rt-chart-tint, 12%), var(--atmr-status-06-500));
+	--rt-chart-10: color-mix(in oklab, var(--atmr-fg-default) var(--rt-chart-tint, 12%), var(--atmr-status-02-400));
+	--rt-chart-other: var(--atmr-neutral-400);
+}
+@supports not (color: color-mix(in oklab, red 10%, blue)) {
+	:where(.rt-chart, .rt-chart-palette) {
+		--rt-chart-1: var(--atmr-accent-500);
+		--rt-chart-2: var(--atmr-status-01-400);
+		--rt-chart-4: var(--atmr-info-500);
+		--rt-chart-5: var(--atmr-success-500);
+		--rt-chart-6: var(--atmr-status-05-500);
+		--rt-chart-7: var(--atmr-warning-600);
+		--rt-chart-8: var(--atmr-status-03-500);
+		--rt-chart-9: var(--atmr-status-06-500);
+		--rt-chart-10: var(--atmr-status-02-400);
+	}
+}
+
+/* ─── root ─────────────────────────────────────────────────────────────────────────────────────────────────────── */
+
+.rt-chart {
+	position: relative;
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	min-width: 0;
+	/* own font and colour from the tokens: looks right without the app base layer (.rt-base) */
+	font: var(--atmr-font-description-l);
+	font-family: var(--atmr-font-family-body);
+	color: var(--atmr-fg-default);
+	text-align: start;
+}
+.rt-chart *,
+.rt-chart *::before,
+.rt-chart *::after {
+	box-sizing: border-box;
+}
+
+/* ─── legend ───────────────────────────────────────────────────────────────────────────────────────────────────── */
+
+.rt-chart__legend {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--atmr-spacing-1x) var(--atmr-spacing-4x);
+	margin: 0 0 var(--atmr-spacing-3x);
+	padding: 0;
+	list-style: none;
+	font: var(--atmr-font-body-s);
+}
+.rt-chart__legend--bottom {
+	margin: var(--atmr-spacing-3x) 0 0;
+}
+.rt-chart__legend--column {
+	flex-direction: column;
+	flex-wrap: nowrap;
+	gap: var(--atmr-spacing-1x);
+	margin: 0;
+}
+.rt-chart__legend-item {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--atmr-spacing-2x);
+	margin: 0 calc(var(--atmr-spacing-1-5x) * -1);
+	padding: var(--atmr-spacing-0-5x) var(--atmr-spacing-1-5x);
+	border: 0;
+	border-radius: var(--atmr-border-radius-xs);
+	background: none;
+	color: var(--atmr-fg-default);
+	font: inherit;
+	text-align: start;
+	cursor: pointer;
+	appearance: none;
+}
+.rt-chart__legend--column .rt-chart__legend-item {
+	display: grid;
+	grid-template-columns: auto minmax(0, 1fr) auto auto;
+	width: 100%;
+	margin: 0;
+	gap: var(--atmr-spacing-2x);
+}
+.rt-chart__legend-item:hover {
+	background: var(--atmr-neutral-container-soft);
+}
+.rt-chart__legend-item:focus-visible {
+	outline: var(--atmr-border-width-m) solid var(--atmr-accent-default);
+	outline-offset: 1px;
+}
+.rt-chart__legend-item[aria-pressed='false'] {
+	color: var(--atmr-fg-muted);
+}
+.rt-chart__legend-item[aria-pressed='false'] .rt-chart__legend-label {
+	text-decoration: line-through;
+}
+.rt-chart__legend-item[aria-pressed='false'] .rt-chart__swatch {
+	opacity: 0.35;
+}
+.rt-chart__legend-label {
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.rt-chart__legend-value {
+	font-weight: var(--atmr-font-weight-semibold);
+	font-variant-numeric: tabular-nums;
+	text-align: end;
+}
+.rt-chart__legend-secondary {
+	min-width: 3.2em;
+	color: var(--atmr-fg-soft);
+	font-variant-numeric: tabular-nums;
+	text-align: end;
+}
+.rt-chart__swatch {
+	flex: none;
+	background: var(--rt-c);
+}
+.rt-chart__swatch--line {
+	width: 14px;
+	height: 3px;
+	border-radius: 2px;
+}
+.rt-chart__swatch--rect {
+	width: 12px;
+	height: 12px;
+	border-radius: 3px;
+}
+.rt-chart__swatch--dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+
+/* ─── plot ─────────────────────────────────────────────────────────────────────────────────────────────────────── */
+
+.rt-chart__plot {
+	position: relative;
+	width: 100%;
+	touch-action: pan-y pinch-zoom;
+	border-radius: var(--atmr-border-radius-xs);
+}
+.rt-chart__plot:has(:focus-visible) {
+	outline: var(--atmr-border-width-m) solid var(--atmr-accent-default);
+	outline-offset: 2px;
+}
+.rt-chart__svg {
+	position: absolute;
+	inset: 0;
+	display: block;
+	overflow: visible;
+	pointer-events: none;
+	user-select: none;
+	-webkit-user-select: none;
+}
+.rt-chart__grid line,
+.rt-chart__axis-line,
+.rt-chart__crosshair {
+	fill: none;
+	stroke-width: 1;
+	shape-rendering: crispEdges;
+}
+.rt-chart__grid line {
+	stroke: var(--rt-chart-grid, var(--atmr-border-muted));
+}
+.rt-chart__axis-line {
+	stroke: var(--rt-chart-axis, var(--atmr-border-soft));
+}
+.rt-chart__crosshair {
+	stroke: var(--atmr-border-default);
+}
+.rt-chart__tick {
+	fill: var(--rt-chart-text, var(--atmr-fg-soft));
+	font: var(--atmr-font-description-l);
+	font-variant-numeric: tabular-nums;
+}
+
+/* marks: the colour of the series arrives as --rt-c (any CSS colour) */
+.rt-chart__line {
+	fill: none;
+	stroke: var(--rt-c);
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+.rt-chart__line--dashed {
+	stroke-dasharray: 6 5;
+}
+.rt-chart__area {
+	fill: var(--rt-c);
+	fill-opacity: 0.12;
+	stroke: none;
+}
+.rt-chart__dot {
+	fill: var(--rt-c);
+	stroke: var(--rt-chart-surface, var(--atmr-bg-surface1));
+	stroke-width: 2;
+}
+.rt-chart__bar,
+.rt-chart__slice {
+	fill: var(--rt-c);
+	stroke: none;
+}
+.rt-chart__bar-label {
+	fill: var(--atmr-fg-default);
+	font: var(--atmr-font-description-l-strong);
+	font-variant-numeric: tabular-nums;
+}
+.rt-chart__bar-label--inside {
+	fill: var(--atmr-static-white);
+}
+
+/* ─── tooltip: absolutely positioned inside the plot, never takes part in the layout ─────────────────────────── */
+
+.rt-chart__tooltip {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 4;
+	box-sizing: border-box;
+	min-width: 132px;
+	max-width: 100%;
+	padding: var(--atmr-spacing-2x) var(--atmr-spacing-3x);
+	border: var(--atmr-border-width-s) solid var(--atmr-border-soft);
+	border-radius: var(--atmr-border-radius-m);
+	background: var(--atmr-bg-elevated-m);
+	box-shadow: var(--atmr-shadow-bottom-m);
+	color: var(--atmr-fg-default);
+	font: var(--atmr-font-description-l);
+	white-space: nowrap;
+	pointer-events: none;
+	will-change: transform;
+}
+.rt-chart__tooltip-title {
+	margin: 0 0 var(--atmr-spacing-1x);
+	color: var(--atmr-fg-soft);
+	font: var(--atmr-font-description-l-strong);
+}
+.rt-chart__tooltip-row {
+	display: flex;
+	align-items: center;
+	gap: var(--atmr-spacing-2x);
+	line-height: 18px;
+}
+.rt-chart__tooltip-row--active .rt-chart__tooltip-label {
+	color: var(--atmr-fg-default);
+}
+.rt-chart__tooltip-key {
+	flex: none;
+	width: 10px;
+	height: 3px;
+	border-radius: 2px;
+	background: var(--rt-c);
+}
+.rt-chart__tooltip-key--dot {
+	height: 10px;
+	border-radius: 50%;
+}
+.rt-chart__tooltip-label {
+	flex: 1;
+	min-width: 0;
+	color: var(--atmr-fg-soft);
+}
+.rt-chart__tooltip-value {
+	font-weight: var(--atmr-font-weight-semibold);
+	font-variant-numeric: tabular-nums;
+}
+.rt-chart__tooltip-share {
+	min-width: 2.8em;
+	color: var(--atmr-fg-soft);
+	font-variant-numeric: tabular-nums;
+	text-align: end;
+}
+
+/* ─── keyboard layer and the visually hidden data summary ──────────────────────────────────────────────────────── */
+
+.rt-chart__hits {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+}
+.rt-chart__hit {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+	opacity: 0;
+	pointer-events: none;
+}
+.rt-chart__sr {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	white-space: nowrap;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+}
+
+/* ─── empty state, donut centre, layout of the donut ───────────────────────────────────────────────────────────── */
+
+.rt-chart__empty {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	border-radius: var(--atmr-border-radius-m);
+	background: var(--atmr-neutral-container-muted);
+	color: var(--atmr-fg-soft);
+	font: var(--atmr-font-body-s);
+	text-align: center;
+}
+
+.rt-chart--donut {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: var(--atmr-spacing-4x) var(--atmr-spacing-8x);
+}
+.rt-chart--donut > .rt-chart__plot {
+	flex: none;
+	width: var(--rt-chart-size);
+}
+.rt-chart--donut > .rt-chart__legend {
+	flex: 1 1 200px;
+	min-width: 0;
+}
+.rt-chart__center {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20%;
+	gap: 2px;
+	text-align: center;
+	pointer-events: none;
+}
+.rt-chart__center-value {
+	font: var(--atmr-font-heading-h3);
+	font-variant-numeric: tabular-nums;
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.rt-chart__center-label {
+	max-width: 100%;
+	overflow: hidden;
+	color: var(--atmr-fg-soft);
+	font: var(--atmr-font-description-l);
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* ─── sparkline ────────────────────────────────────────────────────────────────────────────────────────────────── */
+
+.rt-chart--spark {
+	display: inline-block;
+	width: 100%;
+	vertical-align: middle;
+	line-height: 0;
+}
+.rt-chart--spark .rt-chart__plot {
+	touch-action: auto;
+	border-radius: 0;
+}
+.rt-chart__spark-bar {
+	fill: var(--rt-c);
+	stroke: none;
+}

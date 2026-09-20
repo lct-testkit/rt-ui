@@ -1,0 +1,204 @@
+/* Page layout of the CRM example. Only layout (grid / flex / spacing) with design tokens — every visual element is a library component.
+   The first block is the container layout of <TopMenu>: in the original design system it is app-level CSS (it lives in the CSS of the
+   TopMenu stories, not in the component stylesheet), so an app has to provide it — this is the same rules, reduced to what we use. */
+
+body.rt-crm {
+	margin: 0;
+	background: var(--atmr-bg-page-filled);
+}
+/* playground only: the global sheet of the reference sizes html / body as `width: fit-content` — an app fills the window instead */
+html.rt-crm-root, body.rt-crm { width: auto; min-width: 0; }
+
+/* ---- TopMenu container layout (same rules as the stories of the reference) ---- */
+.crm .atmr-top-menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--atmr-spacing-3x);
+	height: 56px;
+	padding: 0 var(--atmr-spacing-4x);
+	background: var(--atmr-bg-surface1);
+	border-bottom: 1px solid var(--atmr-border-muted);
+}
+.crm .atmr-top-menu__actions-container,
+.crm .atmr-top-menu__utilities-container,
+.crm .atmr-top-menu__profile-container {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	gap: var(--atmr-spacing-2x);
+}
+.crm .atmr-top-menu__product-container {
+	flex: 1 1 0;
+	min-width: 0;
+	display: flex;
+	align-items: center;
+}
+.crm .atmr-top-menu__profile-container {
+	cursor: pointer;
+	padding: var(--atmr-spacing-0-5x);
+}
+.crm .crm__usermenu { flex: 0 0 auto; width: auto; } /* the DropdownMenu root that wraps the profile */
+.crm .atmr-top-menu__profile-avatar {
+	display: block;
+	object-fit: cover;
+	border-radius: var(--atmr-border-radius-full);
+}
+.crm .atmr-top-menu__utilities-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: var(--atmr-border-radius-m);
+	cursor: pointer;
+}
+.crm .atmr-top-menu__utilities-icon svg { fill: var(--atmr-fg-soft); }
+.crm .atmr-top-menu__utilities-icon:hover { background: var(--atmr-neutral-container-soft); }
+.crm .atmr-top-menu__utilities-icon:hover svg { fill: var(--atmr-fg-default); }
+
+/* ---- app shell ---- */
+.crm {
+	display: flex;
+	height: 100vh;
+	height: 100dvh; /* phones: the visible height, without the browser bars */
+	overflow: hidden;
+	background: var(--atmr-bg-page);
+	color: var(--atmr-fg-default);
+}
+.crm__brand { display: flex; align-items: center; gap: var(--atmr-spacing-2x); }
+.crm__main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.crm__content {
+	flex: 1;
+	min-height: 0;
+	display: flex;
+	flex-direction: column;
+	padding: var(--atmr-spacing-6x);
+}
+.crm__demo { display: flex; align-items: center; gap: var(--atmr-spacing-3x); }
+.crm__demo-theme { width: 200px; }
+
+/* ---- "Организации" screen ---- */
+.orgs { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: var(--atmr-spacing-4x); }
+.orgs > * { flex: none; }
+/* the free area under the filters: a definite height, so the table inside can be `max-height: 100%` */
+.orgs > .orgs__table { flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; justify-content: flex-start; }
+.orgs__head { display: flex; align-items: center; gap: var(--atmr-spacing-3x); }
+.orgs__head-title { display: flex; flex-direction: column; gap: var(--atmr-spacing-1x); flex: 1; }
+.orgs__filters {
+	display: grid;
+	grid-template-columns: minmax(220px, 1.6fr) minmax(150px, 1fr) minmax(220px, 1.4fr) minmax(220px, 1.2fr) auto;
+	gap: var(--atmr-spacing-3x);
+	align-items: end;
+}
+.orgs__note { color: var(--atmr-fg-muted); }
+.orgs__status { display: flex; align-items: center; height: 100%; padding: 0 var(--atmr-spacing-3x); }
+
+/* ---- organization card (Drawer) ---- */
+.crm-drawer .atmr-drawer__content {
+	display: flex;
+	flex-direction: column;
+	gap: var(--atmr-spacing-5x);
+	padding: var(--atmr-spacing-6x);
+	box-sizing: border-box;
+}
+.card__head { display: flex; align-items: flex-start; gap: var(--atmr-spacing-3x); }
+.card__title { flex: 1; display: flex; flex-direction: column; gap: var(--atmr-spacing-2x); align-items: flex-start; }
+.card__fields { display: grid; grid-template-columns: 1fr 1fr; gap: var(--atmr-spacing-4x) var(--atmr-spacing-5x); padding-top: var(--atmr-spacing-4x); }
+.card__field { display: flex; flex-direction: column; gap: var(--atmr-spacing-1x); }
+.card__muted { color: var(--atmr-fg-muted); }
+.card__list { display: flex; flex-direction: column; gap: var(--atmr-spacing-3x); padding-top: var(--atmr-spacing-4x); }
+.card__footer { display: flex; gap: var(--atmr-spacing-3x); margin-top: auto; }
+
+/* ---- confirm Modal ---- */
+.crm-modal { padding: var(--atmr-spacing-8x); border-radius: var(--atmr-border-radius-l); }
+.crm-modal__head { position: relative; display: flex; flex-direction: column; gap: var(--atmr-spacing-3x); margin-bottom: var(--atmr-spacing-8x); }
+.crm-modal__close { position: absolute; top: 0; right: 0; }
+.crm-modal__actions { display: flex; gap: var(--atmr-spacing-3x); }
+.crm-modal__actions > * { flex: 1; }
+
+/* ================================================================ adaptive layout ================================================================
+   Breakpoints (same as `useBreakpoint()` of rt-ui/ext): phone < 768, tablet 768-1023, desktop >= 1024. What must change STRUCTURE (table -> cards,
+   side menu -> burger + Drawer, filter grid -> inline panel) is decided in the components by `useBreakpoint()`; the rest is plain CSS below. */
+
+/* phone / tablet: the header buttons and the demo switches must not push the top bar wider than the window */
+@media (max-width: 1023px) {
+	.crm__content { padding: var(--atmr-spacing-4x); }
+	.crm .atmr-top-menu { flex-wrap: nowrap; row-gap: 0; padding: 0 var(--atmr-spacing-3x); }
+	.crm .atmr-top-menu__product-container { overflow: hidden; }
+	.crm__demo-theme { width: 170px; }
+	.orgs__filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.orgs__filters > :last-child { grid-column: 1 / -1; justify-self: end; }
+}
+/* tablet: the breadcrumbs go (the page title says the same), the demo switches stay */
+@media (min-width: 768px) and (max-width: 1023px) {
+	.crm .atmr-top-menu__product-container { display: none; }
+	.crm .atmr-top-menu { justify-content: flex-end; }
+}
+
+/* ---- phone: the top bar ---- */
+.crm--mobile .atmr-top-menu { height: 56px; gap: var(--atmr-spacing-1x); padding: 0 var(--atmr-spacing-2x) 0 var(--atmr-spacing-1x); }
+.crm--mobile .atmr-top-menu__product-container { flex: 1 1 0; min-width: 0; gap: var(--atmr-spacing-1x); }
+.crm__brand--top { display: flex; align-items: center; gap: var(--atmr-spacing-2x); min-width: 0; white-space: nowrap; }
+.crm--mobile .atmr-top-menu__utilities-icon { width: 44px; height: 44px; }
+.crm--mobile .atmr-top-menu__profile-container { padding: var(--atmr-spacing-1x); }
+
+/* ---- phone: the menu Drawer (SideMenu inside) ---- */
+.crm-nav .atmr-drawer__content { padding: 0; }
+.crm-nav .atmr-side-menu { width: 100%; height: 100%; border-right: 0; }
+.crm__demo-stack { display: flex; flex-direction: column; gap: var(--atmr-spacing-3x); padding: var(--atmr-spacing-3x) var(--atmr-spacing-4x) var(--atmr-spacing-5x); box-sizing: border-box; width: 100%; }
+.crm__muted { color: var(--atmr-fg-muted); }
+
+/* ---- phone: the screen scrolls as a page; cards, the inline filter panel, the sticky bulk bar ---- */
+.crm--mobile .crm__content { padding: var(--atmr-spacing-3x) var(--atmr-spacing-3x) 96px; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; }
+.crm--mobile .orgs { flex: none; min-height: auto; gap: var(--atmr-spacing-3x); }
+.crm--mobile .orgs > .orgs__table { flex: none; min-height: auto; display: block; }
+.crm--mobile .orgs__head { gap: var(--atmr-spacing-2x); }
+.orgs__mfilters { display: flex; flex-direction: column; gap: var(--atmr-spacing-3x); }
+.orgs__mfilters-row { display: flex; align-items: center; gap: var(--atmr-spacing-2x); }
+.orgs__grow { flex: 1; min-width: 0; }
+.orgs__iconwrap { position: relative; flex: none; }
+.orgs__iconwrap-badge { position: absolute; top: -6px; right: -6px; pointer-events: none; }
+.orgs__mpanel {
+	display: flex;
+	flex-direction: column;
+	gap: var(--atmr-spacing-3x);
+	padding: var(--atmr-spacing-3x);
+	background: var(--atmr-bg-surface1);
+	border: 1px solid var(--atmr-border-muted);
+	border-radius: var(--atmr-border-radius-m);
+}
+.orgs__mpanel-actions { display: flex; gap: var(--atmr-spacing-3x); }
+.orgs__mpanel-actions > * { flex: 1; }
+.orgs__mbar { display: flex; align-items: center; justify-content: space-between; gap: var(--atmr-spacing-3x); }
+.orgs__mbar-sort { width: 230px; max-width: 62%; }
+.ocard { display: flex; flex-direction: column; gap: var(--atmr-spacing-1x); }
+.ocard__row { display: flex; align-items: center; justify-content: space-between; gap: var(--atmr-spacing-2x); padding: var(--atmr-spacing-1x) 0; }
+.orgs__mpager { display: flex; justify-content: center; padding-top: var(--atmr-spacing-4x); }
+.orgs__bulk {
+	position: sticky;
+	bottom: 0;
+	z-index: var(--atmr-z-index-sticky);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--atmr-spacing-2x);
+	flex-wrap: wrap;
+	padding: var(--atmr-spacing-3x);
+	background: var(--atmr-bg-surface1);
+	border: 1px solid var(--atmr-border-muted);
+	border-radius: var(--atmr-border-radius-m);
+}
+.orgs__bulk-actions { display: flex; align-items: center; gap: var(--atmr-spacing-2x); }
+/* the FAB is portalled into <body>: keep it clear of the home indicator */
+body.rt-crm .atmr-floating-action-button { right: 16px; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); }
+
+/* ---- phone: the card Drawer and the confirm Modal (both are portalled into <body>, so plain media queries) ---- */
+@media (max-width: 767px) {
+	.crm-drawer .atmr-drawer__content { padding: var(--atmr-spacing-4x); gap: var(--atmr-spacing-4x); }
+	.card__fields { grid-template-columns: 1fr; }
+	.card__footer { flex-direction: column; position: sticky; bottom: 0; padding-top: var(--atmr-spacing-3x); background: var(--atmr-bg-surface1); }
+	.card__footer > * { width: 100%; }
+	.crm-modal { padding: var(--atmr-spacing-5x); }
+	.crm-modal__actions { flex-direction: column-reverse; }
+}

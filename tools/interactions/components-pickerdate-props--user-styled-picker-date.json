@@ -1,0 +1,5 @@
+{"states": [
+  {"name": "pick-day", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar__item:not(.atmr-calendar__item--empty):not(.atmr-calendar__item--disabled) .atmr-calendar__inner >> nth=9"], ["wait", 150], ["mouse", 5, 5], ["wait", 150]]},
+  {"name": "month-list", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar-header__item--month"], ["wait", 150]]},
+  {"name": "next-month", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar-header__button >> nth=1"], ["wait", 150]]}
+]}

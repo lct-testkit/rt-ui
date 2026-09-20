@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "kebab-click", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu__suffix button"], ["wait", 300]]},
+  {"name": "hover-disabled-item", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["hover", ".atmr-dropdown-menu__item--disabled"], ["wait", 100]]},
+  {"name": "click-disabled-item", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu__item--disabled"], ["wait", 300]]},
+  {"name": "select-ember", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=1"], ["wait", 300]]}
+]}

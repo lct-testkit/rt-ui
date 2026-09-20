@@ -1,0 +1,65 @@
+{
+ "states": [
+  {
+   "name": "hover-first",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-popover__root >> nth=0"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "hover-third",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-popover__root >> nth=2"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "hover-then-leave",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-popover__root >> nth=1"
+    ],
+    [
+     "wait",
+     400
+    ],
+    [
+     "mouse",
+     900,
+     500
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "click-item",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-popover__root >> nth=1"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  }
+ ]
+}

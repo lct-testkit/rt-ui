@@ -1,0 +1,24 @@
+.header {
+  margin-top: var(--atmr-spacing-8x);
+  margin-bottom: var(--atmr-spacing-3x);
+
+  &.no-space {
+    margin: 0;
+  }
+}
+
+.container {
+  display: flex;
+}
+
+.chip-wrapper {
+  margin: var(--atmr-spacing-5x);
+}
+
+.text-container {
+  margin: var(--atmr-spacing-3x) var(--atmr-spacing-6x);
+}
+
+.container-buttons {
+  margin-bottom: var(--atmr-spacing-10x);
+}

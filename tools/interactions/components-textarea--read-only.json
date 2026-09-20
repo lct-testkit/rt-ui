@@ -1,0 +1,35 @@
+{
+ "states": [
+  {
+   "name": "typed",
+   "actions": [
+    [
+     "click",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "Hello"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "focus",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  }
+ ]
+}

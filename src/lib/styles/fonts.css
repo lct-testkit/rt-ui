@@ -1,0 +1,34 @@
+/* Rostelecom Basis. Font files are licensed by Rostelecom and are NOT committed (see .gitignore) —
+   drop RostelecomBasis-{Light,Regular,Medium,Bold}.woff(2) into ./fonts/. */
+
+@font-face {
+  font-family: 'Rostelecom Basis';
+  src: url('./fonts/RostelecomBasis-Regular.woff2') format('woff2'), url('./fonts/RostelecomBasis-Regular.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rostelecom Basis';
+  src: url('./fonts/RostelecomBasis-Medium.woff2') format('woff2'), url('./fonts/RostelecomBasis-Medium.woff') format('woff');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rostelecom Basis';
+  src: url('./fonts/RostelecomBasis-Light.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rostelecom Basis';
+  src: url('./fonts/RostelecomBasis-Bold.woff2') format('woff2'), url('./fonts/RostelecomBasis-Bold.woff') format('woff');
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+}

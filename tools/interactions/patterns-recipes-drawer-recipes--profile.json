@@ -1,0 +1,14 @@
+{"states": [
+  {"name": "drawer-open", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500]]},
+  {"name": "close-icon", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer .atmr-closebutton"], ["wait", 600]]},
+  {"name": "overlay-click", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer__overlay"], ["wait", 600]]},
+  {"name": "escape-no-handler", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["press", "Escape"], ["wait", 600]]},
+  {"name": "hover-arrow", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["hover", ".profile__arrow button"]]},
+  {"name": "hover-close", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["hover", ".atmr-drawer .atmr-closebutton"]]},
+  {"name": "tab-1", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["press", "Tab"]]},
+  {"name": "tab-2", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["press", "Tab"], ["press", "Tab"]]},
+  {"name": "tab-3", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["press", "Tab"], ["press", "Tab"], ["press", "Tab"]]},
+  {"name": "click-arrow", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".profile__arrow button"], ["wait", 300]]},
+  {"name": "scroll-content", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["scroll", ".atmr-drawer__content", 0, 300], ["wait", 200]]},
+  {"name": "reopen", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-drawer .atmr-closebutton"], ["wait", 600], ["click", "#storybook-root button >> nth=0"], ["wait", 500]]}
+]}

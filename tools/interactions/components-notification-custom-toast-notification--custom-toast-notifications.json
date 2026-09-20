@@ -1,0 +1,3 @@
+{"states": [
+  {"name": "custom-stack-close-first", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 100], ["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-custom-toast-notification >> nth=0 >> button"], ["wait", 700]]}
+]}

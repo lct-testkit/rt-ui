@@ -1,0 +1,240 @@
+{
+ "states": [
+  {
+   "name": "tab-click-2",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [role=tab] >> nth=2"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "tab-click-4",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [role=tab] >> nth=4"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "tab-hover-1",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root [role=tab] >> nth=1"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "tab-kbd-right",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root [role=tab] >> nth=0"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "tab-kbd-enter",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root [role=tab] >> nth=0"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "wait",
+     700
+    ]
+   ]
+  },
+  {
+   "name": "hover-nav-icon",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__navigation-icon"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-brand-button",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__brand-function-button"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "click-brand-button",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-top-menu__brand-function-button"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hover-search-icon",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__actions-container .atmr-top-menu__utilities-icon"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-action-button",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__actions-container .atmr-button"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "click-action-button",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-top-menu__actions-container .atmr-button"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hover-utilities-icon",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__utilities-container .atmr-top-menu__utilities-icon >> nth=1"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "click-utilities-icon",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-top-menu__utilities-container .atmr-top-menu__utilities-icon >> nth=2"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hover-profile",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__profile-container .atmr-top-menu__profile-prefix"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "click-profile",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-top-menu__profile-container"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "tab-focus-4",
+   "actions": [
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  }
+ ]
+}

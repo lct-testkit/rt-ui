@@ -1,0 +1,465 @@
+{
+ "states": [
+  {
+   "name": "kbd-right-x2",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=0"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-left",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=0"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-up-down",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=0"
+    ],
+    [
+     "press",
+     "ArrowUp"
+    ],
+    [
+     "press",
+     "ArrowUp"
+    ],
+    [
+     "press",
+     "ArrowDown"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-home",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=0"
+    ],
+    [
+     "press",
+     "Home"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-end",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=0"
+    ],
+    [
+     "press",
+     "End"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-pageup",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=0"
+    ],
+    [
+     "press",
+     "PageUp"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-pagedown",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=0"
+    ],
+    [
+     "press",
+     "PageDown"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-shift-right",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=0"
+    ],
+    [
+     "press",
+     "Shift+ArrowRight"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-ctrl-right",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=0"
+    ],
+    [
+     "press",
+     "Control+ArrowRight"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-shift-left",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=0"
+    ],
+    [
+     "press",
+     "Shift+ArrowLeft"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-two-right-x3",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=2"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-two-first-right",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=1"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-two-left-clamped",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=2"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-two-end",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=1"
+    ],
+    [
+     "press",
+     "End"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "kbd-two-home",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=2"
+    ],
+    [
+     "press",
+     "Home"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "click-track-0",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-slider__track >> nth=0"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "click-track-1",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-slider__track >> nth=1"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "click-dot-8-single",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-slider >> nth=0 >> .atmr-slider__track-dot >> nth=7"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "click-dot-9-two",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-slider >> nth=1 >> .atmr-slider__track-dot >> nth=8"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "click-dot-2-two",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-slider >> nth=1 >> .atmr-slider__track-dot >> nth=1"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "click-dot-6-two-twice",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-slider >> nth=1 >> .atmr-slider__track-dot >> nth=5"
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-slider >> nth=1 >> .atmr-slider__track-dot >> nth=6"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "collapse-then-click",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=2"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-slider >> nth=1 >> .atmr-slider__track-dot >> nth=5"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "collapse-shift-tab",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=2"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "press",
+     "Shift+Tab"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "tab-x3",
+   "actions": [
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "hover-track-1",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-slider__track >> nth=1"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  }
+ ]
+}

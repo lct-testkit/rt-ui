@@ -1,0 +1,7 @@
+{"states": [
+  {"name": "add-content", "actions": [["click", "text=Добавить контент"], ["wait", 300]]},
+  {"name": "add-content-twice", "actions": [["click", "text=Добавить контент"], ["wait", 300], ["click", "text=Добавить контент"], ["wait", 300]]},
+  {"name": "close-1", "actions": [["click", "#storybook-root [style*='cursor: pointer'] >> nth=0"], ["wait", 500]]},
+  {"name": "add-content-close-1-open-1", "actions": [["click", "text=Добавить контент"], ["wait", 300], ["click", "#storybook-root [style*='cursor: pointer'] >> nth=0"], ["wait", 450], ["click", "#storybook-root [style*='cursor: pointer'] >> nth=0"], ["wait", 500]]},
+  {"name": "kbd-space-add-content", "actions": [["focus", "text=Добавить контент"], ["press", "Space"], ["wait", 300]]}
+]}

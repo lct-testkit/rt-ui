@@ -1,0 +1,8 @@
+{"states": [
+  {"name": "click-disabled", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=3"], ["wait", 150], ["mouse", 5, 5], ["wait", 150]]},
+  {"name": "click-today", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar__item--today .atmr-calendar__inner"], ["wait", 150], ["mouse", 5, 5], ["wait", 150]]},
+  {"name": "click-tomorrow", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=15"], ["wait", 150], ["mouse", 5, 5], ["wait", 150]]},
+  {"name": "hover-today", "actions": [["hover", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar__item--today .atmr-calendar__inner"], ["wait", 150]]},
+  {"name": "next-month", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar-header__button >> nth=1"], ["wait", 150]]},
+  {"name": "today-then-tomorrow", "actions": [["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar__item--today .atmr-calendar__inner"], ["wait", 150], ["click", "#storybook-root .atmr-calendar >> nth=0 >> css=.atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=15"], ["wait", 150], ["mouse", 5, 5], ["wait", 150]]}
+]}

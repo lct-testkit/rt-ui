@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "open-controlled", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["hover", ".atmr-dropdown-menu__item--selected"], ["wait", 100]]},
+  {"name": "select-controlled", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=6"], ["wait", 300]]},
+  {"name": "select-controlled-reopen", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=6"], ["wait", 200], ["click", "#storybook-root .atmr-select"], ["wait", 300]]},
+  {"name": "deselect-controlled", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu__item--selected"], ["wait", 300]]}
+]}

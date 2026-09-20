@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "open-scroll", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 300], ["scroll", ".atmr-dropdown-menu__menu", 0, 200], ["wait", 200]]},
+  {"name": "open-scroll-select-last", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 300], ["scroll", ".atmr-dropdown-menu__menu", 0, 400], ["wait", 200], ["click", ".atmr-dropdown-menu__item >> nth=10"], ["wait", 300]]},
+  {"name": "type-cyrillic", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 200], ["type", "#storybook-root .atmr-taginput", "ск"], ["wait", 300]]},
+  {"name": "type-cyrillic-select", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 200], ["type", "#storybook-root .atmr-taginput", "ск"], ["wait", 200], ["click", ".atmr-dropdown-menu__item >> nth=0"], ["wait", 300]]}
+]}

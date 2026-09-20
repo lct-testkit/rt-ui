@@ -1,0 +1,89 @@
+{
+ "states": [
+  {
+   "name": "hide-first",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-checkbox >> nth=1"
+    ],
+    [
+     "wait",
+     120
+    ],
+    [
+     "hover",
+     "#storybook-root .atmr-checkbox >> nth=0"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "hide-two",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-checkbox >> nth=1"
+    ],
+    [
+     "wait",
+     120
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-checkbox >> nth=3"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "hide-all-parent",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-checkbox >> nth=0"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "hide-and-show",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-checkbox >> nth=2"
+    ],
+    [
+     "wait",
+     120
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-checkbox >> nth=2"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "hover-row",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-tablegrid__row >> nth=2 >> .atmr-tablegrid__cell >> nth=1"
+    ]
+   ]
+  }
+ ]
+}

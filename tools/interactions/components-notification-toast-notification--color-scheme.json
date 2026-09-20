@@ -1,0 +1,7 @@
+{"states": [
+  {"name": "scheme-warning", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 450]]},
+  {"name": "scheme-error", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 450]]},
+  {"name": "scheme-success", "actions": [["click", "#storybook-root button >> nth=3"], ["wait", 450]]},
+  {"name": "scheme-all-four", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 100], ["click", "#storybook-root button >> nth=1"], ["wait", 100], ["click", "#storybook-root button >> nth=2"], ["wait", 100], ["click", "#storybook-root button >> nth=3"], ["wait", 700]]},
+  {"name": "scheme-error-hover-close", "actions": [["click", "#storybook-root button >> nth=2"], ["wait", 450], ["hover", ".atmr-toast-notification__close button"]]}
+]}

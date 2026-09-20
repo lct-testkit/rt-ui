@@ -1,0 +1,69 @@
+/* story-only CSS of patterns-recipes-topmenu-topwithsidemenu--top-with-side-menu-story (copied 1:1 from the reference) */
+.stories-main-side-menu {
+  height: 100%;
+  display: flex;
+  background-color: #f8f9fa;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.stories-top-with-side-menu {
+  width: 100%;
+  height: 100%;
+  min-width: 750px;
+  min-height: 0;
+  background: var(--atmr-bg-page);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: absolute;
+  inset: 0;
+}
+
+.atmr-top-menu--top-with-side-menu .atmr-top-menu__product-tabs {
+  width: auto;
+}
+
+.atmr-top-menu--top-with-side-menu .atmr-top-menu__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--atmr-spacing-1x);
+}
+
+/* TEMP */
+.atmr-top-menu--top-with-side-menu .atmr-tabs-item {
+  padding: 16px 12px !important;
+}
+
+.atmr-top-menu--top-with-side-menu .atmr-tabs-group__tabs::after,
+.atmr-top-menu--top-with-side-menu .atmr-tabs-group_tabs::after,
+.atmr-top-menu--top-with-side-menu .atmr-tabs-group--border .atmr-tabs-group__tabs::after,
+.atmr-top-menu--top-with-side-menu .atmr-tabs-group--border .atmr-tabs-group_tabs::after {
+  content: none !important;
+  display: none !important;
+}
+
+.stories-top-with-side-menu .atmr-top-menu {
+  box-shadow: none;
+}
+
+.stories-top-with-side-menu__layout {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.stories-top-with-side-menu__layout .stories-main-side-menu {
+  position: static !important;
+  height: 100%;
+}
+
+.stories-top-with-side-menu__layout .atmr-side-menu {
+  height: 100%;
+}
+
+.stories-top-with-side-menu__content {
+  flex: 1;
+}

@@ -1,0 +1,9 @@
+{"states": [
+  {"name": "buttons-last", "actions": [["click", "#storybook-root button[page='100']"], ["wait", 100]]},
+  {"name": "buttons-page6", "actions": [["click", "#storybook-root button[page='6']"], ["wait", 100]]},
+  {"name": "mobile-next-next", "actions": [["click", "#storybook-root .atmr-pagination >> nth=1 >> button[type='next']"], ["click", "#storybook-root .atmr-pagination >> nth=1 >> button[type='next']"], ["wait", 100]]},
+  {"name": "mobile-page5", "actions": [["click", "#storybook-root .atmr-pagination >> nth=1 >> button[page='5']"], ["wait", 100]]},
+  {"name": "label-next", "actions": [["click", "#storybook-root .atmr-pagination >> nth=2 >> button[type='next']"], ["wait", 100]]},
+  {"name": "label-next-prev", "actions": [["click", "#storybook-root .atmr-pagination >> nth=2 >> button[type='next']"], ["click", "#storybook-root .atmr-pagination >> nth=2 >> button[type='previous']"], ["wait", 100]]},
+  {"name": "slider-next", "actions": [["click", "#storybook-root .atmr-pagination >> nth=3 >> button[type='next']"], ["wait", 100]]}
+]}

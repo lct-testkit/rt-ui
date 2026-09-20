@@ -1,0 +1,5 @@
+{"states": [
+  {"name": "hover-second", "actions": [["hover", "#storybook-root .atmr-tooltip__trigger >> nth=1"], ["wait", 400]]},
+  {"name": "hover-switch", "actions": [["hover", "#storybook-root .atmr-tooltip__trigger >> nth=0"], ["wait", 400], ["hover", "#storybook-root .atmr-tooltip__trigger >> nth=1"], ["wait", 400]]},
+  {"name": "hover-second-leave", "actions": [["hover", "#storybook-root .atmr-tooltip__trigger >> nth=1"], ["wait", 400], ["mouse", 700, 700], ["wait", 300]]}
+]}

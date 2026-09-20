@@ -1,0 +1,116 @@
+{
+ "states": [
+  {
+   "name": "hover-nav-icon",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__navigation-icon"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-kebab",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-functionbutton"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "click-kebab",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-functionbutton"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hover-search-icon",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__utilities-icon >> nth=1"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-lang-icon",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__utilities-icon >> nth=2"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-action-button",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .top-menu-page-title-status__action-button"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "click-action-button",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .top-menu-page-title-status__action-button"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "tab-focus-3",
+   "actions": [
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  }
+ ]
+}

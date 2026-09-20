@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "list-scroll-mid", "actions": [["scroll", "#storybook-root .atmr-dropdown-menu ul.atmr-scroll-bar", 0, 120], ["wait", 300]]},
+  {"name": "list-scroll-bottom-select", "actions": [["scroll", "#storybook-root .atmr-dropdown-menu ul.atmr-scroll-bar", 0, 1000], ["wait", 300], ["click", "#storybook-root .atmr-dropdown-menu__text >> text=\"Palladium\""], ["wait", 300]]},
+  {"name": "list-select-first", "actions": [["click", "#storybook-root .atmr-dropdown-menu__text >> text=\"Polymer\""], ["wait", 300]]},
+  {"name": "list-hover", "actions": [["hover", "#storybook-root .atmr-dropdown-menu__text >> text=\"Nickel\""]]}
+]}

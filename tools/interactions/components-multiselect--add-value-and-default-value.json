@@ -1,0 +1,13 @@
+{"states": [
+  {"name": "add-1", "actions": [["click", "#storybook-root .atmr-button"], ["wait", 300]]},
+  {"name": "add-3", "actions": [["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["wait", 300]]},
+  {"name": "add-all", "actions": [["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["wait", 300]]},
+  {"name": "add-all-reset", "actions": [["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["wait", 300]]},
+  {"name": "add-3-open-first", "actions": [["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 300]]},
+  {"name": "add-3-remove-tag", "actions": [["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-button"], ["click", "#storybook-root .atmr-tagitem__closebutton >> nth=1"], ["wait", 300]]},
+  {"name": "open-second", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=1"], ["wait", 300]]},
+  {"name": "open-second-select", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=1"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 300]]},
+  {"name": "remove-tag-second", "actions": [["click", "#storybook-root .atmr-tagitem__closebutton >> nth=0"], ["wait", 300]]},
+  {"name": "open-then-click-button", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 300], ["click", "#storybook-root .atmr-button"], ["wait", 300]]},
+  {"name": "open-both", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 300], ["click", "#storybook-root .atmr-input--multiselect >> nth=1"], ["wait", 300]]}
+]}

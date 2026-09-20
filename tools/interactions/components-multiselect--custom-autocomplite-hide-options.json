@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "type-sel", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 200], ["type", "#storybook-root .atmr-taginput", "sel"], ["wait", 300]]},
+  {"name": "type-selection-1", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 200], ["type", "#storybook-root .atmr-taginput", "selection 1"], ["wait", 300]]},
+  {"name": "type-sel-select", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 200], ["type", "#storybook-root .atmr-taginput", "sel"], ["wait", 200], ["click", ".atmr-dropdown-menu__item >> nth=2"], ["wait", 300]]},
+  {"name": "type-sel-select-then-type", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 200], ["type", "#storybook-root .atmr-taginput", "sel"], ["wait", 200], ["click", ".atmr-dropdown-menu__item >> nth=2"], ["wait", 200], ["type", "#storybook-root .atmr-taginput", "e"], ["wait", 300]]}
+]}

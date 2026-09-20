@@ -1,0 +1,29 @@
+/* story-only CSS of patterns-recipes-sidemenu-popover--popover (copied 1:1 from the reference) */
+.stories-main-side-menu {
+  height: 100%;
+  display: flex;
+  background-color: #f8f9fa;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.atmr-popover.atmr-side-menu__tooltip {
+  padding: 0 var(--atmr-spacing-2x);
+  height: 40px;
+  cursor: default;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.atmr-popover.atmr-side-menu__tooltip[data-show='true'] {
+  display: flex;
+}
+
+.atmr-side-menu__tooltip .atmr-list-item__content {
+  min-width: 120px;
+  padding: 0 var(--atmr-spacing-2x);
+  color: var(--atmr-fg-soft);
+  font: var(--atmr-font-body-s);
+}

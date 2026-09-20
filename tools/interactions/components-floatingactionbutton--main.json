@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "hover-button", "actions": [["hover", "#storybook-root .atmr-floating-action-button__button"]]},
+  {"name": "click-twice", "actions": [["click", "#storybook-root .atmr-floating-action-button__button"], ["wait", 400], ["click", "#storybook-root .atmr-floating-action-button__button"], ["wait", 400]]},
+  {"name": "kbd-enter", "actions": [["focus", "#storybook-root .atmr-floating-action-button__button"], ["press", "Enter"], ["wait", 400]]},
+  {"name": "kbd-space", "actions": [["focus", "#storybook-root .atmr-floating-action-button__button"], ["press", "Space"], ["wait", 400]]}
+]}

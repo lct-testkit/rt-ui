@@ -1,0 +1,214 @@
+{
+ "states": [
+  {
+   "name": "fill-2-lines",
+   "actions": [
+    [
+     "fill",
+     "#storybook-root textarea >> nth=0",
+     "line 1\nline 2"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "fill-5-lines",
+   "actions": [
+    [
+     "fill",
+     "#storybook-root textarea >> nth=0",
+     "line 1\nline 2\nline 3\nline 4\nline 5"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "fill-9-lines",
+   "actions": [
+    [
+     "fill",
+     "#storybook-root textarea >> nth=0",
+     "line 1\nline 2\nline 3\nline 4\nline 5\nline 6\nline 7\nline 8\nline 9"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "fill-9-then-1",
+   "actions": [
+    [
+     "fill",
+     "#storybook-root textarea >> nth=0",
+     "line 1\nline 2\nline 3\nline 4\nline 5\nline 6\nline 7\nline 8\nline 9"
+    ],
+    [
+     "wait",
+     100
+    ],
+    [
+     "fill",
+     "#storybook-root textarea >> nth=0",
+     "x"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "typed-lines",
+   "actions": [
+    [
+     "click",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "one"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "two"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "three"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "four"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "five"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "typed-8-lines",
+   "actions": [
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "l1"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "l2"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "l3"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "l4"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "l5"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "l6"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "l7"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "l8"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "long-line-wrap",
+   "actions": [
+    [
+     "fill",
+     "#storybook-root textarea >> nth=0",
+     "word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word "
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  }
+ ]
+}

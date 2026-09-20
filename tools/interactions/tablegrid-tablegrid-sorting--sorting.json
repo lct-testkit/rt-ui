@@ -1,0 +1,39 @@
+{
+ "states": [
+  {
+   "name": "hover-sort-button",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-tablegrid__sorting__button >> nth=1"
+    ]
+   ]
+  },
+  {
+   "name": "hover-sort-first",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-tablegrid__sorting__button >> nth=0"
+    ]
+   ]
+  },
+  {
+   "name": "focus-sort-kbd",
+   "actions": [
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ]
+   ]
+  }
+ ]
+}

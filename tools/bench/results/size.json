@@ -1,0 +1,2389 @@
+{
+  "generatedAt": "2026-09-20T09:28:40.588Z",
+  "versions": {
+    "node": "v26.1.0",
+    "vite": "8.3.0",
+    "svelte": "5.57.1",
+    "vite-plugin-svelte": "7.3.0",
+    "lightningcss": "1.33.0",
+    "react": "19.3.0"
+  },
+  "settings": {
+    "jsMinifier": "oxc (Vite 8 default)",
+    "cssMinifier": "lightningcss",
+    "gzipLevel": 9,
+    "brotliQuality": 11,
+    "unit": "bytes"
+  },
+  "scenarios": {
+    "s0": {
+      "title": "S0 Hello-world Svelte",
+      "imports": "ничего",
+      "extra": false,
+      "js": {
+        "raw": 22341,
+        "gzip": 8969,
+        "brotli": 8180
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 22341,
+        "gzip": 8969,
+        "brotli": 8180
+      },
+      "fonts": {
+        "woff2": {
+          "files": [],
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        },
+        "woff": {
+          "files": [],
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        }
+      },
+      "html": {
+        "raw": 339,
+        "gzip": 255,
+        "brotli": 158
+      },
+      "lazy": {
+        "js": {
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        },
+        "css": {
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        }
+      },
+      "chunks": [
+        {
+          "file": "assets/index-C7HM-k-0.js",
+          "type": "js",
+          "initial": true,
+          "raw": 22341,
+          "gzip": 8969,
+          "brotli": 8180
+        }
+      ],
+      "modules": {
+        "count": 97,
+        "libCount": 0,
+        "libRendered": 0,
+        "top": [
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/batch.js",
+            "rendered": 17154
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/runtime.js",
+            "rendered": 11249
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/blocks/boundary.js",
+            "rendered": 8309
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/proxy.js",
+            "rendered": 6612
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/effects.js",
+            "rendered": 6392
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/sources.js",
+            "rendered": 4680
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/elements/custom-element.js",
+            "rendered": 4518
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/render.js",
+            "rendered": 3889
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/errors.js",
+            "rendered": 3101
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/deriveds.js",
+            "rendered": 2486
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/elements/events.js",
+            "rendered": 2456
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/warnings.js",
+            "rendered": 2296
+          },
+          {
+            "id": "node_modules/svelte/src/legacy/legacy-client.js",
+            "rendered": 2142
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/error-handling.js",
+            "rendered": 1891
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/operations.js",
+            "rendered": 1618
+          }
+        ]
+      },
+      "buildMs": 152
+    },
+    "s0r": {
+      "title": "S0r Hello-world React",
+      "imports": "ничего (React 19)",
+      "extra": false,
+      "js": {
+        "raw": 218698,
+        "gzip": 67331,
+        "brotli": 58097
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 218698,
+        "gzip": 67331,
+        "brotli": 58097
+      },
+      "fonts": {
+        "woff2": {
+          "files": [],
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        },
+        "woff": {
+          "files": [],
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        }
+      },
+      "html": {
+        "raw": 339,
+        "gzip": 255,
+        "brotli": 146
+      },
+      "lazy": {
+        "js": {
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        },
+        "css": {
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        }
+      },
+      "chunks": [
+        {
+          "file": "assets/index-D9jm_lIQ.js",
+          "type": "js",
+          "initial": true,
+          "raw": 218698,
+          "gzip": 67331,
+          "brotli": 58097
+        }
+      ],
+      "modules": {
+        "count": 11,
+        "libCount": 0,
+        "libRendered": 0,
+        "top": [
+          {
+            "id": "tools/bench/node_modules/react-dom/cjs/react-dom-client.production.js",
+            "rendered": 529568
+          },
+          {
+            "id": "tools/bench/node_modules/react/cjs/react.production.js",
+            "rendered": 16011
+          },
+          {
+            "id": "tools/bench/node_modules/scheduler/cjs/scheduler.production.js",
+            "rendered": 9076
+          },
+          {
+            "id": "tools/bench/node_modules/react-dom/cjs/react-dom.production.js",
+            "rendered": 6282
+          },
+          {
+            "id": "tools/bench/node_modules/react-dom/client.js",
+            "rendered": 485
+          },
+          {
+            "id": "tools/bench/node_modules/react-dom/index.js",
+            "rendered": 480
+          },
+          {
+            "id": "tools/bench/app/scenarios/s0r/main.js",
+            "rendered": 415
+          },
+          {
+            "id": "tools/bench/node_modules/scheduler/index.js",
+            "rendered": 200
+          },
+          {
+            "id": "tools/bench/node_modules/react/index.js",
+            "rendered": 188
+          },
+          {
+            "id": "\u0000rolldown/runtime.js",
+            "rendered": 161
+          },
+          {
+            "id": "tools/bench/app/scenarios/s0r/index.html",
+            "rendered": 0
+          }
+        ]
+      },
+      "buildMs": 291
+    },
+    "s1": {
+      "title": "S1 Одна кнопка",
+      "imports": "Button + CSS одной темы",
+      "extra": false,
+      "js": {
+        "raw": 40735,
+        "gzip": 15621,
+        "brotli": 14220
+      },
+      "css": {
+        "raw": 1707643,
+        "gzip": 87368,
+        "brotli": 52021
+      },
+      "total": {
+        "raw": 1748378,
+        "gzip": 102989,
+        "brotli": 66241
+      },
+      "fonts": {
+        "woff2": {
+          "files": [
+            {
+              "file": "assets/RostelecomBasis-Bold-B2rhRksQ.woff2",
+              "raw": 48024
+            },
+            {
+              "file": "assets/RostelecomBasis-Medium-gmdgF0I2.woff2",
+              "raw": 48524
+            },
+            {
+              "file": "assets/RostelecomBasis-Regular-CVOcoQmA.woff2",
+              "raw": 48884
+            }
+          ],
+          "raw": 145432,
+          "gzip": 145531,
+          "brotli": 145444
+        },
+        "woff": {
+          "files": [
+            {
+              "file": "assets/RostelecomBasis-Bold-DijSOI6m.woff",
+              "raw": 63064
+            },
+            {
+              "file": "assets/RostelecomBasis-Light-DqXDAPjX.woff",
+              "raw": 61788
+            },
+            {
+              "file": "assets/RostelecomBasis-Medium-1hMndgxO.woff",
+              "raw": 63732
+            },
+            {
+              "file": "assets/RostelecomBasis-Regular-etaCYQHE.woff",
+              "raw": 63948
+            }
+          ],
+          "raw": 252532,
+          "gzip": 252394,
+          "brotli": 251840
+        }
+      },
+      "html": {
+        "raw": 406,
+        "gzip": 286,
+        "brotli": 158
+      },
+      "lazy": {
+        "js": {
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        },
+        "css": {
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        }
+      },
+      "chunks": [
+        {
+          "file": "assets/index-ALenS0MJ.css",
+          "type": "css",
+          "initial": true,
+          "raw": 1707643,
+          "gzip": 87368,
+          "brotli": 52021
+        },
+        {
+          "file": "assets/index-Bd1WKov0.js",
+          "type": "js",
+          "initial": true,
+          "raw": 40735,
+          "gzip": 15621,
+          "brotli": 14220
+        },
+        {
+          "file": "assets/RostelecomBasis-Bold-B2rhRksQ.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48024,
+          "gzip": 48057,
+          "brotli": 48028
+        },
+        {
+          "file": "assets/RostelecomBasis-Bold-DijSOI6m.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63064,
+          "gzip": 63027,
+          "brotli": 62975
+        },
+        {
+          "file": "assets/RostelecomBasis-Light-DqXDAPjX.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 61788,
+          "gzip": 61756,
+          "brotli": 61529
+        },
+        {
+          "file": "assets/RostelecomBasis-Medium-1hMndgxO.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63732,
+          "gzip": 63703,
+          "brotli": 63603
+        },
+        {
+          "file": "assets/RostelecomBasis-Medium-gmdgF0I2.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48524,
+          "gzip": 48557,
+          "brotli": 48528
+        },
+        {
+          "file": "assets/RostelecomBasis-Regular-CVOcoQmA.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48884,
+          "gzip": 48917,
+          "brotli": 48888
+        },
+        {
+          "file": "assets/RostelecomBasis-Regular-etaCYQHE.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63948,
+          "gzip": 63908,
+          "brotli": 63733
+        }
+      ],
+      "modules": {
+        "count": 102,
+        "libCount": 5,
+        "libRendered": 3302,
+        "top": [
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/batch.js",
+            "rendered": 17154
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/runtime.js",
+            "rendered": 11249
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/elements/attributes.js",
+            "rendered": 9392
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/blocks/boundary.js",
+            "rendered": 8309
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/effects.js",
+            "rendered": 7705
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/proxy.js",
+            "rendered": 6697
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/deriveds.js",
+            "rendered": 5683
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/sources.js",
+            "rendered": 4680
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/errors.js",
+            "rendered": 4579
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/elements/custom-element.js",
+            "rendered": 4518
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/render.js",
+            "rendered": 4116
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/operations.js",
+            "rendered": 3532
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/warnings.js",
+            "rendered": 3530
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/elements/events.js",
+            "rendered": 3356
+          },
+          {
+            "id": "src/lib/components/Button/Button/Button.svelte",
+            "rendered": 3302
+          }
+        ]
+      },
+      "buildMs": 262
+    },
+    "s1b": {
+      "title": "S1b Одна кнопка через barrel",
+      "imports": "import { Button } from 'src/lib/index.ts' (проверка tree-shaking)",
+      "extra": true,
+      "js": {
+        "raw": 40735,
+        "gzip": 15621,
+        "brotli": 14220
+      },
+      "css": {
+        "raw": 1707643,
+        "gzip": 87368,
+        "brotli": 52021
+      },
+      "total": {
+        "raw": 1748378,
+        "gzip": 102989,
+        "brotli": 66241
+      },
+      "fonts": {
+        "woff2": {
+          "files": [
+            {
+              "file": "assets/RostelecomBasis-Bold-B2rhRksQ.woff2",
+              "raw": 48024
+            },
+            {
+              "file": "assets/RostelecomBasis-Medium-gmdgF0I2.woff2",
+              "raw": 48524
+            },
+            {
+              "file": "assets/RostelecomBasis-Regular-CVOcoQmA.woff2",
+              "raw": 48884
+            }
+          ],
+          "raw": 145432,
+          "gzip": 145531,
+          "brotli": 145444
+        },
+        "woff": {
+          "files": [
+            {
+              "file": "assets/RostelecomBasis-Bold-DijSOI6m.woff",
+              "raw": 63064
+            },
+            {
+              "file": "assets/RostelecomBasis-Light-DqXDAPjX.woff",
+              "raw": 61788
+            },
+            {
+              "file": "assets/RostelecomBasis-Medium-1hMndgxO.woff",
+              "raw": 63732
+            },
+            {
+              "file": "assets/RostelecomBasis-Regular-etaCYQHE.woff",
+              "raw": 63948
+            }
+          ],
+          "raw": 252532,
+          "gzip": 252394,
+          "brotli": 251840
+        }
+      },
+      "html": {
+        "raw": 418,
+        "gzip": 293,
+        "brotli": 169
+      },
+      "lazy": {
+        "js": {
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        },
+        "css": {
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        }
+      },
+      "chunks": [
+        {
+          "file": "assets/index-ALenS0MJ.css",
+          "type": "css",
+          "initial": true,
+          "raw": 1707643,
+          "gzip": 87368,
+          "brotli": 52021
+        },
+        {
+          "file": "assets/index-Bd1WKov0.js",
+          "type": "js",
+          "initial": true,
+          "raw": 40735,
+          "gzip": 15621,
+          "brotli": 14220
+        },
+        {
+          "file": "assets/RostelecomBasis-Bold-B2rhRksQ.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48024,
+          "gzip": 48057,
+          "brotli": 48028
+        },
+        {
+          "file": "assets/RostelecomBasis-Bold-DijSOI6m.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63064,
+          "gzip": 63027,
+          "brotli": 62975
+        },
+        {
+          "file": "assets/RostelecomBasis-Light-DqXDAPjX.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 61788,
+          "gzip": 61756,
+          "brotli": 61529
+        },
+        {
+          "file": "assets/RostelecomBasis-Medium-1hMndgxO.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63732,
+          "gzip": 63703,
+          "brotli": 63603
+        },
+        {
+          "file": "assets/RostelecomBasis-Medium-gmdgF0I2.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48524,
+          "gzip": 48557,
+          "brotli": 48528
+        },
+        {
+          "file": "assets/RostelecomBasis-Regular-CVOcoQmA.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48884,
+          "gzip": 48917,
+          "brotli": 48888
+        },
+        {
+          "file": "assets/RostelecomBasis-Regular-etaCYQHE.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63948,
+          "gzip": 63908,
+          "brotli": 63733
+        }
+      ],
+      "modules": {
+        "count": 102,
+        "libCount": 5,
+        "libRendered": 3302,
+        "top": [
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/batch.js",
+            "rendered": 17154
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/runtime.js",
+            "rendered": 11249
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/elements/attributes.js",
+            "rendered": 9392
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/blocks/boundary.js",
+            "rendered": 8309
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/effects.js",
+            "rendered": 7705
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/proxy.js",
+            "rendered": 6697
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/deriveds.js",
+            "rendered": 5683
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/sources.js",
+            "rendered": 4680
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/errors.js",
+            "rendered": 4579
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/elements/custom-element.js",
+            "rendered": 4518
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/render.js",
+            "rendered": 4116
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/operations.js",
+            "rendered": 3532
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/warnings.js",
+            "rendered": 3530
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/elements/events.js",
+            "rendered": 3356
+          },
+          {
+            "id": "src/lib/components/Button/Button/Button.svelte",
+            "rendered": 3302
+          }
+        ]
+      },
+      "buildMs": 2811
+    },
+    "s1n": {
+      "title": "S1n Кнопка через barrel без sideEffects",
+      "imports": "то же, что S1b, но сборщик игнорирует поле sideEffects пакета (что было бы без него)",
+      "extra": true,
+      "js": {
+        "raw": 136017,
+        "gzip": 42654,
+        "brotli": 36968
+      },
+      "css": {
+        "raw": 1708865,
+        "gzip": 87658,
+        "brotli": 51924
+      },
+      "total": {
+        "raw": 1844882,
+        "gzip": 130312,
+        "brotli": 88892
+      },
+      "fonts": {
+        "woff2": {
+          "files": [
+            {
+              "file": "assets/RostelecomBasis-Bold-B2rhRksQ.woff2",
+              "raw": 48024
+            },
+            {
+              "file": "assets/RostelecomBasis-Medium-gmdgF0I2.woff2",
+              "raw": 48524
+            },
+            {
+              "file": "assets/RostelecomBasis-Regular-CVOcoQmA.woff2",
+              "raw": 48884
+            }
+          ],
+          "raw": 145432,
+          "gzip": 145531,
+          "brotli": 145444
+        },
+        "woff": {
+          "files": [
+            {
+              "file": "assets/RostelecomBasis-Bold-DijSOI6m.woff",
+              "raw": 63064
+            },
+            {
+              "file": "assets/RostelecomBasis-Light-DqXDAPjX.woff",
+              "raw": 61788
+            },
+            {
+              "file": "assets/RostelecomBasis-Medium-1hMndgxO.woff",
+              "raw": 63732
+            },
+            {
+              "file": "assets/RostelecomBasis-Regular-etaCYQHE.woff",
+              "raw": 63948
+            }
+          ],
+          "raw": 252532,
+          "gzip": 252394,
+          "brotli": 251840
+        }
+      },
+      "html": {
+        "raw": 418,
+        "gzip": 293,
+        "brotli": 178
+      },
+      "lazy": {
+        "js": {
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        },
+        "css": {
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        }
+      },
+      "chunks": [
+        {
+          "file": "assets/index-CeHBOjl8.css",
+          "type": "css",
+          "initial": true,
+          "raw": 1708865,
+          "gzip": 87658,
+          "brotli": 51924
+        },
+        {
+          "file": "assets/index-DDHI01ne.js",
+          "type": "js",
+          "initial": true,
+          "raw": 136017,
+          "gzip": 42654,
+          "brotli": 36968
+        },
+        {
+          "file": "assets/RostelecomBasis-Bold-B2rhRksQ.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48024,
+          "gzip": 48057,
+          "brotli": 48028
+        },
+        {
+          "file": "assets/RostelecomBasis-Bold-DijSOI6m.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63064,
+          "gzip": 63027,
+          "brotli": 62975
+        },
+        {
+          "file": "assets/RostelecomBasis-Light-DqXDAPjX.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 61788,
+          "gzip": 61756,
+          "brotli": 61529
+        },
+        {
+          "file": "assets/RostelecomBasis-Medium-1hMndgxO.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63732,
+          "gzip": 63703,
+          "brotli": 63603
+        },
+        {
+          "file": "assets/RostelecomBasis-Medium-gmdgF0I2.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48524,
+          "gzip": 48557,
+          "brotli": 48528
+        },
+        {
+          "file": "assets/RostelecomBasis-Regular-CVOcoQmA.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48884,
+          "gzip": 48917,
+          "brotli": 48888
+        },
+        {
+          "file": "assets/RostelecomBasis-Regular-etaCYQHE.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63948,
+          "gzip": 63908,
+          "brotli": 63733
+        }
+      ],
+      "modules": {
+        "count": 1758,
+        "libCount": 1596,
+        "libRendered": 35330,
+        "top": [
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/batch.js",
+            "rendered": 17154
+          },
+          {
+            "id": "node_modules/imask/esm/masked/pattern.js",
+            "rendered": 12377
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/runtime.js",
+            "rendered": 11249
+          },
+          {
+            "id": "src/lib/components/Box/tokens.ts",
+            "rendered": 10881
+          },
+          {
+            "id": "node_modules/dayjs/dayjs.min.js",
+            "rendered": 10185
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/elements/attributes.js",
+            "rendered": 9392
+          },
+          {
+            "id": "node_modules/imask/esm/masked/dynamic.js",
+            "rendered": 9299
+          },
+          {
+            "id": "node_modules/imask/esm/masked/number.js",
+            "rendered": 9225
+          },
+          {
+            "id": "node_modules/imask/esm/masked/base.js",
+            "rendered": 8476
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/blocks/boundary.js",
+            "rendered": 8309
+          },
+          {
+            "id": "node_modules/imask/esm/masked/pattern/input-definition.js",
+            "rendered": 8125
+          },
+          {
+            "id": "node_modules/imask/esm/controls/input.js",
+            "rendered": 7771
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/effects.js",
+            "rendered": 7705
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/proxy.js",
+            "rendered": 6697
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/deriveds.js",
+            "rendered": 5836
+          }
+        ]
+      },
+      "buildMs": 2421
+    },
+    "s2": {
+      "title": "S2 Форма",
+      "imports": "Input, Select, Checkbox, Switch, Button, Modal",
+      "extra": false,
+      "js": {
+        "raw": 188667,
+        "gzip": 62798,
+        "brotli": 54920
+      },
+      "css": {
+        "raw": 1707948,
+        "gzip": 87481,
+        "brotli": 51981
+      },
+      "total": {
+        "raw": 1896615,
+        "gzip": 150279,
+        "brotli": 106901
+      },
+      "fonts": {
+        "woff2": {
+          "files": [
+            {
+              "file": "assets/RostelecomBasis-Bold-B2rhRksQ.woff2",
+              "raw": 48024
+            },
+            {
+              "file": "assets/RostelecomBasis-Medium-gmdgF0I2.woff2",
+              "raw": 48524
+            },
+            {
+              "file": "assets/RostelecomBasis-Regular-CVOcoQmA.woff2",
+              "raw": 48884
+            }
+          ],
+          "raw": 145432,
+          "gzip": 145531,
+          "brotli": 145444
+        },
+        "woff": {
+          "files": [
+            {
+              "file": "assets/RostelecomBasis-Bold-DijSOI6m.woff",
+              "raw": 63064
+            },
+            {
+              "file": "assets/RostelecomBasis-Light-DqXDAPjX.woff",
+              "raw": 61788
+            },
+            {
+              "file": "assets/RostelecomBasis-Medium-1hMndgxO.woff",
+              "raw": 63732
+            },
+            {
+              "file": "assets/RostelecomBasis-Regular-etaCYQHE.woff",
+              "raw": 63948
+            }
+          ],
+          "raw": 252532,
+          "gzip": 252394,
+          "brotli": 251840
+        }
+      },
+      "html": {
+        "raw": 404,
+        "gzip": 285,
+        "brotli": 173
+      },
+      "lazy": {
+        "js": {
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        },
+        "css": {
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        }
+      },
+      "chunks": [
+        {
+          "file": "assets/index-BcJ_1bAv.js",
+          "type": "js",
+          "initial": true,
+          "raw": 188667,
+          "gzip": 62798,
+          "brotli": 54920
+        },
+        {
+          "file": "assets/index-C3OT1w7y.css",
+          "type": "css",
+          "initial": true,
+          "raw": 1707948,
+          "gzip": 87481,
+          "brotli": 51981
+        },
+        {
+          "file": "assets/RostelecomBasis-Bold-B2rhRksQ.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48024,
+          "gzip": 48057,
+          "brotli": 48028
+        },
+        {
+          "file": "assets/RostelecomBasis-Bold-DijSOI6m.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63064,
+          "gzip": 63027,
+          "brotli": 62975
+        },
+        {
+          "file": "assets/RostelecomBasis-Light-DqXDAPjX.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 61788,
+          "gzip": 61756,
+          "brotli": 61529
+        },
+        {
+          "file": "assets/RostelecomBasis-Medium-1hMndgxO.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63732,
+          "gzip": 63703,
+          "brotli": 63603
+        },
+        {
+          "file": "assets/RostelecomBasis-Medium-gmdgF0I2.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48524,
+          "gzip": 48557,
+          "brotli": 48528
+        },
+        {
+          "file": "assets/RostelecomBasis-Regular-CVOcoQmA.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48884,
+          "gzip": 48917,
+          "brotli": 48888
+        },
+        {
+          "file": "assets/RostelecomBasis-Regular-etaCYQHE.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63948,
+          "gzip": 63908,
+          "brotli": 63733
+        }
+      ],
+      "modules": {
+        "count": 248,
+        "libCount": 52,
+        "libRendered": 107600,
+        "top": [
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/batch.js",
+            "rendered": 17154
+          },
+          {
+            "id": "src/lib/components/Input/Input.svelte",
+            "rendered": 14114
+          },
+          {
+            "id": "node_modules/virtua/lib/core/index.mjs",
+            "rendered": 13099
+          },
+          {
+            "id": "node_modules/imask/esm/masked/pattern.js",
+            "rendered": 12377
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/runtime.js",
+            "rendered": 12289
+          },
+          {
+            "id": "src/lib/components/DropdownMenu/DropdownMenu.svelte",
+            "rendered": 12129
+          },
+          {
+            "id": "src/lib/components/Modal/Modal.svelte",
+            "rendered": 10942
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/blocks/each.js",
+            "rendered": 10805
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/elements/attributes.js",
+            "rendered": 9394
+          },
+          {
+            "id": "node_modules/imask/esm/masked/dynamic.js",
+            "rendered": 9299
+          },
+          {
+            "id": "node_modules/imask/esm/masked/number.js",
+            "rendered": 9225
+          },
+          {
+            "id": "src/lib/components/Select/Select.svelte",
+            "rendered": 9204
+          },
+          {
+            "id": "node_modules/imask/esm/masked/base.js",
+            "rendered": 8476
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/effects.js",
+            "rendered": 8447
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/blocks/boundary.js",
+            "rendered": 8309
+          }
+        ]
+      },
+      "buildMs": 372
+    },
+    "s3": {
+      "title": "S3 Таблица",
+      "imports": "TableGrid + Pagination + Select",
+      "extra": false,
+      "js": {
+        "raw": 260925,
+        "gzip": 86087,
+        "brotli": 73960
+      },
+      "css": {
+        "raw": 1750455,
+        "gzip": 90990,
+        "brotli": 54667
+      },
+      "total": {
+        "raw": 2011380,
+        "gzip": 177077,
+        "brotli": 128627
+      },
+      "fonts": {
+        "woff2": {
+          "files": [
+            {
+              "file": "assets/RostelecomBasis-Bold-B2rhRksQ.woff2",
+              "raw": 48024
+            },
+            {
+              "file": "assets/RostelecomBasis-Medium-gmdgF0I2.woff2",
+              "raw": 48524
+            },
+            {
+              "file": "assets/RostelecomBasis-Regular-CVOcoQmA.woff2",
+              "raw": 48884
+            }
+          ],
+          "raw": 145432,
+          "gzip": 145531,
+          "brotli": 145444
+        },
+        "woff": {
+          "files": [
+            {
+              "file": "assets/RostelecomBasis-Bold-DijSOI6m.woff",
+              "raw": 63064
+            },
+            {
+              "file": "assets/RostelecomBasis-Light-DqXDAPjX.woff",
+              "raw": 61788
+            },
+            {
+              "file": "assets/RostelecomBasis-Medium-1hMndgxO.woff",
+              "raw": 63732
+            },
+            {
+              "file": "assets/RostelecomBasis-Regular-etaCYQHE.woff",
+              "raw": 63948
+            }
+          ],
+          "raw": 252532,
+          "gzip": 252394,
+          "brotli": 251840
+        }
+      },
+      "html": {
+        "raw": 405,
+        "gzip": 282,
+        "brotli": 170
+      },
+      "lazy": {
+        "js": {
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        },
+        "css": {
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        }
+      },
+      "chunks": [
+        {
+          "file": "assets/index-BTOfp1tx.js",
+          "type": "js",
+          "initial": true,
+          "raw": 260925,
+          "gzip": 86087,
+          "brotli": 73960
+        },
+        {
+          "file": "assets/index-BuSuTe4l.css",
+          "type": "css",
+          "initial": true,
+          "raw": 1750455,
+          "gzip": 90990,
+          "brotli": 54667
+        },
+        {
+          "file": "assets/RostelecomBasis-Bold-B2rhRksQ.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48024,
+          "gzip": 48057,
+          "brotli": 48028
+        },
+        {
+          "file": "assets/RostelecomBasis-Bold-DijSOI6m.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63064,
+          "gzip": 63027,
+          "brotli": 62975
+        },
+        {
+          "file": "assets/RostelecomBasis-Light-DqXDAPjX.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 61788,
+          "gzip": 61756,
+          "brotli": 61529
+        },
+        {
+          "file": "assets/RostelecomBasis-Medium-1hMndgxO.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63732,
+          "gzip": 63703,
+          "brotli": 63603
+        },
+        {
+          "file": "assets/RostelecomBasis-Medium-gmdgF0I2.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48524,
+          "gzip": 48557,
+          "brotli": 48528
+        },
+        {
+          "file": "assets/RostelecomBasis-Regular-CVOcoQmA.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48884,
+          "gzip": 48917,
+          "brotli": 48888
+        },
+        {
+          "file": "assets/RostelecomBasis-Regular-etaCYQHE.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63948,
+          "gzip": 63908,
+          "brotli": 63733
+        }
+      ],
+      "modules": {
+        "count": 307,
+        "libCount": 109,
+        "libRendered": 242589,
+        "top": [
+          {
+            "id": "src/lib/ext/tableMotion.svelte.ts",
+            "rendered": 23883
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/batch.js",
+            "rendered": 17154
+          },
+          {
+            "id": "src/lib/components/Input/Input.svelte",
+            "rendered": 14112
+          },
+          {
+            "id": "src/lib/components/Pagination/Pagination.svelte",
+            "rendered": 13490
+          },
+          {
+            "id": "node_modules/virtua/lib/core/index.mjs",
+            "rendered": 13099
+          },
+          {
+            "id": "node_modules/imask/esm/masked/pattern.js",
+            "rendered": 12377
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/runtime.js",
+            "rendered": 12289
+          },
+          {
+            "id": "src/lib/components/DropdownMenu/DropdownMenu.svelte",
+            "rendered": 12175
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/blocks/each.js",
+            "rendered": 10805
+          },
+          {
+            "id": "src/lib/components/Popover/Popover.svelte",
+            "rendered": 10713
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/elements/attributes.js",
+            "rendered": 9394
+          },
+          {
+            "id": "node_modules/imask/esm/masked/dynamic.js",
+            "rendered": 9299
+          },
+          {
+            "id": "node_modules/imask/esm/masked/number.js",
+            "rendered": 9225
+          },
+          {
+            "id": "src/lib/components/Select/Select.svelte",
+            "rendered": 9208
+          },
+          {
+            "id": "node_modules/imask/esm/masked/base.js",
+            "rendered": 8476
+          }
+        ]
+      },
+      "buildMs": 532
+    },
+    "s4": {
+      "title": "S4 Вся библиотека",
+      "imports": "import * from 'src/lib/index.ts'",
+      "extra": false,
+      "js": {
+        "raw": 2118296,
+        "gzip": 632949,
+        "brotli": 510215
+      },
+      "css": {
+        "raw": 1776896,
+        "gzip": 94292,
+        "brotli": 56972
+      },
+      "total": {
+        "raw": 3895192,
+        "gzip": 727241,
+        "brotli": 567187
+      },
+      "fonts": {
+        "woff2": {
+          "files": [
+            {
+              "file": "assets/RostelecomBasis-Bold-B2rhRksQ.woff2",
+              "raw": 48024
+            },
+            {
+              "file": "assets/RostelecomBasis-Medium-gmdgF0I2.woff2",
+              "raw": 48524
+            },
+            {
+              "file": "assets/RostelecomBasis-Regular-CVOcoQmA.woff2",
+              "raw": 48884
+            }
+          ],
+          "raw": 145432,
+          "gzip": 145531,
+          "brotli": 145444
+        },
+        "woff": {
+          "files": [
+            {
+              "file": "assets/RostelecomBasis-Bold-DijSOI6m.woff",
+              "raw": 63064
+            },
+            {
+              "file": "assets/RostelecomBasis-Light-DqXDAPjX.woff",
+              "raw": 61788
+            },
+            {
+              "file": "assets/RostelecomBasis-Medium-1hMndgxO.woff",
+              "raw": 63732
+            },
+            {
+              "file": "assets/RostelecomBasis-Regular-etaCYQHE.woff",
+              "raw": 63948
+            }
+          ],
+          "raw": 252532,
+          "gzip": 252394,
+          "brotli": 251840
+        }
+      },
+      "html": {
+        "raw": 413,
+        "gzip": 292,
+        "brotli": 164
+      },
+      "lazy": {
+        "js": {
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        },
+        "css": {
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        }
+      },
+      "chunks": [
+        {
+          "file": "assets/index-B6hgqdED.js",
+          "type": "js",
+          "initial": true,
+          "raw": 2118296,
+          "gzip": 632949,
+          "brotli": 510215
+        },
+        {
+          "file": "assets/index-Bq75WtMz.css",
+          "type": "css",
+          "initial": true,
+          "raw": 1776896,
+          "gzip": 94292,
+          "brotli": 56972
+        },
+        {
+          "file": "assets/RostelecomBasis-Bold-B2rhRksQ.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48024,
+          "gzip": 48057,
+          "brotli": 48028
+        },
+        {
+          "file": "assets/RostelecomBasis-Bold-DijSOI6m.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63064,
+          "gzip": 63027,
+          "brotli": 62975
+        },
+        {
+          "file": "assets/RostelecomBasis-Light-DqXDAPjX.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 61788,
+          "gzip": 61756,
+          "brotli": 61529
+        },
+        {
+          "file": "assets/RostelecomBasis-Medium-1hMndgxO.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63732,
+          "gzip": 63703,
+          "brotli": 63603
+        },
+        {
+          "file": "assets/RostelecomBasis-Medium-gmdgF0I2.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48524,
+          "gzip": 48557,
+          "brotli": 48528
+        },
+        {
+          "file": "assets/RostelecomBasis-Regular-CVOcoQmA.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48884,
+          "gzip": 48917,
+          "brotli": 48888
+        },
+        {
+          "file": "assets/RostelecomBasis-Regular-etaCYQHE.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63948,
+          "gzip": 63908,
+          "brotli": 63733
+        }
+      ],
+      "modules": {
+        "count": 1858,
+        "libCount": 1635,
+        "libRendered": 2834010,
+        "top": [
+          {
+            "id": "src/lib/index.ts",
+            "rendered": 49360
+          },
+          {
+            "id": "src/lib/ext/tableMotion.svelte.ts",
+            "rendered": 23901
+          },
+          {
+            "id": "src/lib/components/Multiselect/Multiselect.svelte",
+            "rendered": 20792
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/batch.js",
+            "rendered": 17154
+          },
+          {
+            "id": "src/lib/components/FileUpload/useDropzone.svelte.ts",
+            "rendered": 15146
+          },
+          {
+            "id": "src/lib/components/PickerDate/utils.ts",
+            "rendered": 14152
+          },
+          {
+            "id": "src/lib/components/Input/Input.svelte",
+            "rendered": 14116
+          },
+          {
+            "id": "src/lib/components/PickerDate/components/Calendar/Calendar.svelte",
+            "rendered": 13614
+          },
+          {
+            "id": "src/lib/components/Pagination/Pagination.svelte",
+            "rendered": 13527
+          },
+          {
+            "id": "src/lib/icons/24/place/Stroller.svelte",
+            "rendered": 13219
+          },
+          {
+            "id": "node_modules/virtua/lib/core/index.mjs",
+            "rendered": 13099
+          },
+          {
+            "id": "src/lib/icons/24/place/Kite.svelte",
+            "rendered": 12845
+          },
+          {
+            "id": "src/lib/components/Tooltip/Tooltip.svelte",
+            "rendered": 12698
+          },
+          {
+            "id": "node_modules/imask/esm/masked/pattern.js",
+            "rendered": 12377
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/runtime.js",
+            "rendered": 12289
+          }
+        ]
+      },
+      "buildMs": 2458
+    },
+    "s5": {
+      "title": "S5 Каркас приложения",
+      "imports": "SideMenu, TopMenu, Tabs, Breadcrumbs",
+      "extra": false,
+      "js": {
+        "raw": 140771,
+        "gzip": 48693,
+        "brotli": 42702
+      },
+      "css": {
+        "raw": 1725189,
+        "gzip": 89710,
+        "brotli": 53595
+      },
+      "total": {
+        "raw": 1865960,
+        "gzip": 138403,
+        "brotli": 96297
+      },
+      "fonts": {
+        "woff2": {
+          "files": [
+            {
+              "file": "assets/RostelecomBasis-Bold-B2rhRksQ.woff2",
+              "raw": 48024
+            },
+            {
+              "file": "assets/RostelecomBasis-Medium-gmdgF0I2.woff2",
+              "raw": 48524
+            },
+            {
+              "file": "assets/RostelecomBasis-Regular-CVOcoQmA.woff2",
+              "raw": 48884
+            }
+          ],
+          "raw": 145432,
+          "gzip": 145531,
+          "brotli": 145444
+        },
+        "woff": {
+          "files": [
+            {
+              "file": "assets/RostelecomBasis-Bold-DijSOI6m.woff",
+              "raw": 63064
+            },
+            {
+              "file": "assets/RostelecomBasis-Light-DqXDAPjX.woff",
+              "raw": 61788
+            },
+            {
+              "file": "assets/RostelecomBasis-Medium-1hMndgxO.woff",
+              "raw": 63732
+            },
+            {
+              "file": "assets/RostelecomBasis-Regular-etaCYQHE.woff",
+              "raw": 63948
+            }
+          ],
+          "raw": 252532,
+          "gzip": 252394,
+          "brotli": 251840
+        }
+      },
+      "html": {
+        "raw": 409,
+        "gzip": 288,
+        "brotli": 171
+      },
+      "lazy": {
+        "js": {
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        },
+        "css": {
+          "raw": 0,
+          "gzip": 0,
+          "brotli": 0
+        }
+      },
+      "chunks": [
+        {
+          "file": "assets/index-BEy-KmDt.css",
+          "type": "css",
+          "initial": true,
+          "raw": 1725189,
+          "gzip": 89710,
+          "brotli": 53595
+        },
+        {
+          "file": "assets/index-CneNBKRE.js",
+          "type": "js",
+          "initial": true,
+          "raw": 140771,
+          "gzip": 48693,
+          "brotli": 42702
+        },
+        {
+          "file": "assets/RostelecomBasis-Bold-B2rhRksQ.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48024,
+          "gzip": 48057,
+          "brotli": 48028
+        },
+        {
+          "file": "assets/RostelecomBasis-Bold-DijSOI6m.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63064,
+          "gzip": 63027,
+          "brotli": 62975
+        },
+        {
+          "file": "assets/RostelecomBasis-Light-DqXDAPjX.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 61788,
+          "gzip": 61756,
+          "brotli": 61529
+        },
+        {
+          "file": "assets/RostelecomBasis-Medium-1hMndgxO.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63732,
+          "gzip": 63703,
+          "brotli": 63603
+        },
+        {
+          "file": "assets/RostelecomBasis-Medium-gmdgF0I2.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48524,
+          "gzip": 48557,
+          "brotli": 48528
+        },
+        {
+          "file": "assets/RostelecomBasis-Regular-CVOcoQmA.woff2",
+          "type": "font",
+          "initial": false,
+          "raw": 48884,
+          "gzip": 48917,
+          "brotli": 48888
+        },
+        {
+          "file": "assets/RostelecomBasis-Regular-etaCYQHE.woff",
+          "type": "font",
+          "initial": false,
+          "raw": 63948,
+          "gzip": 63908,
+          "brotli": 63733
+        }
+      ],
+      "modules": {
+        "count": 226,
+        "libCount": 58,
+        "libRendered": 115264,
+        "top": [
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/batch.js",
+            "rendered": 17154
+          },
+          {
+            "id": "node_modules/virtua/lib/core/index.mjs",
+            "rendered": 13099
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/runtime.js",
+            "rendered": 12289
+          },
+          {
+            "id": "src/lib/components/DropdownMenu/DropdownMenu.svelte",
+            "rendered": 12149
+          },
+          {
+            "id": "src/lib/components/Box/tokens.ts",
+            "rendered": 10881
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/blocks/each.js",
+            "rendered": 10805
+          },
+          {
+            "id": "src/lib/components/Tabs/TabsGroup/TabsGroup.svelte",
+            "rendered": 10090
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/elements/attributes.js",
+            "rendered": 9394
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/effects.js",
+            "rendered": 8447
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/dom/blocks/boundary.js",
+            "rendered": 8309
+          },
+          {
+            "id": "src/lib/components/Box/Box.svelte",
+            "rendered": 8248
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/proxy.js",
+            "rendered": 6697
+          },
+          {
+            "id": "src/lib/hooks/usePopper.svelte.ts",
+            "rendered": 6692
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/errors.js",
+            "rendered": 6520
+          },
+          {
+            "id": "node_modules/svelte/src/internal/client/reactivity/deriveds.js",
+            "rendered": 5838
+          }
+        ]
+      },
+      "buildMs": 529
+    }
+  },
+  "marginal": {
+    "_baseline": {
+      "scenario": "s1",
+      "js": {
+        "raw": 40735,
+        "gzip": 15621,
+        "brotli": 14220
+      },
+      "css": {
+        "raw": 1707643,
+        "gzip": 87368,
+        "brotli": 52021
+      }
+    },
+    "Typography": {
+      "source": "components/Typography/Typography.svelte",
+      "js": {
+        "raw": 2826,
+        "gzip": 1044,
+        "brotli": 937
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 2826,
+        "gzip": 1044,
+        "brotli": 937
+      },
+      "libModules": 3
+    },
+    "Badge": {
+      "source": "components/Badge/Badge.svelte",
+      "js": {
+        "raw": 965,
+        "gzip": 255,
+        "brotli": 218
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 965,
+        "gzip": 255,
+        "brotli": 218
+      },
+      "libModules": 2
+    },
+    "Input": {
+      "source": "components/Input/Input.svelte",
+      "js": {
+        "raw": 70683,
+        "gzip": 19796,
+        "brotli": 16828
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 70683,
+        "gzip": 19796,
+        "brotli": 16828
+      },
+      "libModules": 10
+    },
+    "TextArea": {
+      "source": "components/TextArea/TextArea.svelte",
+      "js": {
+        "raw": 11840,
+        "gzip": 4171,
+        "brotli": 3773
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 11840,
+        "gzip": 4171,
+        "brotli": 3773
+      },
+      "libModules": 12
+    },
+    "Select": {
+      "source": "components/Select/Select.svelte",
+      "js": {
+        "raw": 133711,
+        "gzip": 42590,
+        "brotli": 36735
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 133711,
+        "gzip": 42590,
+        "brotli": 36735
+      },
+      "libModules": 35
+    },
+    "Multiselect": {
+      "source": "components/Multiselect/Multiselect.svelte",
+      "js": {
+        "raw": 77396,
+        "gzip": 27484,
+        "brotli": 24240
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 77396,
+        "gzip": 27484,
+        "brotli": 24240
+      },
+      "libModules": 36
+    },
+    "Checkbox": {
+      "source": "components/Checkbox/Checkbox/Checkbox.svelte",
+      "js": {
+        "raw": 6076,
+        "gzip": 1950,
+        "brotli": 1752
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 6076,
+        "gzip": 1950,
+        "brotli": 1752
+      },
+      "libModules": 8
+    },
+    "RadioButton": {
+      "source": "components/RadioButton/RadioButton/RadioButton.svelte",
+      "js": {
+        "raw": 4861,
+        "gzip": 1676,
+        "brotli": 1506
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 4861,
+        "gzip": 1676,
+        "brotli": 1506
+      },
+      "libModules": 8
+    },
+    "Switch": {
+      "source": "components/Switch/Switch.svelte",
+      "js": {
+        "raw": 4204,
+        "gzip": 1503,
+        "brotli": 1335
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 4204,
+        "gzip": 1503,
+        "brotli": 1335
+      },
+      "libModules": 7
+    },
+    "SegmentedControl": {
+      "source": "components/SegmentedControl/SegmentedControl.svelte",
+      "js": {
+        "raw": 1589,
+        "gzip": 549,
+        "brotli": 504
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 1589,
+        "gzip": 549,
+        "brotli": 504
+      },
+      "libModules": 4
+    },
+    "Slider": {
+      "source": "components/Slider/Slider.svelte",
+      "js": {
+        "raw": 26189,
+        "gzip": 9427,
+        "brotli": 8492
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 26189,
+        "gzip": 9427,
+        "brotli": 8492
+      },
+      "libModules": 11
+    },
+    "Modal": {
+      "source": "components/Modal/Modal.svelte",
+      "js": {
+        "raw": 21934,
+        "gzip": 7966,
+        "brotli": 7184
+      },
+      "css": {
+        "raw": 305,
+        "gzip": 113,
+        "brotli": -40
+      },
+      "total": {
+        "raw": 22239,
+        "gzip": 8079,
+        "brotli": 7144
+      },
+      "libModules": 12
+    },
+    "Drawer": {
+      "source": "components/Drawer/Drawer.svelte",
+      "js": {
+        "raw": 22883,
+        "gzip": 8109,
+        "brotli": 7391
+      },
+      "css": {
+        "raw": 349,
+        "gzip": 81,
+        "brotli": 53
+      },
+      "total": {
+        "raw": 23232,
+        "gzip": 8190,
+        "brotli": 7444
+      },
+      "libModules": 12
+    },
+    "Popover": {
+      "source": "components/Popover/Popover.svelte",
+      "js": {
+        "raw": 48939,
+        "gzip": 17044,
+        "brotli": 15217
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 48939,
+        "gzip": 17044,
+        "brotli": 15217
+      },
+      "libModules": 23
+    },
+    "Tooltip": {
+      "source": "components/Tooltip/Tooltip.svelte",
+      "js": {
+        "raw": 50153,
+        "gzip": 17589,
+        "brotli": 15686
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 50153,
+        "gzip": 17589,
+        "brotli": 15686
+      },
+      "libModules": 22
+    },
+    "DropdownMenu": {
+      "source": "components/DropdownMenu/DropdownMenu.svelte",
+      "js": {
+        "raw": 60521,
+        "gzip": 22106,
+        "brotli": 19756
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 60521,
+        "gzip": 22106,
+        "brotli": 19756
+      },
+      "libModules": 23
+    },
+    "Accordion": {
+      "source": "components/Accordion/Accordion/Accordion.svelte",
+      "js": {
+        "raw": 18679,
+        "gzip": 4627,
+        "brotli": 3683
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 18679,
+        "gzip": 4627,
+        "brotli": 3683
+      },
+      "libModules": 7
+    },
+    "Pagination": {
+      "source": "components/Pagination/Pagination.svelte",
+      "js": {
+        "raw": 141790,
+        "gzip": 45223,
+        "brotli": 38790
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 141790,
+        "gzip": 45223,
+        "brotli": 38790
+      },
+      "libModules": 41
+    },
+    "TableGrid": {
+      "source": "components/TableGrid/TableGrid.svelte",
+      "js": {
+        "raw": 210480,
+        "gzip": 66987,
+        "brotli": 56845
+      },
+      "css": {
+        "raw": 568,
+        "gzip": 126,
+        "brotli": 66
+      },
+      "total": {
+        "raw": 211048,
+        "gzip": 67113,
+        "brotli": 56911
+      },
+      "libModules": 99
+    },
+    "Tree": {
+      "source": "components/Tree/Tree.svelte",
+      "js": {
+        "raw": 49032,
+        "gzip": 15518,
+        "brotli": 13697
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 49032,
+        "gzip": 15518,
+        "brotli": 13697
+      },
+      "libModules": 47
+    },
+    "TabsGroup": {
+      "source": "components/Tabs/TabsGroup/TabsGroup.svelte",
+      "js": {
+        "raw": 70146,
+        "gzip": 25345,
+        "brotli": 22443
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 70146,
+        "gzip": 25345,
+        "brotli": 22443
+      },
+      "libModules": 31
+    },
+    "Breadcrumbs": {
+      "source": "components/Breadcrumbs/Breadcrumbs.svelte",
+      "js": {
+        "raw": 64209,
+        "gzip": 23175,
+        "brotli": 20592
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 64209,
+        "gzip": 23175,
+        "brotli": 20592
+      },
+      "libModules": 27
+    },
+    "SideMenu": {
+      "source": "components/SideMenu/SideMenu.svelte",
+      "js": {
+        "raw": 28571,
+        "gzip": 8264,
+        "brotli": 6890
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 28571,
+        "gzip": 8264,
+        "brotli": 6890
+      },
+      "libModules": 10
+    },
+    "TopMenu": {
+      "source": "components/TopMenu/TopMenu.svelte",
+      "js": {
+        "raw": 17596,
+        "gzip": 4266,
+        "brotli": 3338
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 17596,
+        "gzip": 4266,
+        "brotli": 3338
+      },
+      "libModules": 5
+    },
+    "InputDate": {
+      "source": "components/InputDate/InputDate.svelte",
+      "js": {
+        "raw": 185523,
+        "gzip": 56343,
+        "brotli": 48118
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 185523,
+        "gzip": 56343,
+        "brotli": 48118
+      },
+      "libModules": 57
+    },
+    "PickerDate": {
+      "source": "components/PickerDate/PickerDate.svelte",
+      "js": {
+        "raw": 67660,
+        "gzip": 20446,
+        "brotli": 18294
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 67660,
+        "gzip": 20446,
+        "brotli": 18294
+      },
+      "libModules": 29
+    },
+    "FileUpload": {
+      "source": "components/FileUpload/FileUpload.svelte",
+      "js": {
+        "raw": 181122,
+        "gzip": 50094,
+        "brotli": 40819
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 181122,
+        "gzip": 50094,
+        "brotli": 40819
+      },
+      "libModules": 91
+    },
+    "WizardStepsHorizontal": {
+      "source": "components/Wizard/WizardStepsHorizontal/WizardStepsHorizontal.svelte",
+      "js": {
+        "raw": 24294,
+        "gzip": 8770,
+        "brotli": 7744
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 24294,
+        "gzip": 8770,
+        "brotli": 7744
+      },
+      "libModules": 14
+    },
+    "ToastNotificationsProvider": {
+      "source": "components/wrappers/ToastNotificationsProvider/ToastNotificationsProvider.svelte",
+      "js": {
+        "raw": 38823,
+        "gzip": 13219,
+        "brotli": 11795
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "total": {
+        "raw": 38823,
+        "gzip": 13219,
+        "brotli": 11795
+      },
+      "libModules": 31
+    }
+  }
+}

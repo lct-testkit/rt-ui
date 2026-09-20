@@ -1,0 +1,75 @@
+/* story-only CSS of patterns-recipes-topmenu-twolevelclub--two-level-club-story (copied 1:1 from the reference) */
+.stories-main-top-menu:has(.top-menu-club__stack) {
+  min-width: 900px;
+  padding: 12px;
+}
+
+.top-menu-club__stack {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  gap: var(--atmr-spacing-1-5x);
+}
+
+.atmr-top-menu--club-top {
+  background: transparent !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.atmr-top-menu--club-top .atmr-top-menu__product-tabs {
+  width: auto;
+}
+
+.atmr-top-menu--club-top .atmr-tabs-group__tabs::after,
+.atmr-top-menu--club-top .atmr-tabs-group_tabs::after,
+.atmr-top-menu--club-top .atmr-tabs-group--border .atmr-tabs-group__tabs::after,
+.atmr-top-menu--club-top .atmr-tabs-group--border .atmr-tabs-group_tabs::after {
+  content: none !important;
+  display: none !important;
+}
+
+.atmr-top-menu--club-top .atmr-tabs-item::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* TEMP */
+.atmr-top-menu--club-top .atmr-tabs-item {
+  padding: 16px 12px !important;
+}
+
+.atmr-top-menu--club-sub {
+  width: 100%;
+  border-radius: var(--atmr-border-radius-l);
+  padding: var(--atmr-spacing-0-5x);
+  gap: var(--atmr-spacing-0-5x);
+  box-shadow: var(--atmr-shadow-bottom-l);
+}
+
+.atmr-top-menu--club-sub .atmr-top-menu__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--atmr-spacing-1x);
+}
+
+.atmr-top-menu--club-sub .atmr-top-menu__product-tabs {
+  width: auto;
+}
+
+.top-menu-club__segmented {
+  max-width: min(100%, 520px);
+}
+
+.top-menu-club__actions {
+  gap: var(--atmr-spacing-2x);
+  padding: var(--atmr-spacing-0-5x) 0;
+}
+
+.atmr-top-menu--club-sub .atmr-top-menu__profile-prefix {
+  display: flex;
+  align-items: center;
+}

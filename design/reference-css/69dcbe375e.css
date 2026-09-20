@@ -1,0 +1,10 @@
+.stories-pickerdate-container {
+  display: flex;
+  width: max-content;
+  min-height: 30px;
+}
+
+.stories-pickerdate-props-container {
+  display: flex;
+  gap: 40px;
+}

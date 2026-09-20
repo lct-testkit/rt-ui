@@ -1,0 +1,7 @@
+{"states": [
+  {"name": "toggle-twice", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["click", "#storybook-root button >> nth=0"], ["wait", 300]]},
+  {"name": "hover-icon", "actions": [["hover", "#storybook-root .atmr-tooltip__trigger >> nth=0"], ["wait", 400]]},
+  {"name": "hover-icon-leave", "actions": [["hover", "#storybook-root .atmr-tooltip__trigger >> nth=0"], ["wait", 400], ["mouse", 700, 700], ["wait", 300]]},
+  {"name": "open-then-hover-leave", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["hover", "#storybook-root .atmr-tooltip__trigger >> nth=0"], ["wait", 200], ["mouse", 700, 700], ["wait", 300]]},
+  {"name": "kbd-space-toggle", "actions": [["focus", "#storybook-root button >> nth=0"], ["press", "Space"], ["wait", 400]]}
+]}

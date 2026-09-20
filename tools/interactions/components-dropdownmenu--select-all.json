@@ -1,0 +1,8 @@
+{"states": [
+  {"name": "select-all", "actions": [["click", "#storybook-root .atmr-button"], ["wait", 300]]},
+  {"name": "select-all-hover", "actions": [["click", "#storybook-root .atmr-button"], ["wait", 300], ["hover", "#storybook-root .atmr-dropdown-menu__text >> text=\"Mithril\""]]},
+  {"name": "select-all-then-deselect", "actions": [["click", "#storybook-root .atmr-button"], ["wait", 300], ["click", "#storybook-root .atmr-dropdown-menu__text >> text=\"Polymer\""], ["wait", 300]]},
+  {"name": "select-all-then-deselect-mithril", "actions": [["click", "#storybook-root .atmr-button"], ["wait", 300], ["click", "#storybook-root .atmr-dropdown-menu__text >> text=\"Mithril\""], ["wait", 300]]},
+  {"name": "select-all-then-deselect-both", "actions": [["click", "#storybook-root .atmr-button"], ["wait", 300], ["click", "#storybook-root .atmr-dropdown-menu__text >> text=\"Mithril\""], ["wait", 200], ["click", "#storybook-root .atmr-dropdown-menu__text >> text=\"Ember\""], ["wait", 300]]},
+  {"name": "kbd-select-all", "actions": [["focus", "#storybook-root .atmr-button"], ["press", "Enter"], ["wait", 300]]}
+]}

@@ -1,0 +1,7 @@
+{"states": [
+  {"name": "click-close-button", "actions": [["click", "#storybook-root .atmr-tooltip__trigger >> nth=0"], ["wait", 400], ["click", ".atmr-tooltip .atmr-closebutton >> nth=0"], ["wait", 300]]},
+  {"name": "click-outside", "actions": [["click", "#storybook-root .atmr-tooltip__trigger >> nth=0"], ["wait", 400], ["click", "#storybook-root .atmr-tooltip__trigger >> nth=1"], ["wait", 400]]},
+  {"name": "hover-second", "actions": [["hover", "#storybook-root .atmr-tooltip__trigger >> nth=1"], ["wait", 400]]},
+  {"name": "hover-second-leave", "actions": [["hover", "#storybook-root .atmr-tooltip__trigger >> nth=1"], ["wait", 400], ["mouse", 700, 700], ["wait", 300]]},
+  {"name": "click-then-hover-second", "actions": [["click", "#storybook-root .atmr-tooltip__trigger >> nth=0"], ["wait", 400], ["hover", "#storybook-root .atmr-tooltip__trigger >> nth=1"], ["wait", 400]]}
+]}

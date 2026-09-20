@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "open-empty", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300]]},
+  {"name": "loaded-open", "actions": [["click", "#storybook-root .atmr-button"], ["wait", 5400], ["click", "#storybook-root .atmr-select"], ["wait", 300]]},
+  {"name": "load-while-open", "actions": [["click", "#storybook-root .atmr-button"], ["wait", 300], ["click", "#storybook-root .atmr-select"], ["wait", 5300]]},
+  {"name": "loaded-select", "actions": [["click", "#storybook-root .atmr-button"], ["wait", 5400], ["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=2"], ["wait", 300]]}
+]}

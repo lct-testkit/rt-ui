@@ -1,0 +1,115 @@
+name: CI
+
+# What runs here needs nothing that is kept out of the repository (the reference mirror `_mirror/`, the reference snapshots `design/reference/` and the licensed
+# Rostelecom Basis font are git-ignored): types of the library, the package build, package lint, the node-side checks (SSR of the extensions and charts,
+# CSS guards) and a tarball as an artifact. The pixel comparison with the reference (`tools/compare.py`) and the browser checks run on a machine that has them.
+# The tarball built here has NO fonts (licensed): the app that installs it provides RostelecomBasis-*.woff(2), see docs/PACKAGE.md.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      e2e:
+        description: 'Also run the browser checks of the CRM (mobile) and charts (no licensed font on the runner, so layouts may differ; never blocks)'
+        type: boolean
+        default: false
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Types of the library (src/lib; the playground routes and stories are not part of the package)
+        run: npm run check:lib
+
+      - name: Build the package (barrel, svelte-package, minified CSS, extension CSS guards)
+        run: npm run package
+
+      - name: The generated barrel is committed and up to date
+        run: git diff --exit-code -- src/lib/index.ts
+
+      - name: Package lint (publint + are-the-types-wrong)
+        run: npm run package:check
+
+      - name: Node-side checks (extension CSS, SSR of the extensions and of the charts)
+        run: |
+          node tools/check-ext-css.mjs
+          node tools/check-ext-ssr.mjs
+          node tools/check-charts-ssr.mjs
+
+      - name: Pack the tarball
+        run: |
+          mkdir -p out
+          npm pack --ignore-scripts --pack-destination out
+          ls -la out
+
+      - name: Note about fonts
+        run: echo "::notice title=No fonts in this tarball::Rostelecom Basis is licensed and git-ignored; the app that installs the package provides the font files (docs/PACKAGE.md)."
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rt-ui-package
+          path: out/*.tgz
+          if-no-files-found: error
+          retention-days: 30
+
+  e2e:
+    # manual: Actions -> CI -> Run workflow -> e2e. Informational only (the real font is missing on the runner).
+    if: github.event_name == 'workflow_dispatch' && inputs.e2e
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: npm ci
+
+      - name: Browser + Python Playwright
+        run: |
+          pip install playwright pillow numpy
+          python -m playwright install --with-deps chromium
+
+      - name: Start the playground
+        run: |
+          npm run dev > dev.log 2>&1 &
+          for i in $(seq 1 60); do curl -sf http://127.0.0.1:5180/ > /dev/null && break; sleep 2; done
+          curl -sf http://127.0.0.1:5180/examples/crm > /dev/null
+
+      - name: "CRM: phone / tablet / desktop"
+        run: python tools/check-crm-mobile.py --themes rtk_default_light
+
+      - name: Charts
+        run: python tools/check-charts.py --quick --no-shots
+
+      - name: Dev server log on failure
+        if: failure()
+        run: tail -n 80 dev.log

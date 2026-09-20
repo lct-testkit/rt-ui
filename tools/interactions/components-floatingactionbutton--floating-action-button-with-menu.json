@@ -1,0 +1,12 @@
+{"states": [
+  {"name": "open", "actions": [["click", "#storybook-root .atmr-floating-action-button__button"], ["wait", 400]]},
+  {"name": "open-hover-item2", "actions": [["click", "#storybook-root .atmr-floating-action-button__button"], ["wait", 400], ["hover", "#storybook-root .atmr-floating-action-menu-item__link >> nth=1"]]},
+  {"name": "open-hover-button", "actions": [["click", "#storybook-root .atmr-floating-action-button__button"], ["wait", 400], ["hover", "#storybook-root .atmr-floating-action-button__button"]]},
+  {"name": "open-close", "actions": [["click", "#storybook-root .atmr-floating-action-button__button"], ["wait", 400], ["click", "#storybook-root .atmr-floating-action-button__button"], ["wait", 400]]},
+  {"name": "open-click-item1", "actions": [["click", "#storybook-root .atmr-floating-action-button__button"], ["wait", 400], ["click", "#storybook-root .atmr-floating-action-menu-item__link >> nth=0"], ["wait", 400]]},
+  {"name": "open-click-item2", "actions": [["click", "#storybook-root .atmr-floating-action-button__button"], ["wait", 400], ["click", "#storybook-root .atmr-floating-action-menu-item__link >> nth=1"], ["wait", 400]]},
+  {"name": "open-click-overlay", "actions": [["click", "#storybook-root .atmr-floating-action-button__button"], ["wait", 400], ["click", "#storybook-root .atmr-floating-action-button__overlay"], ["wait", 400]]},
+  {"name": "kbd-open", "actions": [["focus", "#storybook-root .atmr-floating-action-button__button"], ["press", "Enter"], ["wait", 400]]},
+  {"name": "kbd-open-tab", "actions": [["focus", "#storybook-root .atmr-floating-action-button__button"], ["press", "Enter"], ["wait", 400], ["press", "Tab"], ["press", "Tab"]]},
+  {"name": "kbd-open-space-close", "actions": [["focus", "#storybook-root .atmr-floating-action-button__button"], ["press", "Space"], ["wait", 400], ["press", "Space"], ["wait", 400]]}
+]}

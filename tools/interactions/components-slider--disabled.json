@@ -1,0 +1,55 @@
+{
+ "states": [
+  {
+   "name": "kbd-right",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root .atmr-slider__thumb >> nth=0"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "click-track",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-slider__track >> nth=0"
+    ],
+    [
+     "wait",
+     200
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  },
+  {
+   "name": "hover-track",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-slider__track >> nth=0"
+    ],
+    [
+     "wait",
+     120
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,279 @@
+{
+ "states": [
+  {
+   "name": "icon-open",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "icon-open-close",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "focus",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "field-click",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "pick-day",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     ".atmr-popover--inputDate .atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=9"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "mouse",
+     5,
+     5
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "pick-day-reopen",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     ".atmr-popover--inputDate .atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=9"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "focus",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "type-valid",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "type",
+     "#storybook-root input[name=df]",
+     "15032026"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "type-partial",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "type",
+     "#storybook-root input[name=df]",
+     "150"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "type-invalid",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "type",
+     "#storybook-root input[name=df]",
+     "99999999"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "type-clear",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "type",
+     "#storybook-root input[name=df]",
+     "15032026"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "open-next-month",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     ".atmr-popover--inputDate .atmr-calendar-header__button >> nth=1"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  }
+ ]
+}

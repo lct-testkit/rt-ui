@@ -1,0 +1,11 @@
+.textarea-story {
+  textarea {
+    min-width: 256px;
+  }
+}
+
+.textarea-story__one-row {
+  .atmr-input__container {
+    min-height: unset !important;
+  }
+}

@@ -1,0 +1,56 @@
+/* EXTENSION — author's addition, NOT part of the original Rostelecom design system. Styles of <TableCards> (mobile alternative to TableGrid).
+   Only design-system tokens; the component imports this file itself, so a page that never renders it does not load it. */
+.rt-ext-cards {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: var(--atmr-spacing-2x);
+}
+.rt-ext-cards__item {
+	display: flex;
+	align-items: stretch;
+	min-height: 64px;
+	box-sizing: border-box;
+	background: var(--atmr-bg-surface1);
+	border: 1px solid var(--atmr-border-muted);
+	border-radius: var(--atmr-border-radius-m);
+	overflow: hidden;
+}
+.rt-ext-cards__item--selected {
+	background: var(--atmr-accent-container-soft);
+	border-color: var(--atmr-accent-default);
+}
+.rt-ext-cards__check {
+	flex: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px; /* a 48 px wide touch target for the checkbox */
+}
+.rt-ext-cards__main {
+	flex: 1;
+	min-width: 0;
+	box-sizing: border-box;
+	padding: var(--atmr-spacing-3x);
+	-webkit-tap-highlight-color: transparent;
+}
+.rt-ext-cards__item--selectable .rt-ext-cards__main {
+	padding-left: 0;
+}
+.rt-ext-cards__main[role='button'] {
+	cursor: pointer;
+}
+.rt-ext-cards__main[role='button']:active {
+	background: var(--atmr-neutral-container-soft);
+}
+.rt-ext-cards__main:focus-visible {
+	outline: 2px solid var(--atmr-accent-default);
+	outline-offset: -2px;
+}
+.rt-ext-cards__empty {
+	padding: var(--atmr-spacing-8x) var(--atmr-spacing-4x);
+	text-align: center;
+	color: var(--atmr-fg-muted);
+}

@@ -1,0 +1,4 @@
+{"states": [
+  {"name": "open-1-hover-button", "actions": [["click", "#storybook-root [style*='cursor: pointer'] >> nth=0"], ["wait", 450], ["hover", "#storybook-root .atmr-functionbutton >> nth=0"]]},
+  {"name": "open-1-click-button", "actions": [["click", "#storybook-root [style*='cursor: pointer'] >> nth=0"], ["wait", 450], ["click", "#storybook-root .atmr-functionbutton >> nth=1"], ["wait", 100]]}
+]}

@@ -1,0 +1,176 @@
+{
+ "states": [
+  {
+   "name": "tab-click-2",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [role=tab] >> nth=2"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "tab-click-more",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [role=tab] >> nth=4"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "tab-hover-1",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root [role=tab] >> nth=1"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "tab-kbd-right",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root [role=tab] >> nth=0"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hover-home",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .top-menu-two-level__home-icon"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "click-home",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .top-menu-two-level__home-icon"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hover-breadcrumb",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .top-menu-two-level__breadcrumbs a >> nth=1"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-utilities-icon",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__utilities-container .atmr-top-menu__utilities-icon >> nth=0"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-profile",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__profile-container"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-secondary-action",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu--two-level-sub .atmr-button >> nth=0"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "click-primary-action",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-top-menu--two-level-sub .atmr-button >> nth=1"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "tab-focus-4",
+   "actions": [
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  }
+ ]
+}

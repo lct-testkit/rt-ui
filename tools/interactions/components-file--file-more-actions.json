@@ -1,0 +1,13 @@
+{"states": [
+  {"name": "open-compact", "actions": [["click", "#storybook-root .atmr-file--compact button"], ["wait", 300]]},
+  {"name": "hover-item", "actions": [["click", "#storybook-root .atmr-file--horizontal button"], ["wait", 300], ["hover", ".atmr-dropdown-menu__text >> text=\"Редактировать\""], ["wait", 100]]},
+  {"name": "hover-item-compact", "actions": [["click", "#storybook-root .atmr-file--compact button"], ["wait", 300], ["hover", ".atmr-dropdown-menu__text >> text=\"Удалить\""], ["wait", 100]]},
+  {"name": "pick-item", "actions": [["click", "#storybook-root .atmr-file--horizontal button"], ["wait", 300], ["click", ".atmr-dropdown-menu__text >> text=\"Редактировать\""], ["wait", 300]]},
+  {"name": "pick-item-compact", "actions": [["click", "#storybook-root .atmr-file--compact button"], ["wait", 300], ["click", ".atmr-dropdown-menu__text >> text=\"Загрузить\""], ["wait", 300]]},
+  {"name": "outside-click", "actions": [["click", "#storybook-root .atmr-file--horizontal button"], ["wait", 300], ["click", "html"], ["wait", 300]]},
+  {"name": "reopen", "actions": [["click", "#storybook-root .atmr-file--horizontal button"], ["wait", 300], ["click", "html"], ["wait", 300], ["click", "#storybook-root .atmr-file--horizontal button"], ["wait", 300]]},
+  {"name": "reopen-after-pick", "actions": [["click", "#storybook-root .atmr-file--horizontal button"], ["wait", 300], ["click", ".atmr-dropdown-menu__text >> text=\"Удалить\""], ["wait", 300], ["click", "#storybook-root .atmr-file--horizontal button"], ["wait", 300]]},
+  {"name": "switch-menu", "actions": [["click", "#storybook-root .atmr-file--horizontal button"], ["wait", 300], ["click", "#storybook-root .atmr-file--compact button"], ["wait", 300]]},
+  {"name": "kbd-open", "actions": [["focus", "#storybook-root .atmr-file--horizontal button"], ["press", "Enter"], ["wait", 300]]},
+  {"name": "kbd-open-space-tab", "actions": [["focus", "#storybook-root .atmr-file--compact button"], ["press", "Space"], ["wait", 300], ["press", "Tab"], ["wait", 100]]}
+]}

@@ -1,0 +1,4 @@
+{"states": [
+  {"name": "kbd-enter", "actions": [["focus", "#storybook-root button"], ["press", "Enter"], ["wait", 100]]},
+  {"name": "kbd-space", "actions": [["focus", "#storybook-root button"], ["press", "Space"], ["wait", 100]]}
+]}

@@ -1,0 +1,4 @@
+{"states": [
+  {"name": "fit-select", "actions": [["click", "#storybook-root .atmr-dropdown-menu__text >> text=\"Mithril\""], ["wait", 300]]},
+  {"name": "fit-hover-polymer", "actions": [["hover", "#storybook-root .atmr-dropdown-menu__text >> text=\"Polymer\""]]}
+]}

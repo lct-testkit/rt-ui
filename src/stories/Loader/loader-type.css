@@ -1,0 +1,52 @@
+/* story-only CSS of Loader.stories.tsx (design/reference-css/92765d8fa4.css) */
+.loader-type-layout {
+	display: grid;
+	gap: var(--atmr-spacing-4x);
+}
+
+.loader-type-card {
+	display: grid;
+	gap: var(--atmr-spacing-3x);
+	padding: var(--atmr-spacing-4x);
+	border: 1px solid var(--atmr-border-soft);
+	border-radius: var(--atmr-border-radius-controls);
+	background: var(--atmr-bg-surface1);
+}
+
+.loader-type-card__description {
+	color: var(--atmr-fg-muted);
+}
+
+.loader-type-item__label {
+	color: var(--atmr-fg-default);
+}
+
+.loader-type-card--deprecated {
+	border-color: var(--atmr-error-muted);
+	background: var(--atmr-error-container-default);
+
+	.loader-type-card__description {
+		color: var(--atmr-error-on-container);
+	}
+
+	.loader-type-item__label {
+		color: var(--atmr-fg-default);
+	}
+}
+
+.loader-type-card__head {
+	display: grid;
+	gap: var(--atmr-spacing-1x);
+}
+
+.loader-type-card__items {
+	display: flex;
+	align-items: center;
+	gap: var(--atmr-spacing-5x);
+}
+
+.loader-type-item {
+	display: grid;
+	justify-items: center;
+	gap: var(--atmr-spacing-2x);
+}

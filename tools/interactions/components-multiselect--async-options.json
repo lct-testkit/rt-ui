@@ -1,0 +1,7 @@
+{"states": [
+  {"name": "load", "actions": [["click", "#storybook-root .atmr-button"], ["wait", 300]]},
+  {"name": "load-open", "actions": [["click", "#storybook-root .atmr-button"], ["wait", 300], ["click", "#storybook-root .atmr-input--multiselect"], ["wait", 300]]},
+  {"name": "open-then-load", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 300], ["click", "#storybook-root .atmr-button"], ["wait", 300]]},
+  {"name": "load-open-select", "actions": [["click", "#storybook-root .atmr-button"], ["wait", 300], ["click", "#storybook-root .atmr-input--multiselect"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=2"], ["wait", 300]]},
+  {"name": "load-type-enter", "actions": [["click", "#storybook-root .atmr-button"], ["wait", 300], ["click", "#storybook-root .atmr-input--multiselect"], ["wait", 200], ["type", "#storybook-root .atmr-taginput", "Selection 4"], ["press", "Enter"], ["wait", 300]]}
+]}

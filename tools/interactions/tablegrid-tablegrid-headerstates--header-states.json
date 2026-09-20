@@ -1,0 +1,87 @@
+{
+ "states": [
+  {
+   "name": "open-operators-left",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [data-header-cell-name=col3] input"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "open-operators-right",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [data-header-cell-name=col8] input"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "operators-pick-start",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [data-header-cell-name=col3] input"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     "text=Совпадает с началом строки"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "operators-typed",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [data-header-cell-name=col4] input"
+    ],
+    [
+     "type",
+     "#storybook-root [data-header-cell-name=col4] input",
+     "abc"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hover-header-col1",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root [data-header-cell-name=col1]"
+    ]
+   ]
+  },
+  {
+   "name": "hover-sort-col2",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root [data-header-cell-name=col2] .atmr-tablegrid__sorting__button"
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{"states": [
+  {"name": "size-open", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300]]},
+  {"name": "size-25", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=1"], ["wait", 300]]},
+  {"name": "size-50", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=2"], ["wait", 300]]},
+  {"name": "next", "actions": [["click", "#storybook-root button[type='next']"], ["wait", 100]]},
+  {"name": "page5", "actions": [["click", "#storybook-root button[page='5']"], ["wait", 100]]},
+  {"name": "last-page", "actions": [["click", "#storybook-root button[page='20']"], ["wait", 100]]},
+  {"name": "jumper-enter", "actions": [["focus", "#storybook-root .atmr-pagination__jumper input"], ["type", "#storybook-root .atmr-pagination__jumper input", "5"], ["press", "Enter"], ["wait", 100]]},
+  {"name": "jumper-clamp", "actions": [["focus", "#storybook-root .atmr-pagination__jumper input"], ["type", "#storybook-root .atmr-pagination__jumper input", "999"], ["press", "Enter"], ["wait", 100]]},
+  {"name": "jumper-blur", "actions": [["focus", "#storybook-root .atmr-pagination__jumper input"], ["type", "#storybook-root .atmr-pagination__jumper input", "7"], ["press", "Tab"], ["wait", 100]]},
+  {"name": "jumper-nondigit", "actions": [["focus", "#storybook-root .atmr-pagination__jumper input"], ["type", "#storybook-root .atmr-pagination__jumper input", "a1b2c"], ["wait", 100]]},
+  {"name": "jumper-zero", "actions": [["click", "#storybook-root button[page='4']"], ["focus", "#storybook-root .atmr-pagination__jumper input"], ["type", "#storybook-root .atmr-pagination__jumper input", "0"], ["press", "Enter"], ["wait", 100]]},
+  {"name": "jumper-empty", "actions": [["click", "#storybook-root button[page='4']"], ["focus", "#storybook-root .atmr-pagination__jumper input"], ["press", "Backspace"], ["press", "Enter"], ["wait", 100]]},
+  {"name": "size25-last-size50", "actions": [["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=1"], ["wait", 300], ["focus", "#storybook-root .atmr-pagination__jumper input"], ["type", "#storybook-root .atmr-pagination__jumper input", "8"], ["press", "Enter"], ["wait", 200], ["click", "#storybook-root .atmr-select"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=2"], ["wait", 300]]}
+]}

@@ -1,0 +1,5 @@
+{"states": [
+ {"name": "scroll-bottom-loading", "actions": [["scroll", "#storybook-root .atmr-tablegrid__layout", 0, 100000], ["wait", 600]]},
+ {"name": "scroll-bottom-loaded", "actions": [["scroll", "#storybook-root .atmr-tablegrid__layout", 0, 100000], ["wait", 2800]]},
+ {"name": "scroll-x", "actions": [["scroll", "#storybook-root .atmr-tablegrid__layout", 500, 200], ["wait", 200]]}
+]}

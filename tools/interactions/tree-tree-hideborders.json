@@ -1,0 +1,7 @@
+{"states": [
+  {"name": "expand-0-1", "actions": [["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"parent 0-1\")) .atmr-tree__button-expand >> nth=0"], ["wait", 150]]},
+  {"name": "collapse-0-0", "actions": [["click", "#storybook-root .atmr-tree__button-expand >> nth=0"], ["wait", 150]]},
+  {"name": "collapse-0-0-0", "actions": [["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"child 0-0-0\")) .atmr-tree__button-expand >> nth=0"], ["wait", 150]]},
+  {"name": "select-child", "actions": [["click", "#storybook-root p:text-is(\"child 0-0-1\") >> nth=0"], ["wait", 150]]},
+  {"name": "hover-row", "actions": [["hover", "#storybook-root p:text-is(\"parent 0-2\") >> nth=0"]]}
+]}

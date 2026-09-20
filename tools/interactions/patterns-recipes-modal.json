@@ -1,0 +1,7 @@
+{"states": [
+  {"name": "esc-close", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["press", "Escape"], ["wait", 500]]},
+  {"name": "reopen", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["press", "Escape"], ["wait", 500], ["click", "#storybook-root button >> nth=0"], ["wait", 400]]},
+  {"name": "tab-open", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["press", "Tab"], ["press", "Tab"]]},
+  {"name": "esc-closed", "actions": [["press", "Escape"], ["wait", 100]]},
+  {"name": "kbd-open", "actions": [["focus", "#storybook-root button >> nth=0"], ["press", "Enter"], ["wait", 400]]}
+]}

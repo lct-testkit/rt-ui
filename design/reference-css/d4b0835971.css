@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'Rostelecom Basis';
+    src: url('./fonts/RostelecomBasis-Regular.eot');
+    src: url('./fonts/RostelecomBasis-Regular.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/RostelecomBasis-Regular.woff') format('woff'),
+      url('./fonts/RostelecomBasis-Regular.woff2') format('woff2'),
+      url('./fonts/RostelecomBasis-Regular.ttf') format('truetype'),
+      url('./fonts/RostelecomBasis-Regular.svg#RostelecomBasis-Regular') format('svg');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: 'Rostelecom Basis';
+    src: url('./fonts/RostelecomBasis-Medium.eot');
+    src: url('./fonts/RostelecomBasis-Medium.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/RostelecomBasis-Medium.woff') format('woff'),
+      url('./fonts/RostelecomBasis-Medium.woff2') format('woff2'),
+      url('./fonts/RostelecomBasis-Medium.ttf') format('truetype'),
+      url('./fonts/RostelecomBasis-Medium.svg#RostelecomBasis-Medium') format('svg');
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: 'Rostelecom Basis';
+    src: url('./fonts/RostelecomBasis-Light.eot');
+    src: url('./fonts/RostelecomBasis-Light.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/RostelecomBasis-Light.woff') format('woff'),
+      url('./fonts/RostelecomBasis-light.woff2') format('woff2'),
+      url('./fonts/RostelecomBasis-Light.ttf') format('truetype'),
+      url('./fonts/RostelecomBasis-Light.svg#RostelecomBasis-Light') format('svg');
+    font-style: normal;
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: 'Rostelecom Basis';
+    src: url('./fonts/RostelecomBasis-Bold.eot');
+    src: url('./fonts/RostelecomBasis-Bold.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/RostelecomBasis-Bold.woff') format('woff'),
+      url('./fonts/RostelecomBasis-Bold.woff2') format('woff2'),
+      url('./fonts/RostelecomBasis-Bold.ttf') format('truetype'),
+      url('./fonts/RostelecomBasis-Bold.svg#RostelecomBasis-Bold') format('svg');
+    font-style: normal;
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: 'Manrope';
+    src: url('./fonts/Manrope-Regular.eot');
+    src: url('./fonts/Manrope-Regular.ttf') format('truetype');
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: 'Manrope';
+    src: url('./fonts/Manrope-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: 'Manrope';
+    src: url('./fonts/Manrope-Light.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: 'Manrope';
+    src: url('./fonts/Manrope-SemiBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  /* @font-face {
+    font-family: 'Manrope';
+    src:
+      url('./fonts/Manrope-Thin.ttf') format('truetype'),
+      url('./fonts/Manrope-Thin.svg#Manrope-Thin') format('svg');
+    font-style: normal;
+    font-weight: 100;
+  } */
+
+  @font-face {
+    font-family: 'Manrope';
+    src: url('./fonts/Manrope-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: 'Manrope';
+    src: url('./fonts/Manrope-ExtraBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 800;
+  }
+
+  html,
+  body,
+  #root {
+    min-width: 100%;
+    width: fit-content;
+    height: 100%;
+  }
+
+  .docs-story {
+    background: var(--atmr-bg-surface2) !important;
+  }
+  .sbdocs {
+    background: var(--atmr-bg-page) !important;
+  }
+  .sbdocs-preview, .sb-show-main {
+      font-family: 'Times New Roman';  /* Times New Roman установлен для лучшей видимости пропущенных шрифтов на компонентах */
+  }
+  .sbdocs-preview > div:first-child {
+    background: var(--atmr-bg-surface4);
+  }
+  .sb-show-main {
+    background: var(--atmr-bg-surface2) !important;
+  }
+  .sbdocs-title {
+    color: var(--atmr-fg-default) !important;
+  }
+  .description__text {
+    color: var(--atmr-fg-default) !important;
+  }
+  h1, h2, h3, h4, th, li, p {
+    color: var(--atmr-fg-default);
+  }
+
+  .sbdocs table :is(th, td) {
+    color: var(--atmr-fg-default) !important;
+    border-color: var(--atmr-border-muted, rgba(128, 128, 128, 0.25)) !important;
+  }
+
+  .sbdocs table thead :is(th, td) {
+    background: var(--atmr-bg-surface2) !important;
+  }
+
+  .sbdocs table tbody tr:nth-child(odd) :is(th, td) {
+    background: var(--atmr-bg-page) !important;
+  }
+
+  .sbdocs table tbody tr:nth-child(even) :is(th, td) {
+    background: var(--atmr-bg-surface2) !important;
+  }
+
+  .sbdocs table code {
+    color: var(--atmr-fg-default) !important;
+    background: var(--atmr-bg-surface4) !important;
+  }

@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "kbd-enter", "actions": [["press", "Tab"], ["press", "Enter"], ["wait", 200]]},
+  {"name": "kbd-space", "actions": [["press", "Tab"], ["press", "Space"], ["wait", 200]]},
+  {"name": "tab2", "actions": [["press", "Tab"], ["press", "Tab"], ["wait", 150]]},
+  {"name": "hover-last", "actions": [["hover", "#storybook-root [role=tab] >> nth=-1"], ["wait", 200]]}
+]}

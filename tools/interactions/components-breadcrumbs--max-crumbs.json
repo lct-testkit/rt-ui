@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "hover-crumb", "actions": [["hover", "#storybook-root .atmr-breadcrumbs__item >> nth=1"], ["wait", 200]]},
+  {"name": "hover-current", "actions": [["hover", "#storybook-root .atmr-breadcrumbs__item >> nth=2"], ["wait", 200]]},
+  {"name": "tab-chain", "actions": [["press", "Tab"], ["press", "Tab"], ["press", "Tab"], ["wait", 150]]},
+  {"name": "click-crumb", "actions": [["click", "#storybook-root .atmr-breadcrumbs__item >> nth=1"], ["wait", 300]]}
+]}

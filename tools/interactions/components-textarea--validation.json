@@ -1,0 +1,159 @@
+{
+ "states": [
+  {
+   "name": "blur-empty",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "too-long-blur",
+   "actions": [
+    [
+     "click",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "hello world!!"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "ok-blur",
+   "actions": [
+    [
+     "click",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "hello"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "too-long-no-blur",
+   "actions": [
+    [
+     "click",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "hello world!!"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "fix-after-error",
+   "actions": [
+    [
+     "click",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "hello world!!"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "click",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "clear-after-error",
+   "actions": [
+    [
+     "click",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root textarea >> nth=0",
+     "hello"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "click",
+     "#storybook-root textarea >> nth=0"
+    ],
+    [
+     "press",
+     "Control+A"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  }
+ ]
+}

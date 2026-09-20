@@ -1,0 +1,169 @@
+{
+ "states": [
+  {
+   "name": "show-menu",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     600
+    ]
+   ]
+  },
+  {
+   "name": "show-hide-menu",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     600
+    ],
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     600
+    ]
+   ]
+  },
+  {
+   "name": "show-menu-hover-item",
+   "actions": [
+    [
+     "click",
+     "#storybook-root .atmr-side-menu__hide-button"
+    ],
+    [
+     "wait",
+     600
+    ],
+    [
+     "hover",
+     "#storybook-root .atmr-side-menu__content > li >> nth=2"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-item",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-side-menu__content > li >> nth=1"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-info",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-side-menu__info-block"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "tab-click-3",
+   "actions": [
+    [
+     "click",
+     "#storybook-root [role=tab] >> nth=3"
+    ],
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "name": "tab-hover-2",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root [role=tab] >> nth=2"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "tab-kbd-right",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root [role=tab] >> nth=0"
+    ],
+    [
+     "press",
+     "ArrowRight"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "hover-nav-icon",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__navigation-icon"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "hover-profile",
+   "actions": [
+    [
+     "hover",
+     "#storybook-root .atmr-top-menu__profile-container"
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  },
+  {
+   "name": "scroll-side-content",
+   "actions": [
+    [
+     "scroll",
+     "#storybook-root .atmr-side-menu__content",
+     0,
+     300
+    ],
+    [
+     "wait",
+     200
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+{"states": [
+  {"name": "select-mithril", "actions": [["click", "#storybook-root .atmr-dropdown-menu__text >> text=\"Mithril\""], ["wait", 300]]},
+  {"name": "select-then-hover", "actions": [["click", "#storybook-root .atmr-dropdown-menu__text >> text=\"Mithril\""], ["wait", 300], ["hover", "#storybook-root .atmr-dropdown-menu__text >> text=\"Polymer\""]]},
+  {"name": "click-disabled", "actions": [["click", "#storybook-root .atmr-dropdown-menu__text >> text=\"Meteor\""], ["wait", 300]]},
+  {"name": "hover-disabled", "actions": [["hover", "#storybook-root .atmr-dropdown-menu__text >> text=\"Meteor\""]]},
+  {"name": "hover-ember", "actions": [["hover", "#storybook-root .atmr-dropdown-menu__text >> text=\"Ember\""]]},
+  {"name": "hover-kebab", "actions": [["hover", "#storybook-root .atmr-dropdown-menu__suffix .atmr-icon-button"], ["wait", 300]]}
+]}

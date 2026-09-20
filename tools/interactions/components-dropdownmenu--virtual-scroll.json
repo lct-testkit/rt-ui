@@ -1,0 +1,9 @@
+{"states": [
+  {"name": "vs-scroll-1", "actions": [["scroll", "#storybook-root .atmr-dropdown-menu .atmr-scroll-bar", 0, 400], ["wait", 400]]},
+  {"name": "vs-scroll-2", "actions": [["scroll", "#storybook-root .atmr-dropdown-menu .atmr-scroll-bar", 0, 5000], ["wait", 400]]},
+  {"name": "vs-scroll-far", "actions": [["scroll", "#storybook-root .atmr-dropdown-menu .atmr-scroll-bar", 0, 60000], ["wait", 400]]},
+  {"name": "vs-scroll-bottom", "actions": [["scroll", "#storybook-root .atmr-dropdown-menu .atmr-scroll-bar", 0, 100000], ["wait", 500]]},
+  {"name": "vs-scroll-then-select", "actions": [["scroll", "#storybook-root .atmr-dropdown-menu .atmr-scroll-bar", 0, 1000], ["wait", 400], ["click", "#storybook-root .atmr-dropdown-menu__text >> text=\"Item 27\""], ["wait", 300]]},
+  {"name": "vs-select-first", "actions": [["click", "#storybook-root .atmr-dropdown-menu__text >> text=\"Item 2\""], ["wait", 300]]},
+  {"name": "vs-wheel-hover", "actions": [["hover", "#storybook-root .atmr-dropdown-menu__text >> text=\"Item 3\""], ["scroll", "#storybook-root .atmr-dropdown-menu .atmr-scroll-bar", 0, 200], ["wait", 400]]}
+]}

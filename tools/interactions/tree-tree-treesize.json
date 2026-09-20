@@ -1,0 +1,7 @@
+{"states": [
+  {"name": "small-expand-0-0", "actions": [["click", "#storybook-root .atmr-tree__button-expand >> nth=0"], ["wait", 150]]},
+  {"name": "small-expand-0-0-and-child", "actions": [["click", "#storybook-root .atmr-tree__button-expand >> nth=0"], ["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"child 0-0-1\")) .atmr-tree__button-expand >> nth=0"], ["wait", 150]]},
+  {"name": "big-expand-0-0", "actions": [["click", "#storybook-root .atmr-tree__button-expand >> nth=3"], ["wait", 150]]},
+  {"name": "select-small", "actions": [["click", "#storybook-root p:text-is(\"parent 0-1\") >> nth=0"], ["wait", 150]]},
+  {"name": "both-expanded", "actions": [["click", "#storybook-root .atmr-tree__button-expand >> nth=3"], ["click", "#storybook-root .atmr-tree__button-expand >> nth=0"], ["wait", 150]]}
+]}

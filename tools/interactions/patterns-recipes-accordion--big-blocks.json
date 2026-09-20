@@ -1,0 +1,5 @@
+{"states": [
+  {"name": "click-switch-1", "actions": [["click", "#storybook-root .atmr-switch >> nth=0"], ["wait", 500]]},
+  {"name": "open-1-fill", "actions": [["click", "#storybook-root [style*='cursor: pointer'] >> nth=0"], ["wait", 450], ["click", "#storybook-root input[type=text] >> visible=true >> nth=0"], ["type", "#storybook-root input[type=text] >> visible=true >> nth=0", "1234"], ["wait", 100]]},
+  {"name": "open-1-2-fill-2", "actions": [["click", "#storybook-root [style*='cursor: pointer'] >> nth=0"], ["wait", 450], ["click", "#storybook-root [style*='cursor: pointer'] >> nth=1"], ["wait", 450], ["click", "#storybook-root input[type=text] >> visible=true >> nth=1"], ["type", "#storybook-root input[type=text] >> visible=true >> nth=1", "99"], ["wait", 100]]}
+]}

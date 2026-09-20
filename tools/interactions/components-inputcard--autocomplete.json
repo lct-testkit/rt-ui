@@ -1,0 +1,40 @@
+{
+ "states": [
+  {
+   "name": "typed-visa",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input >> nth=0"
+    ],
+    [
+     "type",
+     "#storybook-root input >> nth=0",
+     "4111111111111111"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  },
+  {
+   "name": "fill-mc",
+   "actions": [
+    [
+     "fill",
+     "#storybook-root input >> nth=0",
+     "5555 5555 5555 4444"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     100
+    ]
+   ]
+  }
+ ]
+}

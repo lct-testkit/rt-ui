@@ -1,0 +1,463 @@
+{
+ "states": [
+  {
+   "name": "typed-digits",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "1234567"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "typed-decimal",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "1234,5"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "typed-decimal-dot",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "12.34"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "typed-3-decimals",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "1,234"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "typed-comma-only",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     ","
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "typed-comma-blur",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "12,"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "typed-one-decimal-blur",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "12,5"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "typed-integer-blur",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "1234"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "typed-letters",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "ab12cd"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "typed-negative",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "-1234"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "typed-leading-zeros-blur",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "007"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "typed-long",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "1234567890123456789"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "backspace",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "1234567"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "backspace-over-separator",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "1234"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "delete-over-separator",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "1234"
+    ],
+    [
+     "press",
+     "Home"
+    ],
+    [
+     "press",
+     "Delete"
+    ],
+    [
+     "press",
+     "Delete"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "insert-in-middle",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "1234"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "press",
+     "ArrowLeft"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "9"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "select-all-replace",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "123"
+    ],
+    [
+     "press",
+     "Control+A"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "9"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "select-all-delete",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input"
+    ],
+    [
+     "type",
+     "#storybook-root input",
+     "1234567"
+    ],
+    [
+     "press",
+     "Control+A"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "fill-decimal",
+   "actions": [
+    [
+     "fill",
+     "#storybook-root input",
+     "1234567,891"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "fill-decimal-blur",
+   "actions": [
+    [
+     "fill",
+     "#storybook-root input",
+     "1234567,8"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  },
+  {
+   "name": "focus-blur-empty",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root input"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "wait",
+     150
+    ]
+   ]
+  }
+ ]
+}

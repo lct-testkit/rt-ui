@@ -1,0 +1,8 @@
+<script lang="ts">
+	import Base from '../../Icon.svelte';
+	let props: Record<string, any> = $props();
+</script>
+
+<Base {...props}>
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M0 7C0 5.34315 1.34315 4 3 4H21C22.6569 4 24 5.34315 24 7V17C24 18.6569 22.6569 20 21 20H14.1327L12.3615 21.8533C12.1645 22.0593 11.8355 22.0593 11.6385 21.8533L9.86725 20H3C1.34315 20 0 18.6569 0 17V7ZM4 12.5H12V11H4V12.5ZM14 12.5H20V11H14V12.5ZM6 14.5039H4V16.0039H6V14.5039ZM20 14.4867H7.99999V15.9867H20V14.4867Z" />
+</Base>

@@ -1,0 +1,111 @@
+.stories-main-top-menu:has(.atmr-top-menu--floating) {
+  min-width: 700px;
+  padding: 12px;
+}
+
+.stories-main-top-menu--floating {
+  background: var(--atmr-bg-surface2);
+}
+
+.atmr-top-menu--floating {
+  background: transparent;
+  border-bottom: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  gap: 0;
+}
+
+.atmr-top-menu--floating .atmr-top-menu-flow-bubble {
+  flex: 0 0 auto;
+  background: var(--atmr-bg-surface1);
+  border-radius: var(--atmr-border-radius-l);
+  display: flex;
+  align-items: center;
+  box-shadow: var(--atmr-shadow-bottom-l);
+}
+
+.atmr-top-menu--floating .atmr-top-menu-flow-bubble--center .atmr-top-menu__product-container {
+  flex: 0 0 auto;
+  min-width: unset;
+}
+
+.atmr-top-menu--floating .atmr-top-menu__navigation-container {
+  padding: var(--atmr-spacing-1x);
+}
+
+.atmr-top-menu--floating .atmr-top-menu__brand-container {
+  padding: var(--atmr-spacing-1x) var(--atmr-spacing-3x) var(--atmr-spacing-1x)
+    var(--atmr-spacing-1x);
+}
+
+.atmr-top-menu--floating .atmr-top-menu__brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.atmr-top-menu--floating .atmr-top-menu__product-container {
+  background: var(--atmr-bg-surface1);
+  border-radius: 10px;
+  padding: var(--atmr-spacing-1x);
+}
+
+.atmr-top-menu--floating .atmr-top-menu__product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--atmr-border-radius-m);
+
+  svg {
+    fill: var(--atmr-fg-soft);
+  }
+
+  &:hover {
+    background: var(--atmr-neutral-container-soft);
+
+    svg {
+      fill: var(--atmr-fg-default);
+    }
+  }
+
+  &:active {
+    background: var(--atmr-neutral-container-default);
+
+    svg {
+      fill: var(--atmr-fg-default);
+    }
+  }
+
+  .atmr-top-menu__product-item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.atmr-top-menu--floating .atmr-top-menu__actions-container {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border-radius: 0;
+  padding: var(--atmr-spacing-1x);
+}
+
+.atmr-top-menu--floating .atmr-top-menu__utilities-container {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border-radius: 0;
+  padding: var(--atmr-spacing-1x);
+}
+
+.atmr-top-menu--floating .atmr-top-menu__profile-container {
+  padding: var(--atmr-spacing-1x);
+}

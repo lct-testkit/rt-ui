@@ -1,0 +1,10 @@
+{"states": [
+  {"name": "custom-shown", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 450]]},
+  {"name": "custom-tab-into", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 450], ["press", "Tab"]]},
+  {"name": "custom-hover-button", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 450], ["hover", ".atmr-custom-toast-notification button"]]},
+  {"name": "custom-close", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 450], ["click", ".atmr-custom-toast-notification button"], ["wait", 700]]},
+  {"name": "custom-autohide", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 5700]]},
+  {"name": "custom-stack-2", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 100], ["click", "#storybook-root button >> nth=0"], ["wait", 450]]},
+  {"name": "custom-stack-4-max", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 100], ["click", "#storybook-root button >> nth=0"], ["wait", 100], ["click", "#storybook-root button >> nth=0"], ["wait", 100], ["click", "#storybook-root button >> nth=0"], ["wait", 700]]},
+  {"name": "custom-stack-close-newest", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 100], ["click", "#storybook-root button >> nth=0"], ["wait", 500], ["click", ".atmr-custom-toast-notification >> nth=1 >> button"], ["wait", 700]]}
+]}

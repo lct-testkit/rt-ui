@@ -1,0 +1,71 @@
+/* Story-only CSS of the recipe (design/reference-css/2c3d82a62e.css) */
+.create-project-drawer.atmr-drawer.atmr-drawer--right {
+  width: 100%;
+  max-width: 770px;
+}
+
+.create-project-drawer.atmr-drawer.atmr-drawer--right .atmr-drawer__content {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.create-project-drawer .atmr-drawer__header {
+  display: flex;
+  align-items: center;
+  column-gap: var(--atmr-spacing-4x);
+  padding: var(--atmr-spacing-8x);
+}
+
+.create-project-drawer .atmr-drawer__actions {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+}
+
+.create-project-drawer .atmr-drawer__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: var(--atmr-spacing-8x);
+}
+
+.create-project-drawer .atmr-drawer__body .atmr-dropdown-menu-root {
+  width: 100%;
+}
+
+.create-project-drawer .atmr-drawer__footer {
+  display: flex;
+  column-gap: var(--atmr-spacing-3x);
+  border-top: 1px solid var(--atmr-border-muted);
+  padding: var(--atmr-spacing-8x);
+}
+
+.create-project-drawer .project-info .project-info__dates {
+  margin-bottom: var(--atmr-spacing-8x);
+}
+
+@media screen and (max-width: 800px) {
+  .project-info .project-info__dates {
+    flex-direction: column;
+  }
+}
+
+.project-info .atmr-popover__root,
+.project-info .atmr-input,
+.project-info .atmr-input--multiselect,
+.project-info .atmr-dropdown {
+  width: 100%;
+  max-width: 100%;
+}
+
+.project-info .project-info__technologies svg {
+  fill: var(--atmr-fg-muted);
+}
+
+.project-info .project-info__add-direction {
+  justify-self: flex-start;
+  width: max-content;
+}

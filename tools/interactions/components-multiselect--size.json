@@ -1,0 +1,9 @@
+{"states": [
+  {"name": "open-m", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=1"], ["wait", 300]]},
+  {"name": "open-l", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=2"], ["wait", 300]]},
+  {"name": "select-s-many", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=1"], ["wait", 100], ["click", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 100], ["click", ".atmr-dropdown-menu__item >> nth=5"], ["wait", 100], ["click", ".atmr-dropdown-menu__item >> nth=6"], ["wait", 300]]},
+  {"name": "select-m", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=1"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 200], ["click", ".atmr-dropdown-menu__item >> nth=5"], ["wait", 300]]},
+  {"name": "select-l-many", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=2"], ["wait", 300], ["click", ".atmr-dropdown-menu__item >> nth=1"], ["wait", 100], ["click", ".atmr-dropdown-menu__item >> nth=3"], ["wait", 100], ["click", ".atmr-dropdown-menu__item >> nth=5"], ["wait", 100], ["click", ".atmr-dropdown-menu__item >> nth=6"], ["wait", 300]]},
+  {"name": "type-l", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=2"], ["wait", 200], ["type", "#storybook-root .atmr-input--multiselect >> nth=2 >> .atmr-taginput", "me"], ["wait", 300]]},
+  {"name": "switch-open", "actions": [["click", "#storybook-root .atmr-input--multiselect >> nth=0"], ["wait", 300], ["click", "#storybook-root .atmr-input--multiselect >> nth=2"], ["wait", 300]]}
+]}

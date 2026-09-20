@@ -1,0 +1,7 @@
+{"states": [
+ {"name": "expand-second", "actions": [["click", "#storybook-root .atmr-tablegrid__expand__icon >> nth=1"], ["wait", 200]]},
+ {"name": "collapse-first", "actions": [["click", "#storybook-root .atmr-tablegrid__expand__icon >> nth=0"], ["wait", 200]]},
+ {"name": "expand-all-three", "actions": [["click", "#storybook-root .atmr-tablegrid__expand__icon >> nth=1"], ["wait", 200], ["click", "#storybook-root .atmr-tablegrid__expand__icon >> nth=2"], ["wait", 200]]},
+ {"name": "hover-expanded", "actions": [["hover", "#storybook-root .atmr-tablegrid__expand__container"]]},
+ {"name": "click-row-after-expand", "actions": [["click", "#storybook-root .atmr-tablegrid__row >> nth=3 >> .atmr-tablegrid__cell >> nth=2"], ["wait", 150]]}
+]}

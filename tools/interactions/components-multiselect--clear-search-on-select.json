@@ -1,0 +1,7 @@
+{"states": [
+  {"name": "type-cyr", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 200], ["type", "#storybook-root .atmr-taginput", "ск"], ["wait", 300]]},
+  {"name": "type-cyr-select", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 200], ["type", "#storybook-root .atmr-taginput", "ск"], ["wait", 200], ["click", ".atmr-dropdown-menu__item >> nth=0"], ["wait", 300]]},
+  {"name": "type-cyr-select-two", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 200], ["type", "#storybook-root .atmr-taginput", "ск"], ["wait", 200], ["click", ".atmr-dropdown-menu__item >> nth=0"], ["wait", 200], ["click", ".atmr-dropdown-menu__item >> nth=1"], ["wait", 300]]},
+  {"name": "type-cyr-enter", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 200], ["type", "#storybook-root .atmr-taginput", "Москва"], ["press", "Enter"], ["wait", 300]]},
+  {"name": "type-cyr-separator", "actions": [["click", "#storybook-root .atmr-input--multiselect"], ["wait", 200], ["type", "#storybook-root .atmr-taginput", "Москва,Омск,Казань,"], ["wait", 300]]}
+]}

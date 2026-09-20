@@ -1,0 +1,261 @@
+{
+ "states": [
+  {
+   "name": "icon-open",
+   "actions": [
+    [
+     "focus",
+     "#storybook-root input[name=dt]"
+    ],
+    [
+     "press",
+     "Tab"
+    ],
+    [
+     "press",
+     "Enter"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "range-first-only",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     ".atmr-popover--inputDate .atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=9"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "range-pick",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     ".atmr-popover--inputDate .atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=9"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     ".atmr-popover--inputDate .atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=14"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "mouse",
+     5,
+     5
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "range-pick-reverse",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     ".atmr-popover--inputDate .atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=14"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     ".atmr-popover--inputDate .atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=9"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "mouse",
+     5,
+     5
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "range-hover-mid",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "click",
+     ".atmr-popover--inputDate .atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=9"
+    ],
+    [
+     "wait",
+     300
+    ],
+    [
+     "hover",
+     ".atmr-popover--inputDate .atmr-calendar__item:not(.atmr-calendar__item--empty) .atmr-calendar__inner >> nth=16"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "type-first",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "type",
+     "#storybook-root input[name=df]",
+     "10032026"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "type-first-partial",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "type",
+     "#storybook-root input[name=df]",
+     "1003"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "type-range",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "type",
+     "#storybook-root input[name=df]",
+     "1003202620032026"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "type-range-partial",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "type",
+     "#storybook-root input[name=df]",
+     "100320262003"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  },
+  {
+   "name": "type-range-backspace",
+   "actions": [
+    [
+     "click",
+     "#storybook-root input[name=df]"
+    ],
+    [
+     "type",
+     "#storybook-root input[name=df]",
+     "100320262003"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "press",
+     "Backspace"
+    ],
+    [
+     "wait",
+     300
+    ]
+   ]
+  }
+ ]
+}

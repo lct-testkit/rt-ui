@@ -1,0 +1,9 @@
+{"states": [
+  {"name": "tree1-expand-0-0", "actions": [["click", "#storybook-root .atmr-tree__button-expand >> nth=0"], ["wait", 150]]},
+  {"name": "tree1-expand-0-0-and-0-3", "actions": [["click", "#storybook-root .atmr-tree__button-expand >> nth=0"], ["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"parent 0-3\")) .atmr-tree__button-expand >> nth=0"], ["wait", 150]]},
+  {"name": "tree2-collapse-folder", "actions": [["click", "#storybook-root .atmr-tree__button-expand >> nth=6"], ["wait", 150]]},
+  {"name": "tree2-collapse-inner-folder", "actions": [["click", "#storybook-root .atmr-tree__button-expand >> nth=7"], ["wait", 150]]},
+  {"name": "tree3-expand-0-0", "actions": [["click", "#storybook-root .atmr-tree__button-expand >> nth=11"], ["wait", 150]]},
+  {"name": "select-rating-item", "actions": [["click", "#storybook-root p:text-is(\"parent 5\") >> nth=0"], ["wait", 150]]},
+  {"name": "select-tree2-leaf", "actions": [["click", "#storybook-root p:text-is(\"child 0-0-0-1\") >> nth=0"], ["wait", 150]]}
+]}

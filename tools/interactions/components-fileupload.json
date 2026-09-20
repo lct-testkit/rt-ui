@@ -1,0 +1,10 @@
+{"states": [
+  {"name": "focus-root", "actions": [["focus", "#storybook-root [data-testid=dropzone-root]"]]},
+  {"name": "focus-button", "actions": [["focus", "#storybook-root .atmr-functionbutton"]]},
+  {"name": "hover-button", "actions": [["hover", "#storybook-root .atmr-functionbutton"], ["wait", 200]]},
+  {"name": "click-button", "actions": [["click", "#storybook-root .atmr-functionbutton"], ["wait", 300]]},
+  {"name": "kbd-enter", "actions": [["focus", "#storybook-root [data-testid=dropzone-root]"], ["press", "Enter"], ["wait", 300]]},
+  {"name": "kbd-space", "actions": [["focus", "#storybook-root [data-testid=dropzone-root]"], ["press", "Space"], ["wait", 300]]},
+  {"name": "tab-tab", "actions": [["press", "Tab"], ["press", "Tab"], ["wait", 100]]},
+  {"name": "tab-then-click", "actions": [["press", "Tab"], ["click", "#storybook-root [data-testid=dropzone-root]"], ["wait", 300]]}
+]}

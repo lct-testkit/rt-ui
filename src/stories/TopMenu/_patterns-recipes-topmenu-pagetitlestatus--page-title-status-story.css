@@ -1,0 +1,40 @@
+/* story-only CSS of patterns-recipes-topmenu-pagetitlestatus--page-title-status-story (copied 1:1 from the reference) */
+.stories-main-top-menu:has(.atmr-top-menu--page-title-status) {
+  min-width: 600px;
+}
+
+.atmr-top-menu--page-title-status {
+  height: 56px;
+}
+
+.atmr-top-menu--page-title-status .top-menu-page-title-status__content {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+
+  .atmr-functionbutton {
+    svg {
+      fill: var(--atmr-fg-muted);
+    }
+
+    &:hover {
+      svg {
+        fill: var(--atmr-fg-default);
+      }
+    }
+
+    &:active {
+      svg {
+        fill: var(--atmr-fg-default);
+      }
+    }
+  }
+}
+
+.atmr-top-menu--page-title-status .top-menu-page-title-status__badge {
+  margin-left: var(--atmr-spacing-3x);
+}
+
+.atmr-top-menu--page-title-status .top-menu-page-title-status__action-button {
+  margin-left: var(--atmr-spacing-3x);
+}

@@ -1,0 +1,84 @@
+/* Story-only CSS of the recipe (design/reference-css/abee721cc7.css) */
+.my-requests-drawer.atmr-drawer.atmr-drawer--right {
+  width: 100%;
+  max-width: 940px;
+}
+
+.my-requests-drawer.atmr-drawer.atmr-drawer--right .atmr-drawer__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 100%;
+}
+
+.my-requests-drawer .atmr-drawer__header {
+  display: flex;
+  align-items: center;
+  column-gap: var(--atmr-spacing-4x);
+  padding: var(--atmr-spacing-8x);
+}
+
+.my-requests-drawer .atmr-drawer__actions {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+}
+
+.my-requests-drawer .atmr-drawer__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.my-requests-drawer .atmr-drawer__body .atmr-dropdown-menu-root {
+  width: 100%;
+}
+
+.my-requests-drawer .atmr-drawer__footer {
+  display: flex;
+  column-gap: var(--atmr-spacing-3x);
+  border-top: 1px solid var(--atmr-border-muted);
+  padding: var(--atmr-spacing-8x);
+}
+
+.requests {
+  padding: 0 var(--atmr-spacing-8x) var(--atmr-spacing-8x);
+}
+
+.requests-list {
+  padding-top: var(--atmr-spacing-8x);
+}
+
+.requests-list .requests-list__detail-key {
+  width: 100%;
+  max-width: 250px;
+}
+
+@media screen and (max-width: 600px) {
+  .requests-list .requests-list__detail-key {
+    max-width: 150px;
+  }
+
+  .requests-list .requests-list__detail {
+    justify-content: space-between;
+  }
+
+  .requests-list .requests-list__detail-value {
+    text-align: end;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .requests-list .requests-list__status {
+    display: none;
+  }
+
+  .requests-list .requests-list__header.atmr-box {
+    justify-content: unset;
+  }
+
+  .requests-list .requests-list__name {
+    flex-grow: 1;
+  }
+}

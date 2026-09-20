@@ -1,0 +1,5 @@
+.page-item {
+    padding: var(--atmr-spacing-3x);
+    border: 1px solid var(--atmr-border-default);
+    border-radius: var(--atmr-border-radius-xs);
+}

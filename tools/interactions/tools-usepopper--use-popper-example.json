@@ -1,0 +1,5 @@
+{"states": [
+  {"name": "typed", "actions": [["click", "#storybook-root input"], ["type", "#storybook-root input", "hello"], ["wait", 100]]},
+  {"name": "scroll-mid", "actions": [["scroll", ".scroll-container", 100, 100], ["wait", 100]]},
+  {"name": "scroll-end", "actions": [["scroll", ".scroll-container", 1000, 1000], ["wait", 100]]}
+]}

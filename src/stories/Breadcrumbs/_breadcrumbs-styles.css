@@ -1,0 +1,6 @@
+/* story-only CSS of stories/Breadcrumbs/styles.css (only the rule the stories use) */
+.breadcrumbs-content {
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+}

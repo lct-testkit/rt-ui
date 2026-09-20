@@ -1,0 +1,12 @@
+{"states": [
+  {"name": "tree1-check-0-0", "actions": [["click", "#storybook-root .atmr-tree__button-select .atmr-checkbox >> nth=0"], ["wait", 150]]},
+  {"name": "tree1-check-child-0-0-1", "actions": [["click", "#storybook-root .atmr-tree__button-select .atmr-checkbox >> nth=2"], ["wait", 150]]},
+  {"name": "tree1-check-two-children", "actions": [["click", "#storybook-root .atmr-tree__button-select .atmr-checkbox >> nth=1"], ["click", "#storybook-root .atmr-tree__button-select .atmr-checkbox >> nth=2"], ["wait", 150]]},
+  {"name": "tree1-check-all-children", "actions": [["click", "#storybook-root .atmr-tree__button-select .atmr-checkbox >> nth=1"], ["click", "#storybook-root .atmr-tree__button-select .atmr-checkbox >> nth=2"], ["click", "#storybook-root .atmr-tree__button-select .atmr-checkbox >> nth=3"], ["click", "#storybook-root .atmr-tree__button-select .atmr-checkbox >> nth=4"], ["wait", 150]]},
+  {"name": "tree1-check-then-uncheck-0-0", "actions": [["click", "#storybook-root .atmr-tree__button-select .atmr-checkbox >> nth=0"], ["click", "#storybook-root .atmr-tree__button-select .atmr-checkbox >> nth=0"], ["wait", 150]]},
+  {"name": "tree1-expand-0-1-check-child", "actions": [["click", "#storybook-root .atmr-tree__item:has(p:text-is(\"parent 0-1\")) .atmr-tree__button-expand >> nth=0"], ["wait", 150]]},
+  {"name": "tree2-uncheck-0-0", "actions": [["click", "#storybook-root .atmr-tree__button-select .atmr-checkbox >> nth=8"], ["wait", 150]]},
+  {"name": "tree2-uncheck-child", "actions": [["click", "#storybook-root .atmr-tree__button-select .atmr-checkbox >> nth=10"], ["wait", 150]]},
+  {"name": "tree2-collapse-0-0", "actions": [["click", "#storybook-root .atmr-tree__button-expand >> nth=8"], ["wait", 150]]},
+  {"name": "kbd-space-check", "actions": [["focus", "#storybook-root .atmr-tree__button-select .atmr-checkbox__input >> nth=1"], ["press", "Space"], ["wait", 150]]}
+]}

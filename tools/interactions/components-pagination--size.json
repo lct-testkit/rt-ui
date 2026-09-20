@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "open-s", "actions": [["click", "#storybook-root .atmr-select >> nth=0"], ["wait", 300]]},
+  {"name": "open-m", "actions": [["click", "#storybook-root .atmr-select >> nth=1"], ["wait", 300]]},
+  {"name": "next-s", "actions": [["click", "#storybook-root .atmr-pagination >> nth=0 >> button[type='next']"], ["wait", 100]]},
+  {"name": "jumper-m", "actions": [["focus", "#storybook-root .atmr-pagination__jumper input >> nth=1"], ["type", "#storybook-root .atmr-pagination__jumper input >> nth=1", "12"], ["press", "Enter"], ["wait", 100]]}
+]}

@@ -1,0 +1,5 @@
+{"states": [
+  {"name": "kbd-enter", "actions": [["focus", "#storybook-root button[type='page'] >> nth=1"], ["press", "Enter"], ["wait", 100]]},
+  {"name": "kbd-tab-chain", "actions": [["press", "Tab"], ["press", "Tab"], ["press", "Tab"], ["wait", 100]]},
+  {"name": "kbd-space-next", "actions": [["focus", "#storybook-root button[type='next'] >> nth=0"], ["press", "Space"], ["wait", 100]]}
+]}

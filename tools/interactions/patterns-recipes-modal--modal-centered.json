@@ -1,0 +1,9 @@
+{"states": [
+  {"name": "open-top", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400]]},
+  {"name": "overlay-click-centered", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["click", "#storybook-root"], ["wait", 500]]},
+  {"name": "overlay-click-top", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400], ["click", ".atmr-modal-wrapper"], ["wait", 500]]},
+  {"name": "centered-then-top", "actions": [["click", "#storybook-root button >> nth=0"], ["wait", 400], ["press", "Escape"], ["wait", 500], ["click", "#storybook-root button >> nth=1"], ["wait", 400]]},
+  {"name": "top-then-centered", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400], ["press", "Escape"], ["wait", 500], ["click", "#storybook-root button >> nth=0"], ["wait", 400]]},
+  {"name": "top-esc", "actions": [["click", "#storybook-root button >> nth=1"], ["wait", 400], ["press", "Escape"], ["wait", 500]]},
+  {"name": "hover-second", "actions": [["hover", "#storybook-root button >> nth=1"]]}
+]}

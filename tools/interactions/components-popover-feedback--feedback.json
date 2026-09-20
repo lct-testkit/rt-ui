@@ -1,0 +1,6 @@
+{"states": [
+  {"name": "open", "actions": [["click", "#storybook-root .trigger"], ["wait", 300]]},
+  {"name": "select-unclear", "actions": [["click", "#storybook-root .trigger"], ["wait", 300], ["click", "text=Непонятно"], ["wait", 200]]},
+  {"name": "close-button", "actions": [["click", "#storybook-root .trigger"], ["wait", 300], ["click", ".atmr-popover .atmr-popover__close"], ["wait", 300]]},
+  {"name": "kbd-tab-radio", "actions": [["click", "#storybook-root .trigger"], ["wait", 300], ["press", "Tab"], ["press", "Tab"], ["press", "ArrowDown"], ["wait", 200]]}
+]}
