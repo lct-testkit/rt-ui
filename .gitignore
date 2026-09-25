@@ -22,3 +22,16 @@ tools/*.log
 /static/fonts
 /src/lib/styles/fonts/*.woff*
 /src/lib/styles/fonts/*.ttf
+
+# scratch outputs of one-off tooling runs
+tools/__pycache__/
+tools/**/__pycache__/
+tools/_*.txt
+*.pyc
+
+# test outputs
+/test-results
+/playwright-report
+/coverage
+/release-notes.md
+/out

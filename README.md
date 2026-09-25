@@ -428,6 +428,7 @@ python tools/check-charts.py                                  # графики: 
 npm run bench:size && npm run bench:runtime                   # бенчмарки, см. docs/BENCHMARK.md
 npm run package                                               # собрать пакет в dist/
 npm run check:lib                                            # типы библиотеки (src/lib), то же делает CI
+npm run lint && npm run lint:styles && npm test               # линтеры (храповик) и тесты, то же делает CI
 ```
 
 ```
@@ -448,8 +449,18 @@ design/reference/     снимки эталона: DOM · геометрия · 
 
 ### CI и релизы
 
-`.github/workflows/ci.yml` на каждый push и pull request: `npm ci`, типы библиотеки (`check:lib`), сборка пакета, проверка, что баррель закоммичен, `publint` и `attw`, проверки SSR расширений и графиков, tarball как артефакт сборки. Сверка с эталоном (`compare.py`) и браузерные проверки идут локально: зеркало эталона, снимки и шрифт Rostelecom Basis в репозиторий не входят. Вручную (Actions → CI → Run workflow) можно включить браузерные проверки мобильной версии CRM и графиков.
-`.github/workflows/release.yml`: тег `v0.1.1` (равный `version` в `package.json`) → GitHub Release с tarball пакета. Репозиторий держите приватным; tarball из CI без шрифта, шрифт добавляет приложение-потребитель ([`docs/PACKAGE.md`](docs/PACKAGE.md)).
+`.github/workflows/ci.yml` на каждый push и pull request — два job'а:
+
+| Job | Что проверяет |
+|---|---|
+| `lint · types · tests` | ESLint (`npm run lint`) и stylelint (`npm run lint:styles`) — оба в режиме **храповика**: число замечаний ограничено `--max-warnings` в `package.json`, новое замечание или новый «сырой» hex-цвет роняет CI, а исправленное — повод уменьшить число; типы библиотеки (`check:lib`); Vitest (`npm test`: SSR-рендер компонентов, целостность публичных экспортов); `npm audit` |
+| `build · package · visual` | сборка пакета (`npm run package`), баррель закоммичен (`git diff --exit-code src/lib/index.ts`), `publint` + `attw`, SSR-проверки расширений и графиков, **визуальные регрессии собственных эталонов** (`npm run test:visual`), tarball как артефакт |
+
+* **Визуальные эталоны** — снимки страниц playground (`/charts`, `/examples/crm`, `/ext`, светлая и тёмная темы). Лицензионный эталон РТК в git не хранится, поэтому сравнение идёт с нашими снимками. Их нужно создавать на той же ОС, что и CI (Linux, без лицензионного шрифта), — вручную запускается workflow `visual-baseline` (Actions → visual-baseline → Run workflow), артефакт кладётся в `e2e/visual.spec.ts-snapshots/` и коммитится после просмотра. Пока снимков нет, визуальный шаг пропускается с предупреждением.
+* Сверка с лицензионным эталоном (`compare.py`) и Python-браузерные проверки идут локально или вручную (Actions → CI → Run workflow → e2e): зеркало эталона, снимки и шрифт Rostelecom Basis в репозиторий не входят.
+* **Баррель детерминирован:** `tools/gen-barrel.mjs` сортирует пути побайтово с `/` на любой ОС (раньше на Windows порядок отличался и ломал CI).
+
+`.github/workflows/release.yml`: тег `v0.1.1` (равный `version` в `package.json`, с непустой секцией в `CHANGELOG.md`) → сначала весь `ci.yml` на этом коммите, затем **публикация приватного пакета в GitHub Packages** (`npm.pkg.github.com`, `publishConfig` закрепляет реестр — в публичный npm пакет попасть не может) и GitHub Release с tarball и заметками из changelog. `frontend` ставит `@lct-testkit/rt-ui@<версия>` из реестра. Репозиторий держите приватным; tarball из CI без шрифта, шрифт добавляет приложение-потребитель ([`docs/PACKAGE.md`](docs/PACKAGE.md)).
 
 ## Ограничения и лицензия
 

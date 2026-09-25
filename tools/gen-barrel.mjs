@@ -18,7 +18,14 @@ function* walk(d) {
   }
 }
 
-const svelte = [...walk(comps)].filter((f) => f.endsWith('.svelte') && !path.basename(f).startsWith('_')).sort();
+// Порядок в баррели ДОЛЖЕН быть одинаковым на любой ОС: сравниваем пути с прямыми слэшами и побайтово
+// (не localeCompare и не сырой путь: на Windows разделитель "\" (0x5C) больше буквы "D", на Linux "/" (0x2F) —
+// меньше; из-за этого баррель, сгенерированный на Windows, отличался от закоммиченного, и CI падал на
+// `git diff --exit-code src/lib/index.ts`).
+const posix = (p) => p.split(path.sep).join('/');
+const byPosixPath = (a, b) => (posix(a) < posix(b) ? -1 : posix(a) > posix(b) ? 1 : 0);
+
+const svelte = [...walk(comps)].filter((f) => f.endsWith('.svelte') && !path.basename(f).startsWith('_')).sort(byPosixPath);
 const names = {};
 for (const f of svelte) (names[path.basename(f, '.svelte')] ??= []).push(f);
 
@@ -32,7 +39,7 @@ for (const [name, files] of Object.entries(names)) {
 }
 // Component folders that ship their own public entry (today: TableGrid/index.ts -> useSelection, filter/sort constants, types).
 // The explicit `export { default as X }` lines above win over anything re-exported by these `export *` lines.
-for (const f of [...walk(comps)].filter((f) => path.basename(f) === 'index.ts').sort()) {
+for (const f of [...walk(comps)].filter((f) => path.basename(f) === 'index.ts').sort(byPosixPath)) {
   lines.push(`export * from './${path.relative(lib, f).replace(/\\/g, '/').replace(/\.ts$/, '.js')}';`);
 }
 for (const dir of ['hooks', 'utils', 'actions']) {
