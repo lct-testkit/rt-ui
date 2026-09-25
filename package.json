@@ -135,7 +135,7 @@
 		"clsx": "^2.1.1",
 		"dayjs": "^1.11.13",
 		"imask": "^7.6.1",
-		"virtua": "^0.41.0"
+		"virtua": "^0.52.6"
 	},
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.18.5",
