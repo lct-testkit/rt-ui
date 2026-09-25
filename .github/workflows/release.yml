@@ -68,8 +68,9 @@ jobs:
           npm pack --ignore-scripts --pack-destination out
           ls -la out
 
+      # The path MUST start with ./ : npm reads "out/x.tgz" as the GitHub shorthand owner/repo and tries to clone it over SSH.
       - name: Publish to GitHub Packages
-        run: npm publish "out/lct-testkit-rt-ui-${GITHUB_REF_NAME#v}.tgz"
+        run: npm publish "./out/lct-testkit-rt-ui-${GITHUB_REF_NAME#v}.tgz"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
