@@ -1,27 +1,42 @@
 name: Release
 
-# Push a tag `v0.1.1` (it must match "version" in package.json) -> the package tarball is attached to a GitHub Release.
-# The package is PRIVATE (licensed font and brand assets): keep the repository private, do not publish to the public npm registry.
-# The tarball has no fonts (git-ignored): the installing app provides them, see docs/PACKAGE.md.
+# Push a tag `v0.1.1` (it must match "version" in package.json and have a section in CHANGELOG.md):
+#   1. the whole CI (ci.yml) must be green for the tagged commit;
+#   2. the package is published to GitHub Packages (npm.pkg.github.com, PRIVATE, scope @lct-testkit) -
+#      the `frontend` repository installs `@lct-testkit/rt-ui@<version>` from there, no hand-uploaded tarballs;
+#   3. a GitHub Release is created with the tarball and the release notes taken from CHANGELOG.md.
+# The package is PRIVATE (licensed font and brand assets): keep the repository private, never publish to the public npm registry
+# (publishConfig in package.json pins the GitHub Packages registry). The tarball has no fonts (git-ignored): the installing app
+# provides them, see docs/PACKAGE.md.
 
 on:
   push:
     tags: ['v*']
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
+  ci:
+    name: CI on the tagged commit
+    uses: ./.github/workflows/ci.yml
+
   release:
+    needs: ci
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    permissions:
+      contents: write
+      packages: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 22
           cache: npm
+          registry-url: https://npm.pkg.github.com
+          scope: '@lct-testkit'
 
       - run: npm ci
 
@@ -30,7 +45,20 @@ jobs:
           v="v$(node -p "require('./package.json').version")"
           if [ "$v" != "$GITHUB_REF_NAME" ]; then echo "::error::tag $GITHUB_REF_NAME != package.json version $v"; exit 1; fi
 
-      - run: npm run check:lib
+      - name: Release notes from CHANGELOG.md
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          awk -v v="$version" '
+            $0 ~ "^## \\[" v "\\]" { found = 1; next }
+            found && /^## \[/ { exit }
+            found { print }
+          ' CHANGELOG.md > release-notes.md
+          if [ ! -s release-notes.md ]; then
+            echo "::error::CHANGELOG.md has no (or an empty) section '## [$version]'"
+            exit 1
+          fi
+          cat release-notes.md
+
       - run: npm run package
       - run: npm run package:check
 
@@ -40,9 +68,13 @@ jobs:
           npm pack --ignore-scripts --pack-destination out
           ls -la out
 
+      - name: Publish to GitHub Packages
+        run: npm publish "out/lct-testkit-rt-ui-${GITHUB_REF_NAME#v}.tgz"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: GitHub Release with the tarball
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          notes="Install with npm i ./lct-testkit-rt-ui-${GITHUB_REF_NAME#v}.tgz (private package; provide the Rostelecom Basis font files in the app, see docs/PACKAGE.md)."
-          gh release create "$GITHUB_REF_NAME" out/*.tgz --title "$GITHUB_REF_NAME" --generate-notes --notes "$notes"
+          gh release create "$GITHUB_REF_NAME" out/*.tgz --title "$GITHUB_REF_NAME" --notes-file release-notes.md

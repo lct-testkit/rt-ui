@@ -12,6 +12,16 @@
 - `useShowMotion` понимает тип движения `spring` (Svelte `Spring`): оверлеи «вырастают» на пружине, Drawer — критически демпфированной; общий движок `Driver`, пресеты `SPRING`.
 - Демо `/ext` (блоки «Календарь», «Accordion», «Tabs», «SideMenu», режим «Svelte · Spring» у оверлеев), `tools/ext-check.py --only second`, `tools/ext-check-overlays.py` (Spring), `tools/check-ext-css.mjs`.
 
+### Инфраструктура (CI/CD)
+
+- Публикация: пакет больше не `private` — `publishConfig` закрепляет **GitHub Packages** (`npm.pkg.github.com`, `access: restricted`); релиз по тегу `vX.Y.Z` (`release.yml`) требует зелёный `ci.yml`,
+  версию тега = `package.json`, непустую секцию в `CHANGELOG.md`, публикует пакет и создаёт GitHub Release с заметками из changelog. `frontend` ставит `@lct-testkit/rt-ui@<версия>` из реестра.
+- Проверки: ESLint (`npm run lint`) и stylelint (`npm run lint:styles`) в режиме **храповика** (число замечаний ограничено `--max-warnings` в `package.json`; новый «сырой» hex-цвет или новое замечание роняет CI),
+  Vitest (`npm test`: SSR-рендер компонентов, целостность публичных экспортов), `npm audit`, визуальные регрессии собственных эталонов (`npm run test:visual`, эталоны создаёт workflow `visual-baseline`).
+- Исправлено: `tools/gen-barrel.mjs` сортировал пути по-разному на Windows и Linux (разделитель `\` против `/`), из-за чего баррель, сгенерированный на Windows, расходился с закоммиченным и ломал CI
+  (`git diff --exit-code src/lib/index.ts`). Теперь порядок — по путям с `/`, побайтово, одинаково на любой ОС.
+- Убран мусор из git: `tools/__pycache__`, `tools/_*.txt` (добавлены в `.gitignore`).
+
 ### Изменено
 
 - `ext.css` разделён: **движение** (`ext.css`) импортируют только `@lct-testkit/rt-ui/ext` и `ExtMotionProvider`; крошечная раскладка `fullHeight` (`ext/layout-modal.css` / `ext/layout-drawer.css`) — сами `Modal` и `Drawer`
