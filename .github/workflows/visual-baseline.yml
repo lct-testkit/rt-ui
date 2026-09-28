@@ -1,7 +1,9 @@
 name: visual-baseline
 
-# Creates (or refreshes) the visual baselines of OUR OWN playground pages on the same OS that CI uses (Linux, no licensed font),
-# so the comparison in ci.yml is deterministic. Baselines rendered on a developer's Windows/macOS machine would never match.
+# Creates (or refreshes) the visual baselines of OUR OWN playground pages on the same runner that CI uses (self-hosted,
+# aarch64 Linux, no licensed font — GitHub Actions billing отключён, ubuntu-latest не работает), so the comparison in
+# ci.yml is deterministic. Baselines rendered on a developer's Windows/macOS machine, or on a different CPU arch, would
+# never match reliably.
 #
 #   Actions -> visual-baseline -> Run workflow -> download the `visual-baselines` artifact ->
 #   unpack into e2e/ (it contains visual.spec.ts-snapshots/) -> review the PNGs -> commit.
@@ -15,7 +17,7 @@ permissions:
 
 jobs:
   baseline:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, lct]
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1

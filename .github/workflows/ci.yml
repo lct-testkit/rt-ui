@@ -9,6 +9,10 @@ name: CI
 # The tarball built here has NO fonts (licensed): the app that installs it provides RostelecomBasis-*.woff(2), see docs/PACKAGE.md.
 #
 # Also called by release.yml (workflow_call): a release cannot go out from a red commit.
+#
+# runs-on: [self-hosted, lct] — GitHub Actions billing на организацию отключён, ubuntu-latest падает
+# за пару секунд без единого лога. Раннер flow3-1 (aarch64, тот же, что у backend/frontend/deploy) —
+# Linux, поэтому визуальные baseline (visual-baseline.yml) остаются детерминированными относительно CI.
 
 on:
   push:
@@ -32,7 +36,7 @@ permissions:
 jobs:
   quality:
     name: lint · types · tests
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, lct]
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -72,7 +76,7 @@ jobs:
 
   build:
     name: build · package · visual
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, lct]
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -148,7 +152,7 @@ jobs:
     # manual: Actions -> CI -> Run workflow -> e2e. Informational only (the real font is missing on the runner).
     if: github.event_name == 'workflow_dispatch' && inputs.e2e
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, lct]
     timeout-minutes: 30
     continue-on-error: true
     steps:

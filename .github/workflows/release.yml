@@ -23,7 +23,7 @@ jobs:
 
   release:
     needs: ci
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, lct]
     timeout-minutes: 25
     permissions:
       contents: write
