@@ -400,7 +400,7 @@
     * @tokens FontFamily
     * @presenter FontFamily
     */
-      --atmr-font-family-base: 'Rostelecom Basis'; /** Базовая гарнитура шрифта */
+      --atmr-font-family-base: 'Rostelecom Basis', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; /** Базовая гарнитура шрифта */
   --atmr-font-family-display: var(--atmr-font-family-base); /** Гарнитура для display типографики */
   --atmr-font-family-heading: var(--atmr-font-family-base); /** Гарнитура для heading типографики */
   --atmr-font-family-body: var(--atmr-font-family-base); /** Гарнитура для body типографики */
