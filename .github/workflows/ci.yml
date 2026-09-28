@@ -116,7 +116,11 @@ jobs:
 
       - name: Browser for the visual check
         if: steps.baselines.outputs.have == 'true'
-        run: npx playwright install --with-deps chromium
+        # Не --with-deps: этот шаг лезет за системными библиотеками через sudo apt-get, а раннер
+        # (flow3-1, self-hosted) выполняет job под пользователем runner без пароля к sudo — падает
+        # с "sudo: a password is required". Библиотеки уже поставлены на машине заранее (одноразово,
+        # вручную); просто скачивает бинарник браузера, sudo не нужен.
+        run: npx playwright install chromium
 
       - name: Visual regression against our own baselines
         if: steps.baselines.outputs.have == 'true'
@@ -170,9 +174,11 @@ jobs:
       - run: npm ci
 
       - name: Browser + Python Playwright
+        # Не --with-deps — та же причина, что у "Browser for the visual check" выше (sudo без пароля
+        # у runner на self-hosted). Библиотеки уже на машине, ставим только сам бинарник браузера.
         run: |
           pip install playwright pillow numpy
-          python -m playwright install --with-deps chromium
+          python -m playwright install chromium
 
       - name: Start the playground
         run: |
