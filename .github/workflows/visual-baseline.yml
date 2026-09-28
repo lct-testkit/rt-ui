@@ -29,7 +29,9 @@ jobs:
 
       - run: npm ci
 
-      - run: npx playwright install --with-deps chromium
+      # Не --with-deps: та же причина, что в ci.yml (self-hosted раннер, runner без sudo-пароля) —
+      # системные библиотеки уже поставлены на машине заранее, здесь только бинарник браузера.
+      - run: npx playwright install chromium
 
       - name: Render baselines
         run: npm run test:visual:update
