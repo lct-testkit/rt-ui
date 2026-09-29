@@ -135,8 +135,8 @@ node tools/up.mjs
 
 ```bash
 npm run package                           # dist/: JS, .svelte, .d.ts, min-CSS, шрифты
-npm pack --pack-destination ../           # ../lct-testkit-rt-ui-0.1.0.tgz
-npm i ../lct-testkit-rt-ui-0.1.0.tgz      # или file:../rt-ui, git+ssh://..., приватный реестр
+npm pack --pack-destination ../           # ../lct-testkit-rt-ui-0.1.1.tgz
+npm i ../lct-testkit-rt-ui-0.1.1.tgz      # или file:../rt-ui, git+ssh://..., GitHub Packages (так ставит frontend)
 ```
 
 ```svelte
@@ -456,7 +456,8 @@ design/reference/     снимки эталона: DOM · геометрия · 
 | `lint · types · tests` | ESLint (`npm run lint`) и stylelint (`npm run lint:styles`) — оба в режиме **храповика**: число замечаний ограничено `--max-warnings` в `package.json`, новое замечание или новый «сырой» hex-цвет роняет CI, а исправленное — повод уменьшить число; типы библиотеки (`check:lib`); Vitest (`npm test`: SSR-рендер компонентов, целостность публичных экспортов); `npm audit` |
 | `build · package · visual` | сборка пакета (`npm run package`), баррель закоммичен (`git diff --exit-code src/lib/index.ts`), `publint` + `attw`, SSR-проверки расширений и графиков, **визуальные регрессии собственных эталонов** (`npm run test:visual`), tarball как артефакт |
 
-* **Визуальные эталоны** — снимки страниц playground (`/charts`, `/examples/crm`, `/ext`, светлая и тёмная темы). Лицензионный эталон РТК в git не хранится, поэтому сравнение идёт с нашими снимками. Их нужно создавать на той же ОС, что и CI (Linux, без лицензионного шрифта), — вручную запускается workflow `visual-baseline` (Actions → visual-baseline → Run workflow), артефакт кладётся в `e2e/visual.spec.ts-snapshots/` и коммитится после просмотра. Пока снимков нет, визуальный шаг пропускается с предупреждением.
+* **Визуальные эталоны** — снимки страниц playground (`/charts`, `/examples/crm`, `/ext`, светлая и тёмная темы). Лицензионный эталон РТК в git не хранится, поэтому сравнение идёт с нашими снимками. Их нужно создавать на той же ОС и архитектуре, что и CI, — вручную запускается workflow `visual-baseline` (Actions → visual-baseline → Run workflow), артефакт кладётся в `e2e/visual.spec.ts-snapshots/` и коммитится после просмотра. Если снимков нет вообще, визуальный шаг пропускается с предупреждением.
+  **Сейчас снимки стали:** CI переехал на self-hosted раннер `flow3-1-rtui` (aarch64, см. `docs/ci-self-hosted.md` в `deploy`), а текущие эталоны сняты на прежнем `ubuntu-latest` (amd64) — job `build · package · visual` падает на шаге «Visual regression against our own baselines» на каждом прогоне с 28.09.2026. Чинится тем же способом: ручной запуск `visual-baseline` на новом раннере и коммит обновлённых снимков.
 * Сверка с лицензионным эталоном (`compare.py`) и Python-браузерные проверки идут локально или вручную (Actions → CI → Run workflow → e2e): зеркало эталона, снимки и шрифт Rostelecom Basis в репозиторий не входят.
 * **Баррель детерминирован:** `tools/gen-barrel.mjs` сортирует пути побайтово с `/` на любой ОС (раньше на Windows порядок отличался и ломал CI).
 
