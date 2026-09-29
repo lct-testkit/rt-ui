@@ -5,7 +5,14 @@ import { expect, test, type Page } from '@playwright/test';
 const PAGES: { name: string; path: string; ready: string; themes: string[] }[] = [
 	{ name: 'charts', path: '/charts', ready: 'body.rt-charts-demo', themes: ['rtk_default_light', 'rtk_default_dark'] },
 	{ name: 'crm', path: '/examples/crm', ready: '.crm', themes: ['rtk_default_light', 'rtk_default_dark'] },
-	{ name: 'ext', path: '/ext', ready: 'body', themes: [''] }
+	// `ready: 'body'` только проверял бы наличие <body> — резолвится почти сразу после навигации, ДО того как
+	// `$effect` в routes/ext/+page.svelte успевает выставить body.className (Theme_root_… rt-base rt-ext-demo).
+	// Пока класс не применён, `rt-base` (шрифт/line-height) ещё не действует — скриншот, снятый в этом окне,
+	// ловит другую высоту страницы, чем снятый чуть позже (флейки ровно на этом: "Expected 6535px, received
+	// 6509px" то в одну, то в другую сторону между попытками одного прогона — не архитектура раннера, а гонка
+	// между навигацией и этим эффектом). У charts/crm ready уже ждёт именно такой применённый класс — здесь та
+	// же защита.
+	{ name: 'ext', path: '/ext', ready: 'body.rt-ext-demo', themes: [''] }
 ];
 
 async function stabilise(page: Page) {
