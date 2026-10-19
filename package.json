@@ -3,7 +3,7 @@
 	"version": "0.1.1",
 	"description": "Svelte 5 port of the Rostelecom Atomaro design system (gen2), pixel-matched to the React reference",
 	"type": "module",
-	"license": "UNLICENSED",
+	"license": "Apache-2.0",
 	"repository": { "type": "git", "url": "git+https://github.com/lct-testkit/rt-ui.git" },
 	"publishConfig": { "registry": "https://npm.pkg.github.com", "access": "restricted" },
 	"svelte": "./dist/index.js",
