@@ -89,11 +89,13 @@
 		});
 	});
 
-	// put the caret at the end of the field (after the click / key-up has been processed by the browser)
+	// put the caret at the end of the field (after the click / key-up has been processed by the browser).
+	// A selection (Ctrl+A, Shift+arrows, a drag) is left alone: collapsing it made Ctrl+A → Backspace delete one character instead of everything.
 	const handleFocus = (e: Event) => {
 		const target = e.target as HTMLInputElement;
 		const length = target.value.length;
 		setTimeout(() => {
+			if (target.selectionStart !== target.selectionEnd) return;
 			target.setSelectionRange(length, length);
 		});
 	};
