@@ -17,7 +17,6 @@
 	//    callbacks (`onChange`, `onBlur`, `onChangeMonth`, `onChangeYear`, `onClickIconSuffix`) keep the React names
 	import clsx from 'clsx';
 	import IMask from 'imask';
-	import dayjs from 'dayjs';
 	import { setContext, untrack } from 'svelte';
 	import Calendar from '../../icons/24/communication/Calendar.svelte';
 	import { useFilterAttrs } from '../../hooks/useFilterAttrs.js';
@@ -36,6 +35,7 @@
 	import InputDateControl from './InputDateControl.svelte';
 	import { INPUT_DATE_CONTEXT, type InputDateContext, type InputDateMasks } from './context.js';
 	import { useInputTimeOrDate } from './hooks.svelte.js';
+	import { getInputDateMaskOptions } from './utils.js';
 	import type { Snippet } from 'svelte';
 	import type { MotionProp } from '../../ext/motion.svelte.js';
 
@@ -75,6 +75,11 @@
 		onChangeYear?: (year: number) => void;
 		/** Закрытие календаря */
 		onBlur?: () => void;
+		/**
+		 * [ext, not in original] Одиночная дата: набранный текст не является датой — сообщение об ошибке («Такой даты нет», «Введите год полностью»,
+		 * «Введите дату полностью»), `null` — пусто или дата в порядке. Форма по нему не сохраняет поле, в котором есть текст, но нет даты.
+		 */
+		onInvalid?: (message: string | null) => void;
 		/** Индекс первого дня недели */
 		firstDayIndex?: number;
 		/** Названия дней недели */
@@ -141,6 +146,7 @@
 		onChangeMonth = noop,
 		onChangeYear = noop,
 		onBlur,
+		onInvalid,
 		firstDayIndex,
 		daysOfWeek = DAYS_OF_WEEK,
 		months,
@@ -213,6 +219,9 @@
 		get onBlur() {
 			return onBlur;
 		},
+		get onInvalid() {
+			return onInvalid;
+		},
 		get validationRules() {
 			return otherProps.validationRules;
 		},
@@ -242,35 +251,7 @@
 	const inputClasses = $derived(clsx('atmr-popover--inputDate', className && className));
 
 	// imask date masks of the active (first / only) and the second (range end) field
-	const dateMask = $derived({
-		mask: Date,
-		pattern: dateFormat,
-		autofix: true,
-		lazy: true,
-		overwrite: true,
-		format: (date: Date) => dayjs(date).format(dateFormat),
-		parse: (str: string, m: any) => {
-			const inputDate = dayjs(str, dateFormat);
-			const formatedDate = dayjs(str, dateFormat).format(dateFormat);
-			if (str !== formatedDate) {
-				m.resolve(formatedDate);
-			}
-			return inputDate;
-		},
-		blocks: {
-			YYYY: { mask: IMask.MaskedRange, from: 1000, to: 9999 },
-			MM: { mask: IMask.MaskedRange, from: 1, to: 12 },
-			MMMM: {
-				mask: IMask.MaskedEnum,
-				enum: Array.from({ length: 12 }, (_, i) => new Date(0, i).toLocaleString('en', { month: 'long' })),
-				matchValue: (estr: string, istr: string, matchFrom: any) =>
-					(IMask.MaskedEnum as any).DEFAULTS.matchValue(estr.toLowerCase(), istr.toLowerCase(), matchFrom)
-			},
-			DD: { mask: IMask.MaskedRange, from: 1, to: 31 },
-			HH: { mask: IMask.MaskedRange, from: 0, to: 23 },
-			mm: { mask: IMask.MaskedRange, from: 0, to: 59 }
-		}
-	});
+	const dateMask = $derived(getInputDateMaskOptions(dateFormat, isRange));
 	const createMasks = (options: any): InputDateMasks => ({
 		active: IMask.createMask(options) as any,
 		second: IMask.createMask(options) as any

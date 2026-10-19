@@ -10,7 +10,9 @@ import type { ValidationRule } from '../Input/hooks.svelte.js';
 import { noop } from '../../utils/function.js';
 import { DATE_RANGE_SEPARATOR } from './constants.js';
 import {
+	DATE_TEXT_ERRORS,
 	formattingDateRange,
+	getDateTextStatus,
 	getScopeDate,
 	isPartiallyValidDateRangeFormat,
 	isValidDateFormat,
@@ -35,6 +37,11 @@ export interface InputTimeOrDateParams {
 	onChangeMonth?: (month: any) => void;
 	onChangeYear?: (year: any) => void;
 	onBlur?: () => void;
+	/**
+	 * Одиночная дата: набранный текст не является датой — сообщение («Такой даты нет», «Введите год полностью», «Введите дату полностью»);
+	 * `null` — пусто или дата в порядке. Нужен форме, чтобы не сохранять поле, в котором есть текст, но нет даты.
+	 */
+	onInvalid?: (message: string | null) => void;
 	defaultOpened?: boolean;
 	/** the element the `ref` of the input points to (React: `inputRef.current`) */
 	inputElement?: HTMLElement | null;
@@ -112,7 +119,31 @@ export const useInputTimeOrDate = (params: InputTimeOrDateParams) => {
 				}
 			});
 		}
+		if (!isRange()) {
+			// текст, который не стал датой, — ошибка поля (а не молчаливая подмена: 31.02 → 03.03, месяц 13 → 12, год из 2 цифр → пусто)
+			rules.unshift({
+				error: DATE_TEXT_ERRORS.nonexistent!,
+				validate: (text: string) => getDateTextStatus(text, dateFormat()) !== 'nonexistent'
+			});
+			rules.unshift({
+				error: DATE_TEXT_ERRORS.shortYear!,
+				validate: (text: string) => getDateTextStatus(text, dateFormat()) !== 'shortYear'
+			});
+			rules.unshift({
+				error: DATE_TEXT_ERRORS.partial!,
+				validate: (text: string) => getDateTextStatus(text, dateFormat()) !== 'partial'
+			});
+		}
 		return rules.concat(extra || []);
+	});
+
+	/** что набрано в поле одиночной даты (у периода не разбирается) */
+	const textStatus = $derived(isRange() ? (value ? 'valid' : 'empty') : getDateTextStatus(value, dateFormat()));
+	const invalidMessage = $derived(DATE_TEXT_ERRORS[textStatus]);
+	$effect(() => {
+		const message = invalidMessage;
+		untrack(() => (P.onInvalid ?? noop)(message));
+		return () => untrack(() => (P.onInvalid ?? noop)(null));
 	});
 
 	const getValidRangeDate = (dateString: string) => {
@@ -212,14 +243,16 @@ export const useInputTimeOrDate = (params: InputTimeOrDateParams) => {
 		const inputValue = e.target.value;
 		const fmt = dateFormat();
 		value = inputValue;
-		if (!inputValue) {
+		if (getDateTextStatus(inputValue, fmt) === 'valid') {
+			const date = dayjs(inputValue, fmt, true).toDate();
+			activeDate = date;
+			onChange(date);
+			return;
+		}
+		// пусто, набор не закончен или такой даты нет: прежняя дата больше не соответствует тексту, поле не хранит её «за кадром»
+		if (activeDate) {
 			activeDate = undefined;
 			onChange(undefined);
-		}
-		if (isValidDateFormat(inputValue, fmt)) {
-			const valueDate = dayjs(inputValue, fmt).format();
-			activeDate = new Date(valueDate);
-			onChange(new Date(valueDate));
 		}
 	};
 
@@ -298,6 +331,10 @@ export const useInputTimeOrDate = (params: InputTimeOrDateParams) => {
 		untrack(() => {
 			const formattedValue = parseDateToString({ start: activeValue, end: secondValue }, { isRange: range, dateFormat: fmt, isOpenCalendar });
 			if (formattedValue !== value) {
+				// одиночная дата: пустое значение снаружи — это эхо нашего же onChange(undefined) на недописанный/неверный текст, текст не стираем
+				if (!range && !activeValue && !secondValue && value && textStatus !== 'valid') {
+					return;
+				}
 				value = formattedValue;
 				if (range) {
 					if (!formattedValue) {
