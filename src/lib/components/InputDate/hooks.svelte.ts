@@ -10,14 +10,17 @@ import type { ValidationRule } from '../Input/hooks.svelte.js';
 import { noop } from '../../utils/function.js';
 import { DATE_RANGE_SEPARATOR } from './constants.js';
 import {
+	DATE_RANGE_TEXT_ERRORS,
 	DATE_TEXT_ERRORS,
+	type DateRangeTextStatus,
 	formattingDateRange,
+	getDateRangeTextStatus,
 	getDateTextStatus,
 	getScopeDate,
-	isPartiallyValidDateRangeFormat,
 	isValidDateFormat,
 	isValidDateRangeFormat,
-	parseDateToString
+	parseDateToString,
+	splitDateRangeText
 } from './utils.js';
 
 export interface InputTimeOrDateParams {
@@ -38,8 +41,8 @@ export interface InputTimeOrDateParams {
 	onChangeYear?: (year: any) => void;
 	onBlur?: () => void;
 	/**
-	 * Одиночная дата: набранный текст не является датой — сообщение («Такой даты нет», «Введите год полностью», «Введите дату полностью»);
-	 * `null` — пусто или дата в порядке. Нужен форме, чтобы не сохранять поле, в котором есть текст, но нет даты.
+	 * Набранный текст не является датой — сообщение («Такой даты нет», «Введите год полностью», «Введите дату полностью», у периода ещё
+	 * «Конец периода раньше начала»); `null` — пусто или дата в порядке. Нужен форме, чтобы не сохранять поле, в котором есть текст, но нет даты.
 	 */
 	onInvalid?: (message: string | null) => void;
 	defaultOpened?: boolean;
@@ -119,27 +122,19 @@ export const useInputTimeOrDate = (params: InputTimeOrDateParams) => {
 				}
 			});
 		}
-		if (!isRange()) {
-			// текст, который не стал датой, — ошибка поля (а не молчаливая подмена: 31.02 → 03.03, месяц 13 → 12, год из 2 цифр → пусто)
-			rules.unshift({
-				error: DATE_TEXT_ERRORS.nonexistent!,
-				validate: (text: string) => getDateTextStatus(text, dateFormat()) !== 'nonexistent'
-			});
-			rules.unshift({
-				error: DATE_TEXT_ERRORS.shortYear!,
-				validate: (text: string) => getDateTextStatus(text, dateFormat()) !== 'shortYear'
-			});
-			rules.unshift({
-				error: DATE_TEXT_ERRORS.partial!,
-				validate: (text: string) => getDateTextStatus(text, dateFormat()) !== 'partial'
-			});
+		// текст, который не стал датой, — ошибка поля (а не молчаливая подмена: 31.02 → 03.03, месяц 13 → 12, год из 2 цифр → пусто);
+		// у периода так же для каждого из двух концов, плюс «конец раньше начала»
+		const status = (text: string) => (isRange() ? getDateRangeTextStatus(text, dateFormat()) : getDateTextStatus(text, dateFormat()));
+		const kinds: DateRangeTextStatus[] = isRange() ? ['reversed', 'nonexistent', 'shortYear', 'partial'] : ['nonexistent', 'shortYear', 'partial'];
+		for (const kind of kinds) {
+			rules.unshift({ error: DATE_RANGE_TEXT_ERRORS[kind]!, validate: (text: string) => status(text) !== kind });
 		}
 		return rules.concat(extra || []);
 	});
 
-	/** что набрано в поле одиночной даты (у периода не разбирается) */
-	const textStatus = $derived(isRange() ? (value ? 'valid' : 'empty') : getDateTextStatus(value, dateFormat()));
-	const invalidMessage = $derived(DATE_TEXT_ERRORS[textStatus]);
+	/** что набрано в поле (даты или периода) */
+	const textStatus = $derived(isRange() ? getDateRangeTextStatus(value, dateFormat()) : getDateTextStatus(value, dateFormat()));
+	const invalidMessage = $derived(isRange() ? DATE_RANGE_TEXT_ERRORS[textStatus] : DATE_TEXT_ERRORS[textStatus as keyof typeof DATE_TEXT_ERRORS]);
 	$effect(() => {
 		const message = invalidMessage;
 		untrack(() => (P.onInvalid ?? noop)(message));
@@ -199,6 +194,7 @@ export const useInputTimeOrDate = (params: InputTimeOrDateParams) => {
 
 	const handleSelectDate = (start?: Date, end?: Date) => {
 		const wasOpen = isOpenCalendar;
+		rangeEcho = null;
 		activeDate = start;
 		secondDate = end;
 		value = parseDateToString({ start, end }, { isRange: isRange(), dateFormat: dateFormat(), isOpenCalendar: wasOpen });
@@ -256,56 +252,38 @@ export const useInputTimeOrDate = (params: InputTimeOrDateParams) => {
 		}
 	};
 
+	/** то, что мы сами отдали наружу из набранного текста периода: отличает «эхо» нашего onChange от настоящего внешнего изменения */
+	let rangeEcho: { start?: number; end?: number } | null = null;
+
 	const handleChangeDateRange = (e: ValueEvent) => {
 		const fmt = dateFormat();
-		const prevActiveDate = activeDate;
 		isOpenCalendar = true;
 		const inputValue = e.target.value;
 		value = inputValue;
-		if (!inputValue) {
+		// каждый конец разбирается строго, как одиночная дата: 31.02, месяц 13, год из 2 цифр — ошибка поля (см. правила), а не поправка
+		const [fromText, toText] = splitDateRangeText(inputValue);
+		// тот же момент — тот же объект: иначе родитель получает «новую» дату на каждый символ и пересчитывает календарь
+		const parse = (text: string, prev?: Date) => {
+			if (getDateTextStatus(text, fmt) !== 'valid') return undefined;
+			const date = dayjs(text, fmt, true).toDate();
+			return prev && prev.getTime() === date.getTime() ? prev : date;
+		};
+		const from = parse(fromText, activeDate);
+		let to = parse(toText, secondDate);
+		// конец раньше начала — не меняем местами; конец набран целиком, но такой даты нет — период с ошибкой не отдаём:
+		// поле показывает ошибку, наружу уходит «ничего не выбрано» (пока конец просто не дописан, начало отдаётся как раньше)
+		if ((from && to && to.getTime() < from.getTime()) || (from && getDateTextStatus(toText, fmt) === 'nonexistent')) {
 			activeDate = undefined;
 			secondDate = undefined;
+			rangeEcho = {};
 			onChange(undefined, undefined);
+			return;
 		}
-		if (isValidDateRangeFormat(inputValue, fmt)) {
-			const [dateFrom, dateTo] = inputValue.split(DATE_RANGE_SEPARATOR);
-			const valueDateFrom = dayjs(dateFrom, fmt).format();
-			const valueDateTo = dayjs(dateTo, fmt).format();
-			if (dayjs(dateFrom, fmt).isBefore(dayjs(dateTo, fmt), 'd')) {
-				activeDate = new Date(valueDateFrom);
-				secondDate = new Date(valueDateTo);
-				onChange(new Date(valueDateFrom), new Date(valueDateTo));
-				value = parseDateToString(
-					{ start: new Date(valueDateFrom), end: new Date(valueDateTo) },
-					{ isRange: isRange(), dateFormat: fmt, isOpenCalendar: true }
-				);
-			} else {
-				activeDate = new Date(valueDateTo);
-				secondDate = new Date(valueDateFrom);
-				onChange(new Date(valueDateTo), new Date(valueDateFrom));
-				value = parseDateToString(
-					{ start: new Date(valueDateTo), end: new Date(valueDateFrom) },
-					{ isRange: isRange(), dateFormat: fmt, isOpenCalendar: true }
-				);
-			}
-		}
-		const partial = isPartiallyValidDateRangeFormat(inputValue, fmt);
-		if (partial.from.valid && !partial.to.valid) {
-			secondDate = undefined;
-			onChange(prevActiveDate, undefined);
-		}
-		if (!partial.from.valid && partial.to.valid) {
-			const [, dateTo] = inputValue.split(DATE_RANGE_SEPARATOR);
-			const valueDateTo = dayjs(dayjs(dateTo, fmt).format()).toDate();
-			activeDate = valueDateTo;
-			secondDate = undefined;
-			onChange(valueDateTo, undefined);
-		}
-		if (!partial.from.valid && !partial.to.valid) {
-			secondDate = undefined;
-			activeDate = undefined;
-			onChange(undefined, undefined);
-		}
+		if (!from) to = undefined;
+		activeDate = from;
+		secondDate = to;
+		rangeEcho = { start: from?.getTime(), end: to?.getTime() };
+		onChange(from, to);
 	};
 
 	// React: useEffect(() => setDisplayInputAsFocused(isOpenCalendar), [isOpenCalendar])
@@ -335,6 +313,11 @@ export const useInputTimeOrDate = (params: InputTimeOrDateParams) => {
 				if (!range && !activeValue && !secondValue && value && textStatus !== 'valid') {
 					return;
 				}
+				// период: то же для «эха» — наружу ушло то, что разобрано из набранного текста, текст (недописанный или с ошибкой) остаётся как есть
+				if (range && rangeEcho && rangeEcho.start === activeValue?.getTime() && rangeEcho.end === secondValue?.getTime()) {
+					return;
+				}
+				rangeEcho = null;
 				value = formattedValue;
 				if (range) {
 					if (!formattedValue) {
