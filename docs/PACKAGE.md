@@ -16,7 +16,7 @@ Playground, истории, `tools/`, `design/` в пакет **не входя�
 ```bash
 npm run package        # gen-barrel -> svelte-package (dist/) -> tools/build-package-assets.mjs
 npm run package:check  # publint + are-the-types-wrong (профиль esm-only)
-npm pack --pack-destination ../   # lct-testkit-rt-ui-0.1.1.tgz (prepack сам запускает npm run package)
+npm pack --pack-destination ../   # lct-testkit-rt-ui-0.1.3.tgz (prepack сам запускает npm run package)
 ```
 
 `build-package-assets` добавляет в `dist/styles`: `rt-ui.min.css` (base + components + tablegrid + tree + side-menu + top-menu, **без тем и шрифта**),
@@ -28,9 +28,9 @@ npm pack --pack-destination ../   # lct-testkit-rt-ui-0.1.1.tgz (prepack сам 
 | способ | команда | примечание |
 |---|---|---|
 | GitHub Packages (реально используется — frontend, Docker-образ) | `.npmrc`: `@lct-testkit:registry=https://npm.pkg.github.com`, токен `//npm.pkg.github.com/:_authToken` (classic PAT, `read:packages`) или `NODE_AUTH_TOKEN` в CI, затем `npm i @lct-testkit/rt-ui@0.1.1` | публикует `release.yml` по тегу `vX.Y.Z`; `access: "restricted"` — читают только участники организации; см. `frontend/.npmrc` |
-| tarball | `npm i ../lct-testkit-rt-ui-0.1.1.tgz` | воспроизводимо, шрифты внутри; для offline-стенда без доступа к GitHub Packages; проверено |
+| tarball | `npm i ../lct-testkit-rt-ui-0.1.3.tgz` | воспроизводимо, шрифты внутри; для offline-стенда без доступа к GitHub Packages; проверено |
 | папка | `npm i file:../rt-ui` | симлинк на `dist/` — сначала `npm run package`; проверено (Vite сам дедуплицирует `svelte`) |
-| git | `npm i git+ssh://git@host/team/rt-ui.git#v0.1.1` | `dist/` в git нет: npm выполнит `prepare`/`prepack` и соберёт сам (нужны devDependencies); **шрифтов в git нет** — см. §4; способ не проверялся |
+| git | `npm i git+ssh://git@host/team/rt-ui.git#v0.1.3` | `dist/` в git нет: npm выполнит `prepare`/`prepack` и соберёт сам (нужны devDependencies); **шрифтов в git нет** — см. §4; способ не проверялся |
 
 Пиры: `svelte ^5`. Зависимости (ставятся сами): `@popperjs/core`, `attr-accept`, `card-validator`, `clsx`, `dayjs`, `imask`, `virtua`.
 Для типов нужен `"moduleResolution": "bundler"` (по умолчанию в SvelteKit). Типы проверялись со `strict` и `skipLibCheck: false` — 0 ошибок.
