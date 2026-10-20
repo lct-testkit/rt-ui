@@ -165,6 +165,7 @@
 			value={activeValue}
 			use:mirrorValue={activeValue}
 			name="df"
+			aria-label="Начало периода"
 			{disabled}
 			{placeholder}
 			bind:this={() => ctx.fields.active, (el) => (ctx.fields.active = el)}
@@ -184,6 +185,7 @@
 			value={secondValue}
 			use:mirrorValue={secondValue}
 			name="dt"
+			aria-label="Конец периода"
 			{disabled}
 			bind:this={() => ctx.fields.second, (el) => (ctx.fields.second = el)}
 			onclick={handleFocus}
