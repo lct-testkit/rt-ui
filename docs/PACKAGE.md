@@ -27,7 +27,7 @@ npm pack --pack-destination ../   # lct-testkit-rt-ui-0.1.3.tgz (prepack сам 
 
 | способ | команда | примечание |
 |---|---|---|
-| GitHub Packages (реально используется — frontend, Docker-образ) | `.npmrc`: `@lct-testkit:registry=https://npm.pkg.github.com`, токен `//npm.pkg.github.com/:_authToken` (classic PAT, `read:packages`) или `NODE_AUTH_TOKEN` в CI, затем `npm i @lct-testkit/rt-ui@0.1.1` | публикует `release.yml` по тегу `vX.Y.Z`; `access: "restricted"` — читают только участники организации; см. `frontend/.npmrc` |
+| GitHub Packages (реально используется — frontend, Docker-образ) | `.npmrc`: `@lct-testkit:registry=https://npm.pkg.github.com`, токен `//npm.pkg.github.com/:_authToken` (classic PAT, `read:packages`) или `NODE_AUTH_TOKEN` в CI, затем `npm i @lct-testkit/rt-ui@0.1.3` | публикует `release.yml` по тегу `vX.Y.Z`; `access: "restricted"` — читают только участники организации; см. `frontend/.npmrc` |
 | tarball | `npm i ../lct-testkit-rt-ui-0.1.3.tgz` | воспроизводимо, шрифты внутри; для offline-стенда без доступа к GitHub Packages; проверено |
 | папка | `npm i file:../rt-ui` | симлинк на `dist/` — сначала `npm run package`; проверено (Vite сам дедуплицирует `svelte`) |
 | git | `npm i git+ssh://git@host/team/rt-ui.git#v0.1.3` | `dist/` в git нет: npm выполнит `prepare`/`prepack` и соберёт сам (нужны devDependencies); **шрифтов в git нет** — см. §4; способ не проверялся |
