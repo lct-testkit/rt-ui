@@ -52,6 +52,8 @@
 		useInPortal?: boolean;
 		/** Кастомная иконка кнопки меню */
 		moreIcon?: Content;
+		/** Название кнопки скрытых пунктов для скринридера (по умолчанию «Скрытые разделы») */
+		moreLabel?: string;
 		/** Окрашивать ли текст элемента при выборе */
 		isSelectedItemColored?: boolean;
 		/** Параметры для popper.js */
@@ -77,6 +79,7 @@
 		useInPortal,
 		class: className,
 		moreIcon,
+		moreLabel = 'Скрытые разделы',
 		isSelectedItemColored,
 		usePopperProps,
 		dropdownMenuClassName,
@@ -130,7 +133,7 @@
 						<button
 							class="atmr-breadcrumbs__dividermenu"
 							type="button"
-							aria-label="breadcrumbs dividermenu"
+							aria-label={moreLabel}
 							data-active={isOpenDropdown}
 							onclick={() => (isOpenDropdown = !isOpenDropdown)}
 						>

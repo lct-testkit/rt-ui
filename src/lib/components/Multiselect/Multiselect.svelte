@@ -139,6 +139,12 @@
 		isSelectedItemColored?: boolean;
 		/** Закрывать меню при выборе элемента */
 		hideOnSelect?: boolean;
+		/** Название кнопки очистки для скринридера (по умолчанию «Очистить») */
+		clearLabel?: string;
+		/** Название кнопки раскрытия списка для скринридера (по умолчанию «Открыть список») */
+		openLabel?: string;
+		/** Название поля поиска для скринридера (по умолчанию — текст `label`, а без него «Поиск») */
+		searchLabel?: string;
 		/** Обязательное поле */
 		required?: boolean;
 		/** Принимается для совместимости с Input (React: попадает в restProps и не используется) */
@@ -197,6 +203,9 @@
 		headerSlot,
 		footerSlot,
 		usePopperProps,
+		clearLabel = 'Очистить',
+		openLabel = 'Открыть список',
+		searchLabel,
 		isSelectedItemColored,
 		iconPrefix,
 		hideOnSelect = false,
@@ -504,7 +513,8 @@
 		value: searchValue,
 		onkeyup: handleKeyPress,
 		readonly: !autocomplete?.enabled,
-		disabled
+		disabled,
+		'aria-label': searchLabel ?? (typeof labelProp === 'string' && labelProp ? labelProp : 'Поиск')
 	});
 
 	// React: `{ trigger: inputRef.current, offset: parseFloat(cssOffset), ...usePopperProps }` (+ `lazy: false`, see the header)
@@ -577,7 +587,7 @@
 						onclick={onClickClearButton}
 						onmousedown={preventDefaultFn}
 						ontouchstart={preventDefaultFn}
-						aria-label="Clear"
+						aria-label={clearLabel}
 					>
 						{#if clearIcon === undefined}<CloseSmall size={iconCloseSize} />{:else}<Slot content={clearIcon} />{/if}
 					</button>
@@ -588,9 +598,9 @@
 					</span>
 				{/if}
 				{#if chevronIcon}
-					<button type="button" {disabled} class="atmr-input__suffix" onclick={clickOnSchevron}><Slot content={chevronIcon} /></button>
+					<button type="button" {disabled} class="atmr-input__suffix" onclick={clickOnSchevron} aria-label={openLabel}><Slot content={chevronIcon} /></button>
 				{:else}
-					<button type="button" class="atmr-input__suffix atmr-dropdown__trigger-icon" onclick={clickOnSchevron} {disabled} aria-label="open">
+					<button type="button" class="atmr-input__suffix atmr-dropdown__trigger-icon" onclick={clickOnSchevron} {disabled} aria-label={openLabel}>
 						<ChevronDown />
 					</button>
 				{/if}

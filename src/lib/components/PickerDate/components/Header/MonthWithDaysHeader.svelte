@@ -61,6 +61,7 @@
 		<button
 			type="button"
 			disabled={!checkDate(prevMonth)}
+			aria-label="Предыдущий месяц"
 			class="atmr-calendar-header__button"
 			onclick={(e) => {
 				if (!checkDate(prevMonth)) return;
@@ -93,6 +94,7 @@
 		<button
 			type="button"
 			disabled={!checkDate(nextMonth)}
+			aria-label="Следующий месяц"
 			class="atmr-calendar-header__button"
 			onclick={(e) => {
 				if (!checkDate(nextMonth)) return;

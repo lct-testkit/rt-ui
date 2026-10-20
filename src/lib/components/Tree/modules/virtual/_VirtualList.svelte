@@ -51,7 +51,7 @@
 	// `deferredMeasurementCache`) - the virtual list the React Tree renders with `virtualScroll.isEnable`. The reference DOM is the DOM of
 	// react-virtualized, so this is a port and not a virtua list:
 	//
-	//   <div class="ReactVirtualized__Grid ReactVirtualized__List" role="grid" aria-label="grid" aria-readonly="true" tabindex="0" style="...; overflow: hidden auto">
+	//   <div class="ReactVirtualized__Grid ReactVirtualized__List" role="grid" aria-label="Дерево" aria-readonly="true" tabindex="0" style="...; overflow: hidden auto">
 	//     <div class="ReactVirtualized__Grid__innerScrollContainer" role="row" style="height: <total>; max-height: <total>; ...">
 	//       ...one absolutely positioned row per index of the window (visible rows + 10 rows of overscan)...
 	//
@@ -284,7 +284,7 @@
 </script>
 
 <!-- svelte-ignore a11y_no_noninteractive_tabindex, a11y_no_noninteractive_element_interactions -->
-<div bind:this={container} aria-label="grid" aria-readonly="true" class="ReactVirtualized__Grid ReactVirtualized__List" role="grid" style={view.gridStyle} tabindex="0" onscroll={onScroll}>
+<div bind:this={container} aria-label="Дерево" aria-readonly="true" class="ReactVirtualized__Grid ReactVirtualized__List" role="grid" style={view.gridStyle} tabindex="0" onscroll={onScroll}>
 	{#if view.cells.length > 0}
 		<div class="ReactVirtualized__Grid__innerScrollContainer" role="row" style={view.innerStyle}>
 			{#each view.cells as cell (cell.index)}

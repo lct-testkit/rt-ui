@@ -199,7 +199,7 @@
 
 <div {...rootAttrs} class={rootClass}>
 	<div class="atmr-number-stepper__inner" bind:this={containerEl}>
-		<button type="button" class="atmr-number-stepper__button atmr-number-stepper__button--decrement" disabled={isLeftDisabled || isAllDisabled} onclick={handleLeftClick}>
+		<button type="button" class="atmr-number-stepper__button atmr-number-stepper__button--decrement" aria-label="Уменьшить" disabled={isLeftDisabled || isAllDisabled} onclick={handleLeftClick}>
 			{#if iconPrefix}<Slot content={iconPrefix} />{:else}<RemoveSmall />{/if}
 		</button>
 		<input
@@ -214,7 +214,7 @@
 			oninput={handleChange}
 			{...restAttrs}
 		/>
-		<button type="button" class="atmr-number-stepper__button atmr-number-stepper__button--increment" disabled={isRightDisabled || isAllDisabled} onclick={handleRightClick}>
+		<button type="button" class="atmr-number-stepper__button atmr-number-stepper__button--increment" aria-label="Увеличить" disabled={isRightDisabled || isAllDisabled} onclick={handleRightClick}>
 			{#if iconSuffix}<Slot content={iconSuffix} />{:else}<AddSmall />{/if}
 		</button>
 	</div>

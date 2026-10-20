@@ -48,6 +48,7 @@
 		<button
 			type="button"
 			class="atmr-calendar-header__button"
+			aria-label="Предыдущий год"
 			disabled={!checkDate(prevYear)}
 			onclick={(e) => {
 				if (!checkDate(prevYear)) return;
@@ -76,6 +77,7 @@
 		<button
 			type="button"
 			class="atmr-calendar-header__button"
+			aria-label="Следующий год"
 			disabled={!checkDate(nextYear)}
 			onclick={(e) => {
 				if (!checkDate(nextYear)) return;
