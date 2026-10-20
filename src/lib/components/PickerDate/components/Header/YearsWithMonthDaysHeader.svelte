@@ -66,6 +66,7 @@
 		<button
 			type="button"
 			disabled={!checkDate(view === CALENDAR_VIEW.time ? prevDay : prevMonth)}
+			aria-label={view === CALENDAR_VIEW.time ? 'Предыдущий день' : 'Предыдущий месяц'}
 			class="atmr-calendar-header__button"
 			onclick={(e) => {
 				e.stopPropagation();
@@ -110,6 +111,7 @@
 		<button
 			type="button"
 			disabled={!checkDate(view === CALENDAR_VIEW.time ? nextDay : nextMonth, view === CALENDAR_VIEW.time)}
+			aria-label={view === CALENDAR_VIEW.time ? 'Следующий день' : 'Следующий месяц'}
 			class="atmr-calendar-header__button"
 			onclick={(e) => {
 				e.stopPropagation();

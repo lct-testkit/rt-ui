@@ -74,6 +74,10 @@
 		onClickIconPrefix?: (event: MouseEvent) => void;
 		/** Клик по иконке в конце (иконка становится кнопкой) */
 		onClickIconSuffix?: (event: MouseEvent) => void;
+		/** Название кнопки очистки для скринридера (по умолчанию «Очистить») */
+		clearLabel?: string;
+		/** Название кнопки-иконки в конце (когда задан `onClickIconSuffix`; по умолчанию «Действие») */
+		iconSuffixLabel?: string;
 		/** Правила валидации */
 		validationRules?: ValidationRule[];
 		/** Правила трансформации значения */
@@ -126,6 +130,8 @@
 		clearIcon,
 		onClickIconPrefix = noop,
 		onClickIconSuffix,
+		clearLabel = 'Очистить',
+		iconSuffixLabel = 'Действие',
 		validationRules = [],
 		transformationRule = defaultTrasformationRule,
 		onBlur: onPropsBlur = noop,
@@ -306,7 +312,7 @@
 					onclick={handleClear}
 					onmousedown={preventDefaultFn}
 					ontouchstart={preventDefaultFn}
-					aria-label="Clear"
+					aria-label={clearLabel}
 					data-testid="input__suffix__clear"
 				>
 					{#if clearIcon === undefined}<CloseSmall size={iconSize} />{:else}<Slot content={clearIcon} />{/if}
@@ -334,13 +340,13 @@
 						onclick={onClickIconSuffix}
 						onmousedown={preventDefaultFn}
 						ontouchstart={preventDefaultFn}
-						aria-label="Input-right-icon"
+						aria-label={iconSuffixLabel}
 						data-testid="input__suffix"
 					>
 						<Slot content={iconSuffix} />
 					</button>
 				{:else}
-					<div class="atmr-input__suffix" aria-label="atmr-Input-right-icon" data-testid="input__suffix"><Slot content={iconSuffix} /></div>
+					<div class="atmr-input__suffix" data-testid="input__suffix"><Slot content={iconSuffix} /></div>
 				{/if}
 			{/if}
 		</div>

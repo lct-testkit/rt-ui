@@ -68,7 +68,7 @@
 <div aria-disabled={disabled} aria-invalid={error} class={rootClass} bind:this={ref} {...restProps}>
 	<span class="atmr-tagitem__label" aria-disabled={disabled}><Slot content={text} /></span>
 	{#if closable}
-		<button type="button" aria-disabled={disabled} {disabled} onclick={onClose} class="atmr-tagitem__closebutton">
+		<button type="button" aria-label="Удалить" aria-disabled={disabled} {disabled} onclick={onClose} class="atmr-tagitem__closebutton">
 			{#if iconProp != null}
 				<Slot content={iconProp} />
 			{:else if size === 'xs' || size === 's'}
