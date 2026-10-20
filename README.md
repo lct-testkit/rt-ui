@@ -135,8 +135,8 @@ node tools/up.mjs
 
 ```bash
 npm run package                           # dist/: JS, .svelte, .d.ts, min-CSS, шрифты
-npm pack --pack-destination ../           # ../lct-testkit-rt-ui-0.1.1.tgz
-npm i ../lct-testkit-rt-ui-0.1.1.tgz      # или file:../rt-ui, git+ssh://..., GitHub Packages (так ставит frontend)
+npm pack --pack-destination ../           # ../lct-testkit-rt-ui-0.1.3.tgz
+npm i ../lct-testkit-rt-ui-0.1.3.tgz      # или file:../rt-ui, git+ssh://..., GitHub Packages (так ставит frontend)
 ```
 
 ```svelte
