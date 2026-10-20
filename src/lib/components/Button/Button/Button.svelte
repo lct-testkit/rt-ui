@@ -31,7 +31,7 @@
 		iconSuffix,
 		label,
 		disabled = false,
-		id = 'button',
+		id,
 		class: className,
 		...rest
 	}: Props = $props();
