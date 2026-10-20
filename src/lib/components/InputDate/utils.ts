@@ -145,43 +145,47 @@ export const getDateTextStatus = (text: string, dateFormat: string): DateTextSta
 	return shortYearRe(dateFormat)?.test(text) ? 'shortYear' : 'partial';
 };
 
-/** Параметры imask для поля даты. */
-export const getInputDateMaskOptions = (dateFormat: string, isRange: boolean): Record<string, any> => {
-	const months = Array.from({ length: 12 }, (_, i) => new Date(0, i).toLocaleString('en', { month: 'long' }));
-	const monthName = {
-		mask: IMask.MaskedEnum,
-		enum: months,
-		matchValue: (estr: string, istr: string, matchFrom: any) =>
-			(IMask.MaskedEnum as any).DEFAULTS.matchValue(estr.toLowerCase(), istr.toLowerCase(), matchFrom)
-	};
-	if (isRange) {
-		// период — прежняя маска (поправка введённого на ближайшую существующую дату и зажим в диапазон)
-		return {
-			mask: Date,
-			pattern: dateFormat,
-			autofix: true,
-			lazy: true,
-			overwrite: true,
-			format: (date: Date) => dayjs(date).format(dateFormat),
-			parse: (str: string, m: any) => {
-				const inputDate = dayjs(str, dateFormat);
-				const formatedDate = dayjs(str, dateFormat).format(dateFormat);
-				if (str !== formatedDate) {
-					m.resolve(formatedDate);
-				}
-				return inputDate;
-			},
-			blocks: {
-				YYYY: { mask: IMask.MaskedRange, from: 1000, to: 9999 },
-				MM: { mask: IMask.MaskedRange, from: 1, to: 12 },
-				MMMM: monthName,
-				DD: { mask: IMask.MaskedRange, from: 1, to: 31 },
-				HH: { mask: IMask.MaskedRange, from: 0, to: 23 },
-				mm: { mask: IMask.MaskedRange, from: 0, to: 59 }
-			}
-		};
+/** Что набрано в поле периода: статус даты или `reversed` (обе даты есть, но конец раньше начала). */
+export type DateRangeTextStatus = DateTextStatus | 'reversed';
+
+/** Тексты ошибок поля периода (`null` — набор в порядке). */
+export const DATE_RANGE_TEXT_ERRORS: Record<DateRangeTextStatus, string | null> = {
+	...DATE_TEXT_ERRORS,
+	reversed: 'Конец периода раньше начала'
+};
+
+/** Разбор текста периода `<начало> - <конец>` на две части; заглушка `...` (начало без конца при закрытом календаре) — это пустой конец. */
+export const splitDateRangeText = (text: string): [string, string] => {
+	const [from = '', to = ''] = text.split(DATE_RANGE_SEPARATOR);
+	return [from, to === '...' ? '' : to];
+};
+
+/**
+ * Разбирает набранный текст периода так же строго, как одиночную дату (`getDateTextStatus`) — для каждого из двух концов.
+ * Если ошибки есть у обоих, показывается самая «жёсткая»: несуществующая дата → год из 2 цифр → не дописано.
+ * Начало есть, конца нет — это не ошибка текста (`valid`: период ещё не закончен, это решает правило «Укажите окончание периода»).
+ */
+export const getDateRangeTextStatus = (text: string, dateFormat: string): DateRangeTextStatus => {
+	if (!text) return 'empty';
+	const [fromText, toText] = splitDateRangeText(text);
+	const from = getDateTextStatus(fromText, dateFormat);
+	const to = getDateTextStatus(toText, dateFormat);
+	const statuses: DateTextStatus[] = [from, to];
+	for (const bad of ['nonexistent', 'shortYear'] as const) {
+		if (statuses.includes(bad)) return bad;
 	}
-	// одиночная дата: маска только расставляет точки и пускает цифры, ничего не «исправляет»; существует ли дата, решает getDateTextStatus
+	// конец набран, а начала нет (стёрли) — не дописано
+	if (from === 'partial' || to === 'partial' || (from === 'empty' && to !== 'empty')) return 'partial';
+	if (from === 'valid' && to === 'valid' && dayjs(toText, dateFormat, true).isBefore(dayjs(fromText, dateFormat, true))) return 'reversed';
+	return 'valid';
+};
+
+/**
+ * Параметры imask для поля даты (и каждого из двух полей периода): маска только расставляет точки и пускает цифры, ничего не «исправляет»;
+ * существует ли дата, решают `getDateTextStatus` / `getDateRangeTextStatus`.
+ */
+export const getInputDateMaskOptions = (dateFormat: string): Record<string, any> => {
+	const months = Array.from({ length: 12 }, (_, i) => new Date(0, i).toLocaleString('en', { month: 'long' }));
 	return {
 		mask: dateFormat,
 		lazy: true,
@@ -189,7 +193,12 @@ export const getInputDateMaskOptions = (dateFormat: string, isRange: boolean): R
 		blocks: {
 			YYYY: { mask: '0000' },
 			MM: { mask: '00' },
-			MMMM: monthName,
+			MMMM: {
+				mask: IMask.MaskedEnum,
+				enum: months,
+				matchValue: (estr: string, istr: string, matchFrom: any) =>
+					(IMask.MaskedEnum as any).DEFAULTS.matchValue(estr.toLowerCase(), istr.toLowerCase(), matchFrom)
+			},
 			DD: { mask: '00' },
 			HH: { mask: '00' },
 			mm: { mask: '00' }

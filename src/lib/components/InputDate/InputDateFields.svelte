@@ -93,9 +93,11 @@
 	// A selection (Ctrl+A, Shift+arrows, a drag) is left alone: collapsing it made Ctrl+A → Backspace delete one character instead of everything.
 	const handleFocus = (e: Event) => {
 		const target = e.target as HTMLInputElement;
-		const length = target.value.length;
 		setTimeout(() => {
 			if (target.selectionStart !== target.selectionEnd) return;
+			// the length is read now, not when the event fired: with a quick typist the key-up of the previous character is handled after the next one was
+			// already typed, and the caret used to jump back into the middle of the text (then the digits landed in the wrong places)
+			const length = target.value.length;
 			target.setSelectionRange(length, length);
 		});
 	};
