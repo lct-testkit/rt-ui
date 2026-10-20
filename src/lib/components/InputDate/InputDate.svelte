@@ -76,8 +76,8 @@
 		/** Закрытие календаря */
 		onBlur?: () => void;
 		/**
-		 * [ext, not in original] Одиночная дата: набранный текст не является датой — сообщение об ошибке («Такой даты нет», «Введите год полностью»,
-		 * «Введите дату полностью»), `null` — пусто или дата в порядке. Форма по нему не сохраняет поле, в котором есть текст, но нет даты.
+		 * [ext, not in original] Набранный текст не является датой — сообщение об ошибке («Такой даты нет», «Введите год полностью», «Введите дату
+		 * полностью»; у периода ещё «Конец периода раньше начала»), `null` — пусто или дата в порядке. Форма по нему не сохраняет поле, в котором есть текст, но нет даты.
 		 */
 		onInvalid?: (message: string | null) => void;
 		/** Индекс первого дня недели */
@@ -251,7 +251,7 @@
 	const inputClasses = $derived(clsx('atmr-popover--inputDate', className && className));
 
 	// imask date masks of the active (first / only) and the second (range end) field
-	const dateMask = $derived(getInputDateMaskOptions(dateFormat, isRange));
+	const dateMask = $derived(getInputDateMaskOptions(dateFormat));
 	const createMasks = (options: any): InputDateMasks => ({
 		active: IMask.createMask(options) as any,
 		second: IMask.createMask(options) as any
@@ -361,6 +361,7 @@
 	bind:ref={popoverEl}
 >
 	<Input
+		iconSuffixLabel="Открыть календарь"
 		{...restAttrs}
 		{variant}
 		{size}
