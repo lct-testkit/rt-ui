@@ -128,6 +128,22 @@
   height: auto;
   overflow: hidden;
   color: var(--atmr-fg-soft);
+  position: relative;
+}
+
+/* [ext, not in original] SideMenuItem with `href`: an empty link over the whole row (see SideMenuItem.svelte) */
+.atmr-side-menu__link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.atmr-side-menu__link:focus-visible {
+  outline: var(--atmr-focus-soft-border-width) solid var(--atmr-focus-soft-color);
+  outline-offset: calc(var(--atmr-focus-soft-border-width) * -1);
 }
 
 .atmr-side-menu__item .atmr-list-item__content {
