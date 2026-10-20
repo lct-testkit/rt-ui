@@ -1,7 +1,7 @@
 import { createRawSnippet } from 'svelte';
 import { describe, expect, it } from 'vitest';
 import { render } from 'svelte/server';
-import { Breadcrumbs, Button, Input, Multiselect, TextArea } from '../src/lib/index.js';
+import { Breadcrumbs, Button, Input, InputDate, Multiselect, TextArea } from '../src/lib/index.js';
 import SideMenuHref from './fixtures/SideMenuHref.svelte';
 
 const html = (component: any, props: Record<string, unknown> = {}) => render(component, { props }).body;
@@ -49,6 +49,14 @@ describe('подписи для скринридера — по-русски (A-
 		const custom = html(Multiselect, { items, openLabel: 'Раскрыть', searchLabel: 'Найти коллегу', autocomplete: { enabled: true } });
 		expect(custom).toContain('aria-label="Раскрыть"');
 		expect(custom).toContain('aria-label="Найти коллегу"');
+	});
+
+	it('InputDate: поля периода названы, календарь — «Открыть календарь»', () => {
+		const range = html(InputDate, { isRange: true });
+		expect(range).toContain('aria-label="Начало периода"');
+		expect(range).toContain('aria-label="Конец периода"');
+		expect(range).toContain('aria-label="Открыть календарь"');
+		expect(html(InputDate, {})).not.toContain('Начало периода');
 	});
 
 	it('Breadcrumbs: кнопка скрытых разделов', () => {
