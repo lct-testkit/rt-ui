@@ -71,6 +71,8 @@
 		validationOnChange?: boolean;
 		/** Показывает кнопку очистки */
 		clearable?: boolean;
+		/** Название кнопки очистки для скринридера (по умолчанию «Очистить») */
+		clearLabel?: string;
 		/** Всегда показывать кнопку очистки */
 		showClearable?: boolean;
 		/** Обязательное поле */
@@ -112,6 +114,7 @@
 		forceError,
 		validationOnChange = false,
 		clearable = false,
+		clearLabel = 'Очистить',
 		showClearable = false,
 		required,
 		clearIcon,
@@ -260,7 +263,7 @@
 					onclick={handleClear}
 					onmousedown={preventDefaultFn}
 					ontouchstart={preventDefaultFn}
-					aria-label="Clear"
+					aria-label={clearLabel}
 					data-testid="textarea__suffix__clear"
 				>
 					{#if clearIcon === undefined}<CloseSmall size={INPUT_ICON_SIZE_MAP[size] ?? undefined} />{:else}<Slot content={clearIcon} />{/if}

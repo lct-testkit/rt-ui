@@ -56,7 +56,7 @@
 </script>
 
 <div class={rootClass} {...rest}>
-	<button type="button" class="atmr-stepper__button atmr-stepper__button--prev" disabled={isLeftDisabled || isAllDisabled} onclick={handleLeftClick}>
+	<button type="button" class="atmr-stepper__button atmr-stepper__button--prev" aria-label="Уменьшить" disabled={isLeftDisabled || isAllDisabled} onclick={handleLeftClick}>
 		{#if iconPrefix}<Slot content={iconPrefix} />{:else}<RemoveSmall />{/if}
 	</button>
 	{#if label}
@@ -64,7 +64,7 @@
 	{:else}
 		<span class="atmr-stepper__divider"></span>
 	{/if}
-	<button type="button" class="atmr-stepper__button atmr-stepper__button--next" disabled={isRightDisabled || isAllDisabled} onclick={handleRightClick}>
+	<button type="button" class="atmr-stepper__button atmr-stepper__button--next" aria-label="Увеличить" disabled={isRightDisabled || isAllDisabled} onclick={handleRightClick}>
 		{#if iconSuffix}<Slot content={iconSuffix} />{:else}<AddSmall />{/if}
 	</button>
 </div>

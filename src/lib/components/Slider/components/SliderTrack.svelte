@@ -57,9 +57,9 @@
 	<div class="atmr-slider__track-backdrop"></div>
 	<div class="atmr-slider__track-fill" style={trackFillStyle}></div>
 	{#if showDots}
-		<div class={clsx(['atmr-slider__track-dots', { 'atmr-show-dots': ctx.dots }])} role="list" aria-label="Slider marks">
+		<div class={clsx(['atmr-slider__track-dots', { 'atmr-show-dots': ctx.dots }])} role="list" aria-label="Метки">
 			{#each computedTicks as { tick, className, style } (tick.value)}
-				<div class={className} {style} data-testid="slider-dot" role="listitem" aria-label={`Mark at ${tick.value}`}>
+				<div class={className} {style} data-testid="slider-dot" role="listitem" aria-label={`Метка ${tick.value}`}>
 					{#if tick.label}
 						<div class="atmr-slider__track-dot-label" aria-hidden="true">{tick.label}</div>
 					{/if}

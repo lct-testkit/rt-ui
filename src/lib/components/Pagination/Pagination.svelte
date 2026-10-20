@@ -233,6 +233,7 @@
 	<button
 		class="atmr-pagination__button"
 		disabled={item.disabled}
+		aria-label={item.type === 'next' ? 'Следующая страница' : 'Предыдущая страница'}
 		onclick={() => handleClickButton(buttonPage(item.type) as number)}
 		{...itemAttrs(item)}
 	>
@@ -252,6 +253,7 @@
 						<button
 							class={item.type === 'page' ? clsx('atmr-pagination__button', { 'atmr-pagination--selected': item.selected }) : 'atmr-pagination__button'}
 							disabled={item.disabled}
+							aria-label={item.type === 'next' ? 'Следующая страница' : item.type === 'previous' ? 'Предыдущая страница' : undefined}
 							aria-current={item['aria-current']}
 							onclick={() => handleClickButton(item.page as number)}
 							{...itemAttrs(item)}
